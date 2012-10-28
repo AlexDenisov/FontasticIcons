@@ -18,6 +18,7 @@
 		CA7C55DB163DC00700AC32A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55DA163DC00700AC32A3 /* Default-568h@2x.png */; };
 		CA7C55DE163DC00700AC32A3 /* FIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55DD163DC00700AC32A3 /* FIViewController.m */; };
 		CA7C55E1163DC00700AC32A3 /* FIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55DF163DC00700AC32A3 /* FIViewController.xib */; };
+		CA7C55EF163DC4E000AC32A3 /* FIIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55EE163DC4E000AC32A3 /* FIIconView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		CA7C55DC163DC00700AC32A3 /* FIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIViewController.h; sourceTree = "<group>"; };
 		CA7C55DD163DC00700AC32A3 /* FIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIViewController.m; sourceTree = "<group>"; };
 		CA7C55E0163DC00700AC32A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FIViewController.xib; sourceTree = "<group>"; };
+		CA7C55ED163DC4E000AC32A3 /* FIIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIconView.h; sourceTree = "<group>"; };
+		CA7C55EE163DC4E000AC32A3 /* FIIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIIconView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +59,8 @@
 		CA7C55B5163DC00700AC32A3 = {
 			isa = PBXGroup;
 			children = (
-				CA7C55CA163DC00700AC32A3 /* FontasticIcons */,
+				CA7C55E7163DC28500AC32A3 /* Sources */,
+				CA7C55CA163DC00700AC32A3 /* Sample */,
 				CA7C55C3163DC00700AC32A3 /* Frameworks */,
 				CA7C55C1163DC00700AC32A3 /* Products */,
 			);
@@ -80,7 +84,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CA7C55CA163DC00700AC32A3 /* FontasticIcons */ = {
+		CA7C55CA163DC00700AC32A3 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
 				CA7C55D3163DC00700AC32A3 /* FIAppDelegate.h */,
@@ -90,7 +94,8 @@
 				CA7C55DF163DC00700AC32A3 /* FIViewController.xib */,
 				CA7C55CB163DC00700AC32A3 /* Supporting Files */,
 			);
-			path = FontasticIcons;
+			name = Sample;
+			path = FontasticIcons/Sample;
 			sourceTree = "<group>";
 		};
 		CA7C55CB163DC00700AC32A3 /* Supporting Files */ = {
@@ -105,6 +110,56 @@
 				CA7C55DA163DC00700AC32A3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA7C55E7163DC28500AC32A3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55F2163DC52B00AC32A3 /* Resources */,
+				CA7C55F1163DC51500AC32A3 /* Classes */,
+			);
+			name = Sources;
+			path = FontasticIcons/Sources;
+			sourceTree = "<group>";
+		};
+		CA7C55E8163DC49C00AC32A3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55ED163DC4E000AC32A3 /* FIIconView.h */,
+				CA7C55EE163DC4E000AC32A3 /* FIIconView.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CA7C55E9163DC4A300AC32A3 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		CA7C55F0163DC4F400AC32A3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CA7C55F1163DC51500AC32A3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55E8163DC49C00AC32A3 /* Base */,
+				CA7C55E9163DC4A300AC32A3 /* Impl */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CA7C55F2163DC52B00AC32A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55F0163DC4F400AC32A3 /* Fonts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +232,7 @@
 				CA7C55D1163DC00700AC32A3 /* main.m in Sources */,
 				CA7C55D5163DC00700AC32A3 /* FIAppDelegate.m in Sources */,
 				CA7C55DE163DC00700AC32A3 /* FIViewController.m in Sources */,
+				CA7C55EF163DC4E000AC32A3 /* FIIconView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +310,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FontasticIcons/FontasticIcons-Prefix.pch";
-				INFOPLIST_FILE = "FontasticIcons/FontasticIcons-Info.plist";
+				GCC_PREFIX_HEADER = "FontasticIcons/Sample/FontasticIcons-Prefix.pch";
+				INFOPLIST_FILE = "FontasticIcons/Sample/FontasticIcons-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -266,8 +322,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FontasticIcons/FontasticIcons-Prefix.pch";
-				INFOPLIST_FILE = "FontasticIcons/FontasticIcons-Info.plist";
+				GCC_PREFIX_HEADER = "FontasticIcons/Sample/FontasticIcons-Prefix.pch";
+				INFOPLIST_FILE = "FontasticIcons/Sample/FontasticIcons-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
