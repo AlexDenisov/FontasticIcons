@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA7C55C5163DC00700AC32A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C4163DC00700AC32A3 /* UIKit.framework */; };
+		CA7C55C7163DC00700AC32A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C6163DC00700AC32A3 /* Foundation.framework */; };
+		CA7C55C9163DC00700AC32A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C8163DC00700AC32A3 /* CoreGraphics.framework */; };
+		CA7C55CF163DC00700AC32A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55CD163DC00700AC32A3 /* InfoPlist.strings */; };
+		CA7C55D1163DC00700AC32A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55D0163DC00700AC32A3 /* main.m */; };
+		CA7C55D5163DC00700AC32A3 /* FIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55D4163DC00700AC32A3 /* FIAppDelegate.m */; };
+		CA7C55D7163DC00700AC32A3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55D6163DC00700AC32A3 /* Default.png */; };
+		CA7C55D9163DC00700AC32A3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55D8163DC00700AC32A3 /* Default@2x.png */; };
+		CA7C55DB163DC00700AC32A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55DA163DC00700AC32A3 /* Default-568h@2x.png */; };
+		CA7C55DE163DC00700AC32A3 /* FIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55DD163DC00700AC32A3 /* FIViewController.m */; };
+		CA7C55E1163DC00700AC32A3 /* FIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55DF163DC00700AC32A3 /* FIViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CA7C55C0163DC00700AC32A3 /* FontasticIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontasticIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7C55C4163DC00700AC32A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CA7C55C6163DC00700AC32A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CA7C55C8163DC00700AC32A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CA7C55CC163DC00700AC32A3 /* FontasticIcons-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FontasticIcons-Info.plist"; sourceTree = "<group>"; };
+		CA7C55CE163DC00700AC32A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CA7C55D0163DC00700AC32A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA7C55D2163DC00700AC32A3 /* FontasticIcons-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FontasticIcons-Prefix.pch"; sourceTree = "<group>"; };
+		CA7C55D3163DC00700AC32A3 /* FIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIAppDelegate.h; sourceTree = "<group>"; };
+		CA7C55D4163DC00700AC32A3 /* FIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIAppDelegate.m; sourceTree = "<group>"; };
+		CA7C55D6163DC00700AC32A3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CA7C55D8163DC00700AC32A3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CA7C55DA163DC00700AC32A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CA7C55DC163DC00700AC32A3 /* FIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIViewController.h; sourceTree = "<group>"; };
+		CA7C55DD163DC00700AC32A3 /* FIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIViewController.m; sourceTree = "<group>"; };
+		CA7C55E0163DC00700AC32A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FIViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA7C55BD163DC00700AC32A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7C55C5163DC00700AC32A3 /* UIKit.framework in Frameworks */,
+				CA7C55C7163DC00700AC32A3 /* Foundation.framework in Frameworks */,
+				CA7C55C9163DC00700AC32A3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA7C55B5163DC00700AC32A3 = {
+			isa = PBXGroup;
+			children = (
+				CA7C55CA163DC00700AC32A3 /* FontasticIcons */,
+				CA7C55C3163DC00700AC32A3 /* Frameworks */,
+				CA7C55C1163DC00700AC32A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA7C55C1163DC00700AC32A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55C0163DC00700AC32A3 /* FontasticIcons.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA7C55C3163DC00700AC32A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55C4163DC00700AC32A3 /* UIKit.framework */,
+				CA7C55C6163DC00700AC32A3 /* Foundation.framework */,
+				CA7C55C8163DC00700AC32A3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA7C55CA163DC00700AC32A3 /* FontasticIcons */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55D3163DC00700AC32A3 /* FIAppDelegate.h */,
+				CA7C55D4163DC00700AC32A3 /* FIAppDelegate.m */,
+				CA7C55DC163DC00700AC32A3 /* FIViewController.h */,
+				CA7C55DD163DC00700AC32A3 /* FIViewController.m */,
+				CA7C55DF163DC00700AC32A3 /* FIViewController.xib */,
+				CA7C55CB163DC00700AC32A3 /* Supporting Files */,
+			);
+			path = FontasticIcons;
+			sourceTree = "<group>";
+		};
+		CA7C55CB163DC00700AC32A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55CC163DC00700AC32A3 /* FontasticIcons-Info.plist */,
+				CA7C55CD163DC00700AC32A3 /* InfoPlist.strings */,
+				CA7C55D0163DC00700AC32A3 /* main.m */,
+				CA7C55D2163DC00700AC32A3 /* FontasticIcons-Prefix.pch */,
+				CA7C55D6163DC00700AC32A3 /* Default.png */,
+				CA7C55D8163DC00700AC32A3 /* Default@2x.png */,
+				CA7C55DA163DC00700AC32A3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA7C55BF163DC00700AC32A3 /* FontasticIcons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA7C55E4163DC00700AC32A3 /* Build configuration list for PBXNativeTarget "FontasticIcons" */;
+			buildPhases = (
+				CA7C55BC163DC00700AC32A3 /* Sources */,
+				CA7C55BD163DC00700AC32A3 /* Frameworks */,
+				CA7C55BE163DC00700AC32A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FontasticIcons;
+			productName = FontasticIcons;
+			productReference = CA7C55C0163DC00700AC32A3 /* FontasticIcons.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA7C55B7163DC00700AC32A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FI;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Alex Denisov";
+			};
+			buildConfigurationList = CA7C55BA163DC00700AC32A3 /* Build configuration list for PBXProject "FontasticIcons" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CA7C55B5163DC00700AC32A3;
+			productRefGroup = CA7C55C1163DC00700AC32A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA7C55BF163DC00700AC32A3 /* FontasticIcons */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA7C55BE163DC00700AC32A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7C55CF163DC00700AC32A3 /* InfoPlist.strings in Resources */,
+				CA7C55D7163DC00700AC32A3 /* Default.png in Resources */,
+				CA7C55D9163DC00700AC32A3 /* Default@2x.png in Resources */,
+				CA7C55DB163DC00700AC32A3 /* Default-568h@2x.png in Resources */,
+				CA7C55E1163DC00700AC32A3 /* FIViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA7C55BC163DC00700AC32A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7C55D1163DC00700AC32A3 /* main.m in Sources */,
+				CA7C55D5163DC00700AC32A3 /* FIAppDelegate.m in Sources */,
+				CA7C55DE163DC00700AC32A3 /* FIViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA7C55CD163DC00700AC32A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA7C55CE163DC00700AC32A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CA7C55DF163DC00700AC32A3 /* FIViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA7C55E0163DC00700AC32A3 /* en */,
+			);
+			name = FIViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA7C55E2163DC00700AC32A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CA7C55E3163DC00700AC32A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA7C55E5163DC00700AC32A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FontasticIcons/FontasticIcons-Prefix.pch";
+				INFOPLIST_FILE = "FontasticIcons/FontasticIcons-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CA7C55E6163DC00700AC32A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FontasticIcons/FontasticIcons-Prefix.pch";
+				INFOPLIST_FILE = "FontasticIcons/FontasticIcons-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA7C55BA163DC00700AC32A3 /* Build configuration list for PBXProject "FontasticIcons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA7C55E2163DC00700AC32A3 /* Debug */,
+				CA7C55E3163DC00700AC32A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA7C55E4163DC00700AC32A3 /* Build configuration list for PBXNativeTarget "FontasticIcons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA7C55E5163DC00700AC32A3 /* Debug */,
+				CA7C55E6163DC00700AC32A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA7C55B7163DC00700AC32A3 /* Project object */;
+}
