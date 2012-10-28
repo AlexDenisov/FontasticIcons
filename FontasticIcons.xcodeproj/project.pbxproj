@@ -19,6 +19,10 @@
 		CA7C55DE163DC00700AC32A3 /* FIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55DD163DC00700AC32A3 /* FIViewController.m */; };
 		CA7C55E1163DC00700AC32A3 /* FIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55DF163DC00700AC32A3 /* FIViewController.xib */; };
 		CA7C55EF163DC4E000AC32A3 /* FIIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55EE163DC4E000AC32A3 /* FIIconView.m */; };
+		CA7C55F5163DC6C900AC32A3 /* FIIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55F4163DC6C900AC32A3 /* FIIcon.m */; };
+		CA7C55F8163DC81800AC32A3 /* FIFont.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55F7163DC81800AC32A3 /* FIFont.m */; };
+		CA7C55FD163DCD2F00AC32A3 /* Entypo-Social.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55FB163DCD2F00AC32A3 /* Entypo-Social.otf */; };
+		CA7C55FE163DCD2F00AC32A3 /* Entypo.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55FC163DCD2F00AC32A3 /* Entypo.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,13 @@
 		CA7C55E0163DC00700AC32A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FIViewController.xib; sourceTree = "<group>"; };
 		CA7C55ED163DC4E000AC32A3 /* FIIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIconView.h; sourceTree = "<group>"; };
 		CA7C55EE163DC4E000AC32A3 /* FIIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIIconView.m; sourceTree = "<group>"; };
+		CA7C55F3163DC6C900AC32A3 /* FIIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIcon.h; sourceTree = "<group>"; };
+		CA7C55F4163DC6C900AC32A3 /* FIIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIIcon.m; sourceTree = "<group>"; };
+		CA7C55F6163DC81800AC32A3 /* FIFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFont.h; sourceTree = "<group>"; };
+		CA7C55F7163DC81800AC32A3 /* FIFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFont.m; sourceTree = "<group>"; };
+		CA7C55FA163DC8B800AC32A3 /* FIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIUtils.h; sourceTree = "<group>"; };
+		CA7C55FB163DCD2F00AC32A3 /* Entypo-Social.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Entypo-Social.otf"; sourceTree = "<group>"; };
+		CA7C55FC163DCD2F00AC32A3 /* Entypo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +138,10 @@
 			children = (
 				CA7C55ED163DC4E000AC32A3 /* FIIconView.h */,
 				CA7C55EE163DC4E000AC32A3 /* FIIconView.m */,
+				CA7C55F3163DC6C900AC32A3 /* FIIcon.h */,
+				CA7C55F4163DC6C900AC32A3 /* FIIcon.m */,
+				CA7C55F6163DC81800AC32A3 /* FIFont.h */,
+				CA7C55F7163DC81800AC32A3 /* FIFont.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -141,6 +156,8 @@
 		CA7C55F0163DC4F400AC32A3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				CA7C55FB163DCD2F00AC32A3 /* Entypo-Social.otf */,
+				CA7C55FC163DCD2F00AC32A3 /* Entypo.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -148,6 +165,7 @@
 		CA7C55F1163DC51500AC32A3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA7C55F9163DC88A00AC32A3 /* Utils */,
 				CA7C55E8163DC49C00AC32A3 /* Base */,
 				CA7C55E9163DC4A300AC32A3 /* Impl */,
 			);
@@ -160,6 +178,14 @@
 				CA7C55F0163DC4F400AC32A3 /* Fonts */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA7C55F9163DC88A00AC32A3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C55FA163DC8B800AC32A3 /* FIUtils.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +245,8 @@
 				CA7C55D9163DC00700AC32A3 /* Default@2x.png in Resources */,
 				CA7C55DB163DC00700AC32A3 /* Default-568h@2x.png in Resources */,
 				CA7C55E1163DC00700AC32A3 /* FIViewController.xib in Resources */,
+				CA7C55FD163DCD2F00AC32A3 /* Entypo-Social.otf in Resources */,
+				CA7C55FE163DCD2F00AC32A3 /* Entypo.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +261,8 @@
 				CA7C55D5163DC00700AC32A3 /* FIAppDelegate.m in Sources */,
 				CA7C55DE163DC00700AC32A3 /* FIViewController.m in Sources */,
 				CA7C55EF163DC4E000AC32A3 /* FIIconView.m in Sources */,
+				CA7C55F5163DC6C900AC32A3 /* FIIcon.m in Sources */,
+				CA7C55F8163DC81800AC32A3 /* FIFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,17 +1,15 @@
 //
-//  FIIconView.m
+//  FIIcon.h
 //  FontasticIcons
 //
 //  Created by Alex Denisov on 28.10.12.
 //  Copyright (c) 2012 Alex Denisov. All rights reserved.
 //
 
-#import <CoreText/CoreText.h>
-#import "FIUtils.h"
+#import <Foundation/Foundation.h>
 
-#import "FIIconView.h"
-#import "FIIcon.h"
+@interface FIIcon : NSObject
 
-@implementation FIIconView
+@property (nonatomic, copy) NSString *iconString;
 
 @end
