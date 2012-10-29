@@ -14,5 +14,6 @@
 @property (nonatomic, copy) NSString *iconName;
 
 + (FIIcon *)iconWithName:(NSString *)anIconName;
++ (NSArray *)iconNames;
 
 @end

@@ -19,6 +19,10 @@
     fi_arc_dealloc;
 }
 
++ (NSArray *)iconNames {
+    return [[self iconsDictionary] allKeys];
+}
+
 + (NSString *)iconKeyForName:(NSString *)aName {
     return [[self iconsDictionary] valueForKey:aName];
 }

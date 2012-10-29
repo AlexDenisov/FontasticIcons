@@ -25,7 +25,6 @@
 
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    NSLog(@"%@", NSStringFromClass(self.icon.class));
     CTFontRef font = [[[self.icon class] iconFont] fontRef];
     if (self.iconColor == nil) {
         self.iconColor = [UIColor blackColor];
@@ -40,7 +39,6 @@
     NSAttributedString *attrString = [[NSMutableAttributedString alloc]
                                        initWithString:iconString
                                        attributes:attributesDict];
-    
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
@@ -58,9 +56,8 @@
     width += padding;
     height += padding;
     
-    float size = MIN(self.bounds.size.width, self.bounds.size.height);
-    float sx = size / width;
-    float sy = size / height;
+    float sx = self.bounds.size.width / width;
+    float sy = self.bounds.size.height / height;
     
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     
