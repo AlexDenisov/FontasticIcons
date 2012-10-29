@@ -10,8 +10,17 @@
 #import "FIUtils.h"
 #import "FIFont.h"
 #import "FIIcon_Private.h"
+#import "FIMetaInfoManager.h"
 
 @implementation FIIcon
+
++ (void)initialize {
+    FIMetaInfoManager *manager = [FIMetaInfoManager sharedManager];
+    [manager registerFont:[self iconFont]
+                 forClass:self];
+    [manager registerIconSet:[self iconsDictionary]
+                    forClass:self];
+}
 
 - (void)dealloc {
     self.iconString = nil;
@@ -28,7 +37,7 @@
 }
 
 + (FIFont *)iconFont {
-    return nil;
+    return [[FIMetaInfoManager sharedManager] fontForClass:self];
 }
 
 + (FIIcon *)iconWithName:(NSString *)anIconName {
@@ -39,7 +48,7 @@
 }
 
 + (NSDictionary *)iconsDictionary {
-    return nil;
+    return [[FIMetaInfoManager sharedManager] iconSetForClass:self];
 }
 
 @end
