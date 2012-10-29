@@ -2,6 +2,8 @@
 
 FontasticIcons is an Objective-C wrapper for iconic fonts.
 
+![FontasticIcons example](https://github.com/AlexDenisov/FontasticIcons/blob/master/example.png?raw=true).
+
 ## Installation
 
 ### With CocoaPods
@@ -10,7 +12,7 @@ FontasticIcons is an Objective-C wrapper for iconic fonts.
 
 ### Manual
 
-Just add sources from `FontasticIcons/Sources` directory to your project.
+Just add sources from `FontasticIcons/Sources/Classes` directory to your project.
  
 ## Usage
 

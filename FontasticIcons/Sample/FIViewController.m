@@ -44,6 +44,7 @@ const static NSUInteger kColumnsCount = 3;
         iconView.backgroundColor = [UIColor clearColor];
         iconView.icon = [FIEntypoIcon iconWithName:iconName];
         iconView.padding = 2;
+        iconView.iconColor = [self randomColor];
         [scrollView addSubview:iconView];
         currentColumn++;
     }
@@ -61,6 +62,7 @@ const static NSUInteger kColumnsCount = 3;
         iconView.backgroundColor = [UIColor clearColor];
         iconView.icon = [FIEntypoSocialIcon iconWithName:iconName];
         iconView.padding = 2;
+        iconView.iconColor = [self randomColor];
         [scrollView addSubview:iconView];
         currentColumn++;
     }
@@ -69,6 +71,16 @@ const static NSUInteger kColumnsCount = 3;
                                     (currentRow + 1) * size);
     [scrollView setContentSize:contentSize];
     
+}
+
+- (UIColor *)randomColor {
+    int r = arc4random() % 255;
+    int g = arc4random() % 255;
+    int b = arc4random() % 255;
+    return [UIColor colorWithRed:r/255.f
+                           green:g/255.f
+                            blue:b/255.f
+                           alpha:1];
 }
 
 @end
