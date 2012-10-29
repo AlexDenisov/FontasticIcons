@@ -11,5 +11,8 @@
 @interface FIIcon : NSObject
 
 @property (nonatomic, copy) NSString *iconString;
+@property (nonatomic, copy) NSString *iconName;
+
++ (FIIcon *)iconWithName:(NSString *)anIconName;
 
 @end

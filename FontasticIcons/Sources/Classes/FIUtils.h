@@ -10,9 +10,11 @@
 
 
 #if __has_feature( objc_arc )
-    #define fi_arc_release(obj) {}
+    #define fi_arc_release(obj)
     #define fi_arc_dealloc {}
+    #define fi_autorelease(obj) (obj)
 #else
-    #define fi_arc_release(obj) [obj release]
+    #define fi_arc_release(obj) [(obj) release]
     #define fi_arc_dealloc [super dealloc]
+    #define fi_autorelease(obj) [(obj) autorelease]
 #endif

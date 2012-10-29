@@ -9,13 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class FIIcon;
-@class FIFont;
 
 @interface FIIconView : UIView
 
 @property (nonatomic, readwrite) CGFloat padding;
 @property (nonatomic, strong) UIColor *iconColor;
 @property (nonatomic, strong) FIIcon *icon;
-@property (nonatomic, strong) FIFont *font;
 
 @end

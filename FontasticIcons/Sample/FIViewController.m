@@ -7,6 +7,8 @@
 //
 
 #import "FIViewController.h"
+#import "FIEntypoIcon.h"
+#import "FIIconView.h"
 
 @interface FIViewController ()
 
@@ -17,13 +19,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    FIIconView *iconView = [[FIIconView alloc] initWithFrame:
+                            CGRectMake(50, 50, 170, 170)];
+    iconView.backgroundColor = [UIColor clearColor];
+    iconView.icon = [FIEntypoIcon clockIcon];
+    [self.view addSubview:iconView];
 }
 
 @end

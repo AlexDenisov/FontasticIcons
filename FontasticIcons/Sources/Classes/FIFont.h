@@ -1,17 +1,17 @@
 //
-//  FIIconView.m
+//  FIFont.h
 //  FontasticIcons
 //
 //  Created by Alex Denisov on 28.10.12.
 //  Copyright (c) 2012 Alex Denisov. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <CoreText/CoreText.h>
-#import "FIUtils.h"
 
-#import "FIIconView.h"
-#import "FIIcon.h"
+@interface FIFont : NSObject
 
-@implementation FIIconView
++ (FIFont *)entypoFont;
++ (FIFont *)entypoSocialFont;
 
 @end
