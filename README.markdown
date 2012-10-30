@@ -27,7 +27,7 @@ Just add sources from `FontasticIcons/Sources/Classes` directory to your project
     
 ## Available fonts
 
-Right now added only [Entypo](http://www.entypo.com/) font.
+ - Entypo pictograms by Daniel Bruce — www.entypo.com
 
 ## License
 
