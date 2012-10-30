@@ -7,10 +7,8 @@
 //
 
 #import "FIViewController.h"
-#import "FIIconView.h"
 
-#import "FIEntypoIcon.h"
-#import "FIEntypoSocialIcon.h"
+#import "FontasticIcons.h"
 
 @interface FIViewController ()
 

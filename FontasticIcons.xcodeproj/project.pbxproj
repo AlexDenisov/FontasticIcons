@@ -64,6 +64,7 @@
 		CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIEntypoSocialIcon.m; sourceTree = "<group>"; };
 		CA7C561C163F060500AC32A3 /* FIMetaInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIMetaInfoManager.h; sourceTree = "<group>"; };
 		CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIMetaInfoManager.m; sourceTree = "<group>"; };
+		CA7C562D163FAC5300AC32A3 /* FontasticIcons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontasticIcons.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +180,7 @@
 		CA7C55F1163DC51500AC32A3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA7C562B163FAC3000AC32A3 /* FontasticIcons */,
 				CA7C55F9163DC88A00AC32A3 /* Utils */,
 				CA7C55E8163DC49C00AC32A3 /* Base */,
 				CA7C55E9163DC4A300AC32A3 /* Impl */,
@@ -249,6 +251,14 @@
 				CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */,
 			);
 			name = FIMetaInfoManager;
+			sourceTree = "<group>";
+		};
+		CA7C562B163FAC3000AC32A3 /* FontasticIcons */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C562D163FAC5300AC32A3 /* FontasticIcons.h */,
+			);
+			name = FontasticIcons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
