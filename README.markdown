@@ -16,6 +16,8 @@ Just add sources from `FontasticIcons/Sources/Classes` directory to your project
  
 ## Usage
 
+    #import <FontasticIcons.h>
+    ...
     FIIconView *iconView = [[FIIconView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     iconView.backgroundColor = [UIColor clearColor];
     iconView.icon = [FIEntypoIcon leafIcon];
