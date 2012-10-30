@@ -9,6 +9,7 @@
 #import <CoreText/CoreText.h>
 #import "FIFont_Private.h"
 #import "FIFont.h"
+#import "FIUtils.h"
 
 @implementation FIFont
 {
@@ -41,13 +42,15 @@
 }
 
 + (FIFont *)entypoFont {
-    return [[self alloc] initWithFontName:@"Entypo"
-                                   ofType:@"otf"];
+    FIFont *font = [[self alloc] initWithFontName:@"Entypo"
+                                           ofType:@"otf"];
+    return fi_autorelease(font);
 }
 
 + (FIFont *)entypoSocialFont {
-    return [[self alloc] initWithFontName:@"Entypo-Social"
-                                   ofType:@"otf"];
+    FIFont *font = [[self alloc] initWithFontName:@"Entypo-Social"
+                                           ofType:@"otf"];
+    return fi_autorelease(font);
 }
 
 @end

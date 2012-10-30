@@ -21,8 +21,7 @@ const static NSUInteger kColumnsCount = 3;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%@", self.view);
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    UIScrollView *scrollView = [[[UIScrollView alloc] initWithFrame:self.view.bounds] autorelease];
     [self.view addSubview:scrollView];
     
     NSUInteger currentRow = 0;
@@ -34,11 +33,11 @@ const static NSUInteger kColumnsCount = 3;
             currentColumn = 0;
             currentRow++;
         }
-        FIIconView *iconView = [[FIIconView alloc] initWithFrame:
+        FIIconView *iconView = [[[FIIconView alloc] initWithFrame:
                                 CGRectMake(currentColumn * size,
                                            currentRow * size,
                                            size,
-                                           size)];
+                                           size)] autorelease];
         iconView.backgroundColor = [UIColor clearColor];
         iconView.icon = [FIEntypoIcon iconWithName:iconName];
         iconView.padding = 2;
@@ -52,11 +51,11 @@ const static NSUInteger kColumnsCount = 3;
             currentColumn = 0;
             currentRow++;
         }
-        FIIconView *iconView = [[FIIconView alloc] initWithFrame:
+        FIIconView *iconView = [[[FIIconView alloc] initWithFrame:
                                 CGRectMake(currentColumn * size,
                                            currentRow * size,
                                            size,
-                                           size)];
+                                           size)] autorelease];
         iconView.backgroundColor = [UIColor clearColor];
         iconView.icon = [FIEntypoSocialIcon iconWithName:iconName];
         iconView.padding = 2;
