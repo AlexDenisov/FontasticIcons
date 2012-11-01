@@ -25,7 +25,7 @@
 - (void)dealloc {
     self.iconString = nil;
     self.iconName = nil;
-    fi_arc_dealloc;
+    arcsafe_super_dealloc();
 }
 
 + (NSArray *)iconNames {
@@ -44,7 +44,7 @@
     FIIcon *icon = [self new];
     icon.iconName = anIconName;
     icon.iconString = [self iconKeyForName:anIconName];
-    return fi_autorelease(icon);
+    return arcsafe_autorelease(icon);
 }
 
 + (NSDictionary *)iconsDictionary {

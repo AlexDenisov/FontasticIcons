@@ -11,7 +11,8 @@
 
 @interface FIFont ()
 
-- (id)initWithFontName:(NSString *)aName ofType:(NSString *)aType;
++ (FIFont *)fontWithName:(NSString *)aName ofType:(NSString *)aType;
+- (FIFont *)initWithFontName:(NSString *)aName ofType:(NSString *)aType;
 - (CTFontRef)fontRef;
 
 @end

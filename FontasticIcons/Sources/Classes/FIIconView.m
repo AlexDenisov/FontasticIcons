@@ -20,7 +20,7 @@
 - (void)dealloc {
     self.icon = nil;
     self.iconColor = nil;
-    fi_arc_dealloc;
+    arcsafe_super_dealloc();
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -70,7 +70,7 @@
     CTLineDraw(line, context);
     CFRelease(line);
     
-    fi_arc_release(attrString);
+    arcsafe_release(attrString);
 }
 
 @end

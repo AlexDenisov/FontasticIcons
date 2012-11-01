@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-
-#if __has_feature( objc_arc )
-    #define fi_arc_release(obj)
-    #define fi_arc_dealloc {}
-    #define fi_autorelease(obj) (obj)
+#if __has_feature(objc_arc)
+    #define arcsafe_retain(X) (X)
+    #define arcsafe_retain_unused(X)
+    #define arcsafe_release(X)
+    #define arcsafe_super_dealloc()
+    #define arcsafe_autorelease(X) (X)
+    #define arcsafe_autorelease_unused(X)
 #else
-    #define fi_arc_release(obj) [(obj) release]
-    #define fi_arc_dealloc [super dealloc]
-    #define fi_autorelease(obj) [(obj) autorelease]
+    #define arcsafe_retain(X) [(X) retain]
+    #define arcsafe_retain_unused(X) [(X) retain]
+    #define arcsafe_release(X) [(X) release]
+    #define arcsafe_super_dealloc() [super dealloc]
+    #define arcsafe_autorelease(X) [(X) autorelease]
+    #define arcsafe_autorelease_unused(X) [(X) autorelease]
 #endif
+

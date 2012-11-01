@@ -16,6 +16,12 @@
     CTFontRef _font;
 }
 
++ (FIFont *)fontWithName:(NSString *)aName ofType:(NSString *)aType {
+    FIFont *font = [[FIFont alloc] initWithFontName:aName
+                                             ofType:aType];
+    return arcsafe_autorelease(font);
+}
+
 - (id)initWithFontName:(NSString *)aName ofType:(NSString *)aType {
     self = [super init];
     if (self) {
@@ -42,15 +48,11 @@
 }
 
 + (FIFont *)entypoFont {
-    FIFont *font = [[self alloc] initWithFontName:@"Entypo"
-                                           ofType:@"otf"];
-    return fi_autorelease(font);
+    return [self fontWithName:@"Entypo" ofType:@"otf"];
 }
 
 + (FIFont *)entypoSocialFont {
-    FIFont *font = [[self alloc] initWithFontName:@"Entypo-Social"
-                                           ofType:@"otf"];
-    return fi_autorelease(font);
+    return [self fontWithName:@"Entypo-Social" ofType:@"otf"];
 }
 
 @end
