@@ -33,5 +33,5 @@ Just add sources from `FontasticIcons/Sources/Classes` directory to your project
 
 Source code distributed under MIT license.
 
-**Note that all fonts have it's own license.**
+**Note that all fonts have their own license.**
 
