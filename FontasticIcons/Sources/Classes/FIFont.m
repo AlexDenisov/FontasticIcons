@@ -29,7 +29,7 @@
                                                              ofType:aType];
         NSData *data = [[NSData alloc] initWithContentsOfFile:fontPath];
         CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((CFDataRef)data);
-        [data release];
+        arcsafe_release(data);
         
         CGFontRef cgFont = CGFontCreateWithDataProvider(fontProvider);
         CGDataProviderRelease(fontProvider);
