@@ -42,6 +42,11 @@ const static NSUInteger kColumnsCount = 3;
         iconView.icon = [self.iconClass iconWithName:iconName];
         iconView.padding = 2;
         iconView.iconColor = [self randomColor];
+        UITapGestureRecognizer *recognizer = [[[UITapGestureRecognizer alloc]
+                                              initWithTarget:self
+                                              action:@selector(iconSelected:)] autorelease];
+        recognizer.numberOfTapsRequired = 1;
+        [iconView addGestureRecognizer:recognizer];
         [scrollView addSubview:iconView];
         currentColumn++;
     }
@@ -59,6 +64,12 @@ const static NSUInteger kColumnsCount = 3;
                            green:g/255.f
                             blue:b/255.f
                            alpha:1];
+}
+
+
+- (void)iconSelected:(UITapGestureRecognizer *)sender {
+    FIIconView *view = (FIIconView *)sender.view;
+    [self.navigationItem setTitle:view.icon.iconName];
 }
 
 @end
