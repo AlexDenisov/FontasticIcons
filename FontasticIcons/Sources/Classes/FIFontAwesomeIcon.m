@@ -232,4 +232,838 @@
     };
 }
 
+#pragma mark - Icons
+
++ (FIIcon *)glassIcon {
+    return [self iconWithName:@"glass"];
+}
+
++ (FIIcon *)musicIcon {
+    return [self iconWithName:@"music"];
+}
+
++ (FIIcon *)searchIcon {
+    return [self iconWithName:@"search"];
+}
+
++ (FIIcon *)mailIcon {
+    return [self iconWithName:@"mail"];
+}
+
++ (FIIcon *)mailAltIcon {
+    return [self iconWithName:@"mail-alt"];
+}
+
++ (FIIcon *)heartIcon {
+    return [self iconWithName:@"heart"];
+}
+
++ (FIIcon *)heartEmptyIcon {
+    return [self iconWithName:@"heart-empty"];
+}
+
++ (FIIcon *)starIcon {
+    return [self iconWithName:@"star"];
+}
+
++ (FIIcon *)starEmptyIcon {
+    return [self iconWithName:@"star-empty"];
+}
+
++ (FIIcon *)starHalfIcon {
+    return [self iconWithName:@"star-half"];
+}
+
++ (FIIcon *)userIcon {
+    return [self iconWithName:@"user"];
+}
+
++ (FIIcon *)usersIcon {
+    return [self iconWithName:@"users"];
+}
+
++ (FIIcon *)userMdIcon {
+    return [self iconWithName:@"user-md"];
+}
+
++ (FIIcon *)videoIcon {
+    return [self iconWithName:@"video"];
+}
+
++ (FIIcon *)videocamIcon {
+    return [self iconWithName:@"videocam"];
+}
+
++ (FIIcon *)pictureIcon {
+    return [self iconWithName:@"picture"];
+}
+
++ (FIIcon *)cameraIcon {
+    return [self iconWithName:@"camera"];
+}
+
++ (FIIcon *)cameraAltIcon {
+    return [self iconWithName:@"camera-alt"];
+}
+
++ (FIIcon *)thLargeIcon {
+    return [self iconWithName:@"th-large"];
+}
+
++ (FIIcon *)thIcon {
+    return [self iconWithName:@"th"];
+}
+
++ (FIIcon *)thListIcon {
+    return [self iconWithName:@"th-list"];
+}
+
++ (FIIcon *)okIcon {
+    return [self iconWithName:@"ok"];
+}
+
++ (FIIcon *)okCircleIcon {
+    return [self iconWithName:@"ok-circle"];
+}
+
++ (FIIcon *)okCircle2Icon {
+    return [self iconWithName:@"ok-circle2"];
+}
+
++ (FIIcon *)cancelIcon {
+    return [self iconWithName:@"cancel"];
+}
+
++ (FIIcon *)cancelCircleIcon {
+    return [self iconWithName:@"cancel-circle"];
+}
+
++ (FIIcon *)cancelCircle2Icon {
+    return [self iconWithName:@"cancel-circle2"];
+}
+
++ (FIIcon *)plusIcon {
+    return [self iconWithName:@"plus"];
+}
+
++ (FIIcon *)plusCircleIcon {
+    return [self iconWithName:@"plus-circle"];
+}
+
++ (FIIcon *)minusIcon {
+    return [self iconWithName:@"minus"];
+}
+
++ (FIIcon *)minusCircleIcon {
+    return [self iconWithName:@"minus-circle"];
+}
+
++ (FIIcon *)helpCircleIcon {
+    return [self iconWithName:@"help-circle"];
+}
+
++ (FIIcon *)infoCircleIcon {
+    return [self iconWithName:@"info-circle"];
+}
+
++ (FIIcon *)homeIcon {
+    return [self iconWithName:@"home"];
+}
+
++ (FIIcon *)linkIcon {
+    return [self iconWithName:@"link"];
+}
+
++ (FIIcon *)linkExtIcon {
+    return [self iconWithName:@"link-ext"];
+}
+
++ (FIIcon *)attachIcon {
+    return [self iconWithName:@"attach"];
+}
+
++ (FIIcon *)lockIcon {
+    return [self iconWithName:@"lock"];
+}
+
++ (FIIcon *)lockOpenIcon {
+    return [self iconWithName:@"lock-open"];
+}
+
++ (FIIcon *)pinIcon {
+    return [self iconWithName:@"pin"];
+}
+
++ (FIIcon *)eyeIcon {
+    return [self iconWithName:@"eye"];
+}
+
++ (FIIcon *)eyeOffIcon {
+    return [self iconWithName:@"eye-off"];
+}
+
++ (FIIcon *)tagIcon {
+    return [self iconWithName:@"tag"];
+}
+
++ (FIIcon *)tagsIcon {
+    return [self iconWithName:@"tags"];
+}
+
++ (FIIcon *)bookmarkIcon {
+    return [self iconWithName:@"bookmark"];
+}
+
++ (FIIcon *)bookmarkEmptyIcon {
+    return [self iconWithName:@"bookmark-empty"];
+}
+
++ (FIIcon *)flagIcon {
+    return [self iconWithName:@"flag"];
+}
+
++ (FIIcon *)thumbsUpIcon {
+    return [self iconWithName:@"thumbs-up"];
+}
+
++ (FIIcon *)thumbsDownIcon {
+    return [self iconWithName:@"thumbs-down"];
+}
+
++ (FIIcon *)downloadIcon {
+    return [self iconWithName:@"download"];
+}
+
++ (FIIcon *)uploadIcon {
+    return [self iconWithName:@"upload"];
+}
+
++ (FIIcon *)forwardIcon {
+    return [self iconWithName:@"forward"];
+}
+
++ (FIIcon *)exportIcon {
+    return [self iconWithName:@"export"];
+}
+
++ (FIIcon *)pencilIcon {
+    return [self iconWithName:@"pencil"];
+}
+
++ (FIIcon *)editIcon {
+    return [self iconWithName:@"edit"];
+}
+
++ (FIIcon *)printIcon {
+    return [self iconWithName:@"print"];
+}
+
++ (FIIcon *)retweetIcon {
+    return [self iconWithName:@"retweet"];
+}
+
++ (FIIcon *)commentIcon {
+    return [self iconWithName:@"comment"];
+}
+
++ (FIIcon *)chatIcon {
+    return [self iconWithName:@"chat"];
+}
+
++ (FIIcon *)bellIcon {
+    return [self iconWithName:@"bell"];
+}
+
++ (FIIcon *)attentionIcon {
+    return [self iconWithName:@"attention"];
+}
+
++ (FIIcon *)attentionCircleIcon {
+    return [self iconWithName:@"attention-circle"];
+}
+
++ (FIIcon *)locationIcon {
+    return [self iconWithName:@"location"];
+}
+
++ (FIIcon *)trashIcon {
+    return [self iconWithName:@"trash"];
+}
+
++ (FIIcon *)docIcon {
+    return [self iconWithName:@"doc"];
+}
+
++ (FIIcon *)docsIcon {
+    return [self iconWithName:@"docs"];
+}
+
++ (FIIcon *)folderIcon {
+    return [self iconWithName:@"folder"];
+}
+
++ (FIIcon *)folderOpenIcon {
+    return [self iconWithName:@"folder-open"];
+}
+
++ (FIIcon *)rssIcon {
+    return [self iconWithName:@"rss"];
+}
+
++ (FIIcon *)phoneIcon {
+    return [self iconWithName:@"phone"];
+}
+
++ (FIIcon *)phoneSquaredIcon {
+    return [self iconWithName:@"phone-squared"];
+}
+
++ (FIIcon *)menuIcon {
+    return [self iconWithName:@"menu"];
+}
+
++ (FIIcon *)cogIcon {
+    return [self iconWithName:@"cog"];
+}
+
++ (FIIcon *)cogAltIcon {
+    return [self iconWithName:@"cog-alt"];
+}
+
++ (FIIcon *)wrenchIcon {
+    return [self iconWithName:@"wrench"];
+}
+
++ (FIIcon *)basketIcon {
+    return [self iconWithName:@"basket"];
+}
+
++ (FIIcon *)calendarIcon {
+    return [self iconWithName:@"calendar"];
+}
+
++ (FIIcon *)loginIcon {
+    return [self iconWithName:@"login"];
+}
+
++ (FIIcon *)logoutIcon {
+    return [self iconWithName:@"logout"];
+}
+
++ (FIIcon *)volumeOffIcon {
+    return [self iconWithName:@"volume-off"];
+}
+
++ (FIIcon *)volumeDownIcon {
+    return [self iconWithName:@"volume-down"];
+}
+
++ (FIIcon *)volumeUpIcon {
+    return [self iconWithName:@"volume-up"];
+}
+
++ (FIIcon *)headphonesIcon {
+    return [self iconWithName:@"headphones"];
+}
+
++ (FIIcon *)clockIcon {
+    return [self iconWithName:@"clock"];
+}
+
++ (FIIcon *)blockIcon {
+    return [self iconWithName:@"block"];
+}
+
++ (FIIcon *)resizeFullIcon {
+    return [self iconWithName:@"resize-full"];
+}
+
++ (FIIcon *)resizeFullAltIcon {
+    return [self iconWithName:@"resize-full-alt"];
+}
+
++ (FIIcon *)resizeSmallIcon {
+    return [self iconWithName:@"resize-small"];
+}
+
++ (FIIcon *)resizeVerticalIcon {
+    return [self iconWithName:@"resize-vertical"];
+}
+
++ (FIIcon *)resizeHorizontalIcon {
+    return [self iconWithName:@"resize-horizontal"];
+}
+
++ (FIIcon *)moveIcon {
+    return [self iconWithName:@"move"];
+}
+
++ (FIIcon *)zoomInIcon {
+    return [self iconWithName:@"zoom-in"];
+}
+
++ (FIIcon *)zoomOutIcon {
+    return [self iconWithName:@"zoom-out"];
+}
+
++ (FIIcon *)downCircle2Icon {
+    return [self iconWithName:@"down-circle2"];
+}
+
++ (FIIcon *)upCircle2Icon {
+    return [self iconWithName:@"up-circle2"];
+}
+
++ (FIIcon *)downDirIcon {
+    return [self iconWithName:@"down-dir"];
+}
+
++ (FIIcon *)upDirIcon {
+    return [self iconWithName:@"up-dir"];
+}
+
++ (FIIcon *)leftDirIcon {
+    return [self iconWithName:@"left-dir"];
+}
+
++ (FIIcon *)rightDirIcon {
+    return [self iconWithName:@"right-dir"];
+}
+
++ (FIIcon *)downOpenIcon {
+    return [self iconWithName:@"down-open"];
+}
+
++ (FIIcon *)leftOpenIcon {
+    return [self iconWithName:@"left-open"];
+}
+
++ (FIIcon *)rightOpenIcon {
+    return [self iconWithName:@"right-open"];
+}
+
++ (FIIcon *)upOpenIcon {
+    return [self iconWithName:@"up-open"];
+}
+
++ (FIIcon *)downIcon {
+    return [self iconWithName:@"down"];
+}
+
++ (FIIcon *)leftIcon {
+    return [self iconWithName:@"left"];
+}
+
++ (FIIcon *)rightIcon {
+    return [self iconWithName:@"right"];
+}
+
++ (FIIcon *)upIcon {
+    return [self iconWithName:@"up"];
+}
+
++ (FIIcon *)rightHandIcon {
+    return [self iconWithName:@"right-hand"];
+}
+
++ (FIIcon *)leftHandIcon {
+    return [self iconWithName:@"left-hand"];
+}
+
++ (FIIcon *)upHandIcon {
+    return [self iconWithName:@"up-hand"];
+}
+
++ (FIIcon *)downHandIcon {
+    return [self iconWithName:@"down-hand"];
+}
+
++ (FIIcon *)leftCircledIcon {
+    return [self iconWithName:@"left-circled"];
+}
+
++ (FIIcon *)rightCircledIcon {
+    return [self iconWithName:@"right-circled"];
+}
+
++ (FIIcon *)upCircledIcon {
+    return [self iconWithName:@"up-circled"];
+}
+
++ (FIIcon *)downCircledIcon {
+    return [self iconWithName:@"down-circled"];
+}
+
++ (FIIcon *)cwIcon {
+    return [self iconWithName:@"cw"];
+}
+
++ (FIIcon *)ccwIcon {
+    return [self iconWithName:@"ccw"];
+}
+
++ (FIIcon *)arrowsCwIcon {
+    return [self iconWithName:@"arrows-cw"];
+}
+
++ (FIIcon *)shuffleIcon {
+    return [self iconWithName:@"shuffle"];
+}
+
++ (FIIcon *)playIcon {
+    return [self iconWithName:@"play"];
+}
+
++ (FIIcon *)playCircle2Icon {
+    return [self iconWithName:@"play-circle2"];
+}
+
++ (FIIcon *)stopIcon {
+    return [self iconWithName:@"stop"];
+}
+
++ (FIIcon *)pauseIcon {
+    return [self iconWithName:@"pause"];
+}
+
++ (FIIcon *)toEndIcon {
+    return [self iconWithName:@"to-end"];
+}
+
++ (FIIcon *)toEndAltIcon {
+    return [self iconWithName:@"to-end-alt"];
+}
+
++ (FIIcon *)toStartIcon {
+    return [self iconWithName:@"to-start"];
+}
+
++ (FIIcon *)toStartAltIcon {
+    return [self iconWithName:@"to-start-alt"];
+}
+
++ (FIIcon *)fastFwIcon {
+    return [self iconWithName:@"fast-fw"];
+}
+
++ (FIIcon *)fastBwIcon {
+    return [self iconWithName:@"fast-bw"];
+}
+
++ (FIIcon *)ejectIcon {
+    return [self iconWithName:@"eject"];
+}
+
++ (FIIcon *)targetIcon {
+    return [self iconWithName:@"target"];
+}
+
++ (FIIcon *)signalIcon {
+    return [self iconWithName:@"signal"];
+}
+
++ (FIIcon *)awardIcon {
+    return [self iconWithName:@"award"];
+}
+
++ (FIIcon *)inboxIcon {
+    return [self iconWithName:@"inbox"];
+}
+
++ (FIIcon *)globeIcon {
+    return [self iconWithName:@"globe"];
+}
+
++ (FIIcon *)cloudIcon {
+    return [self iconWithName:@"cloud"];
+}
+
++ (FIIcon *)flashIcon {
+    return [self iconWithName:@"flash"];
+}
+
++ (FIIcon *)umbrellaIcon {
+    return [self iconWithName:@"umbrella"];
+}
+
++ (FIIcon *)flightIcon {
+    return [self iconWithName:@"flight"];
+}
+
++ (FIIcon *)leafIcon {
+    return [self iconWithName:@"leaf"];
+}
+
++ (FIIcon *)fontIcon {
+    return [self iconWithName:@"font"];
+}
+
++ (FIIcon *)boldIcon {
+    return [self iconWithName:@"bold"];
+}
+
++ (FIIcon *)italicIcon {
+    return [self iconWithName:@"italic"];
+}
+
++ (FIIcon *)textHeightIcon {
+    return [self iconWithName:@"text-height"];
+}
+
++ (FIIcon *)textWidthIcon {
+    return [self iconWithName:@"text-width"];
+}
+
++ (FIIcon *)alignLeftIcon {
+    return [self iconWithName:@"align-left"];
+}
+
++ (FIIcon *)alignCenterIcon {
+    return [self iconWithName:@"align-center"];
+}
+
++ (FIIcon *)alignRightIcon {
+    return [self iconWithName:@"align-right"];
+}
+
++ (FIIcon *)alignJustifyIcon {
+    return [self iconWithName:@"align-justify"];
+}
+
++ (FIIcon *)listIcon {
+    return [self iconWithName:@"list"];
+}
+
++ (FIIcon *)indentLeftIcon {
+    return [self iconWithName:@"indent-left"];
+}
+
++ (FIIcon *)indentRightIcon {
+    return [self iconWithName:@"indent-right"];
+}
+
++ (FIIcon *)listBulletIcon {
+    return [self iconWithName:@"list-bullet"];
+}
+
++ (FIIcon *)listNumberedIcon {
+    return [self iconWithName:@"list-numbered"];
+}
+
++ (FIIcon *)strikeIcon {
+    return [self iconWithName:@"strike"];
+}
+
++ (FIIcon *)underlineIcon {
+    return [self iconWithName:@"underline"];
+}
+
++ (FIIcon *)tableIcon {
+    return [self iconWithName:@"table"];
+}
+
++ (FIIcon *)columnsIcon {
+    return [self iconWithName:@"columns"];
+}
+
++ (FIIcon *)scissorsIcon {
+    return [self iconWithName:@"scissors"];
+}
+
++ (FIIcon *)pasteIcon {
+    return [self iconWithName:@"paste"];
+}
+
++ (FIIcon *)briefcaseIcon {
+    return [self iconWithName:@"briefcase"];
+}
+
++ (FIIcon *)offIcon {
+    return [self iconWithName:@"off"];
+}
+
++ (FIIcon *)roadIcon {
+    return [self iconWithName:@"road"];
+}
+
++ (FIIcon *)listAltIcon {
+    return [self iconWithName:@"list-alt"];
+}
+
++ (FIIcon *)qrcodeIcon {
+    return [self iconWithName:@"qrcode"];
+}
+
++ (FIIcon *)barcodeIcon {
+    return [self iconWithName:@"barcode"];
+}
+
++ (FIIcon *)bookIcon {
+    return [self iconWithName:@"book"];
+}
+
++ (FIIcon *)ajustIcon {
+    return [self iconWithName:@"ajust"];
+}
+
++ (FIIcon *)tintIcon {
+    return [self iconWithName:@"tint"];
+}
+
++ (FIIcon *)checkIcon {
+    return [self iconWithName:@"check"];
+}
+
++ (FIIcon *)checkEmptyIcon {
+    return [self iconWithName:@"check-empty"];
+}
+
++ (FIIcon *)asteriskIcon {
+    return [self iconWithName:@"asterisk"];
+}
+
++ (FIIcon *)giftIcon {
+    return [self iconWithName:@"gift"];
+}
+
++ (FIIcon *)fireIcon {
+    return [self iconWithName:@"fire"];
+}
+
++ (FIIcon *)magnetIcon {
+    return [self iconWithName:@"magnet"];
+}
+
++ (FIIcon *)chartBarIcon {
+    return [self iconWithName:@"chart-bar"];
+}
+
++ (FIIcon *)creditCardIcon {
+    return [self iconWithName:@"credit-card"];
+}
+
++ (FIIcon *)floppyIcon {
+    return [self iconWithName:@"floppy"];
+}
+
++ (FIIcon *)megaphoneIcon {
+    return [self iconWithName:@"megaphone"];
+}
+
++ (FIIcon *)hddIcon {
+    return [self iconWithName:@"hdd"];
+}
+
++ (FIIcon *)keyIcon {
+    return [self iconWithName:@"key"];
+}
+
++ (FIIcon *)certificateIcon {
+    return [self iconWithName:@"certificate"];
+}
+
++ (FIIcon *)tasksIcon {
+    return [self iconWithName:@"tasks"];
+}
+
++ (FIIcon *)filterIcon {
+    return [self iconWithName:@"filter"];
+}
+
++ (FIIcon *)beakerIcon {
+    return [self iconWithName:@"beaker"];
+}
+
++ (FIIcon *)magicIcon {
+    return [self iconWithName:@"magic"];
+}
+
++ (FIIcon *)truckIcon {
+    return [self iconWithName:@"truck"];
+}
+
++ (FIIcon *)moneyIcon {
+    return [self iconWithName:@"money"];
+}
+
++ (FIIcon *)sortIcon {
+    return [self iconWithName:@"sort"];
+}
+
++ (FIIcon *)sortDownIcon {
+    return [self iconWithName:@"sort-down"];
+}
+
++ (FIIcon *)sortUpIcon {
+    return [self iconWithName:@"sort-up"];
+}
+
++ (FIIcon *)hammerIcon {
+    return [self iconWithName:@"hammer"];
+}
+
++ (FIIcon *)gaugeIcon {
+    return [self iconWithName:@"gauge"];
+}
+
++ (FIIcon *)sitemapIcon {
+    return [self iconWithName:@"sitemap"];
+}
+
++ (FIIcon *)githubSquaredIcon {
+    return [self iconWithName:@"github-squared"];
+}
+
++ (FIIcon *)githubIcon {
+    return [self iconWithName:@"github"];
+}
+
++ (FIIcon *)twitterSquaredIcon {
+    return [self iconWithName:@"twitter-squared"];
+}
+
++ (FIIcon *)twitterIcon {
+    return [self iconWithName:@"twitter"];
+}
+
++ (FIIcon *)facebookSquaredIcon {
+    return [self iconWithName:@"facebook-squared"];
+}
+
++ (FIIcon *)facebookIcon {
+    return [self iconWithName:@"facebook"];
+}
+
++ (FIIcon *)linkedinSquaredIcon {
+    return [self iconWithName:@"linkedin-squared"];
+}
+
++ (FIIcon *)linkedinIcon {
+    return [self iconWithName:@"linkedin"];
+}
+
++ (FIIcon *)pinterestCircledIcon {
+    return [self iconWithName:@"pinterest-circled"];
+}
+
++ (FIIcon *)pinterestSquaredIcon {
+    return [self iconWithName:@"pinterest-squared"];
+}
+
++ (FIIcon *)gplusSquaredIcon {
+    return [self iconWithName:@"gplus-squared"];
+}
+
++ (FIIcon *)gplusIcon {
+    return [self iconWithName:@"gplus"];
+}
+
++ (FIIcon *)blankIcon {
+    return [self iconWithName:@"blank"];
+}
+
++ (FIIcon *)lemonIcon {
+    return [self iconWithName:@"lemon"];
+}
+
 @end
