@@ -47,6 +47,12 @@
     return self->_font;
 }
 
+- (NSString *)fontName {
+    return (NSString *)CTFontCopyFullName(self->_font);
+}
+
+#pragma mark - Fonts
+
 + (FIFont *)entypoFont {
     return [self fontWithName:@"Entypo" ofType:@"otf"];
 }
@@ -55,8 +61,8 @@
     return [self fontWithName:@"Entypo-Social" ofType:@"otf"];
 }
 
-- (NSString *)fontName {
-    return (NSString *)CTFontCopyFullName(self->_font);
++ (FIFont *)fontAwesomeFont {
+    return [self fontWithName:@"fontawesome" ofType:@"ttf"];
 }
 
 @end

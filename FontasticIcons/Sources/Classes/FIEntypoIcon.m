@@ -7,7 +7,6 @@
 //
 
 #import "FIEntypoIcon.h"
-#import "FIIcon_Private.h"
 #import "FIFont.h"
 
 @implementation FIEntypoIcon

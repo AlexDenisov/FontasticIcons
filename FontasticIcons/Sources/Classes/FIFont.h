@@ -14,5 +14,6 @@
 
 + (FIFont *)entypoFont;
 + (FIFont *)entypoSocialFont;
++ (FIFont *)fontAwesomeFont;
 
 @end

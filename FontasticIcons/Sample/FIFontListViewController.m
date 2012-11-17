@@ -7,10 +7,11 @@
 //
 
 #import "FIFontListViewController.h"
-#import "FIIcon.h"
+#import "FIViewController.h"
+
 #import "FIEntypoIcon.h"
 #import "FIEntypoSocialIcon.h"
-#import "FIViewController.h"
+#import "FIFontAwesomeIcon.h"
 
 @implementation FIFontListViewController
 {
@@ -23,7 +24,8 @@
     _icons = [[NSArray alloc] initWithArray:
               @[
                 [FIEntypoIcon class],
-                [FIEntypoSocialIcon class]
+                [FIEntypoSocialIcon class],
+                [FIFontAwesomeIcon class]
               ]];
     _fontListTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _fontListTableView.delegate = self;
