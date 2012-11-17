@@ -10,6 +10,8 @@
 
 @interface FIFont : NSObject
 
+- (NSString *)fontName;
+
 + (FIFont *)entypoFont;
 + (FIFont *)entypoSocialFont;
 

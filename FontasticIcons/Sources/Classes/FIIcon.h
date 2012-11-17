@@ -16,7 +16,7 @@
 + (FIIcon *)iconWithName:(NSString *)anIconName;
 + (NSArray *)iconNames;
 
-+ (NSString *)fontKitName;
-- (NSString *)fontKitName;
++ (NSString *)fontSetName;
+- (NSString *)fontSetName;
 
 @end

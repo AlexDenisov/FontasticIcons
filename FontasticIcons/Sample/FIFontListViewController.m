@@ -20,7 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _icons = [[NSArray alloc] initWithArray:@[[FIEntypoIcon class]]];
+    _icons = [[NSArray alloc] initWithArray:
+              @[
+                [FIEntypoIcon class],
+                [FIEntypoSocialIcon class]
+              ]];
     _fontListTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _fontListTableView.delegate = self;
     _fontListTableView.dataSource = self;
@@ -44,7 +48,7 @@
                                       reuseIdentifier:kCellIdentifier] autorelease];
     }
     Class iconKit = _icons[indexPath.row];
-    cell.textLabel.text = [iconKit performSelector:@selector(fontKitName)];
+    cell.textLabel.text = [iconKit performSelector:@selector(fontSetName)];
     return cell;
 }
 

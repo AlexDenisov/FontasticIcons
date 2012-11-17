@@ -55,4 +55,8 @@
     return [self fontWithName:@"Entypo-Social" ofType:@"otf"];
 }
 
+- (NSString *)fontName {
+    return (NSString *)CTFontCopyFullName(self->_font);
+}
+
 @end

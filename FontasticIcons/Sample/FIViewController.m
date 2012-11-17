@@ -21,6 +21,7 @@ const static NSUInteger kColumnsCount = 3;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     UIScrollView *scrollView = [[[UIScrollView alloc] initWithFrame:self.view.frame] autorelease];
     [self.view addSubview:scrollView];    
     NSUInteger currentRow = 0;
