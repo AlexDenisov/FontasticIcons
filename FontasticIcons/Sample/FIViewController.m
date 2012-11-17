@@ -21,9 +21,8 @@ const static NSUInteger kColumnsCount = 3;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIScrollView *scrollView = [[[UIScrollView alloc] initWithFrame:self.view.bounds] autorelease];
-    [self.view addSubview:scrollView];
-    
+    UIScrollView *scrollView = [[[UIScrollView alloc] initWithFrame:self.view.frame] autorelease];
+    [self.view addSubview:scrollView];    
     NSUInteger currentRow = 0;
     NSUInteger currentColumn = 0;
     CGFloat size = self.view.bounds.size.width/kColumnsCount;
@@ -47,7 +46,7 @@ const static NSUInteger kColumnsCount = 3;
     }
     
     CGSize contentSize = CGSizeMake(kColumnsCount * size,
-                                    (currentRow + 1) * size);
+                                    (currentRow + 2) * size);
     [scrollView setContentSize:contentSize];
 }
 

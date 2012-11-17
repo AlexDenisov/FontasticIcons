@@ -25,7 +25,7 @@
 
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    CTFontRef font = [[[self.icon class] iconFont] fontRef];
+    CTFontRef font = [[[self.icon class] metaFont] fontRef];
     if (self.iconColor == nil) {
         self.iconColor = [UIColor blackColor];
     }

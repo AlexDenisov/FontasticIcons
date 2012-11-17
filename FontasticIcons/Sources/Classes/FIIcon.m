@@ -29,14 +29,18 @@
 }
 
 + (NSArray *)iconNames {
-    return [[self iconsDictionary] allKeys];
+    return [[self metaIconsDictionary] allKeys];
 }
 
 + (NSString *)iconKeyForName:(NSString *)aName {
-    return [[self iconsDictionary] valueForKey:aName];
+    return [[self metaIconsDictionary] valueForKey:aName];
 }
 
 + (FIFont *)iconFont {
+    return nil;
+}
+
++ (FIFont *)metaFont {
     return [[FIMetaInfoManager sharedManager] fontForClass:self];
 }
 
@@ -48,6 +52,10 @@
 }
 
 + (NSDictionary *)iconsDictionary {
+    return nil;
+}
+
++ (NSDictionary *)metaIconsDictionary {
     return [[FIMetaInfoManager sharedManager] iconSetForClass:self];
 }
 

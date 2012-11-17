@@ -16,4 +16,7 @@
 + (NSDictionary *)iconsDictionary;
 + (FIFont *)iconFont;
 
++ (FIFont *)metaFont;
++ (NSDictionary *)metaIconsDictionary;
+
 @end
