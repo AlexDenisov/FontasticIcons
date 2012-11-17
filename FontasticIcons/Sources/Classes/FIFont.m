@@ -65,4 +65,8 @@
     return [self fontWithName:@"fontawesome" ofType:@"ttf"];
 }
 
++ (FIFont *)iconicFont {
+    return [self fontWithName:@"iconic" ofType:@"otf"];
+}
+
 @end
