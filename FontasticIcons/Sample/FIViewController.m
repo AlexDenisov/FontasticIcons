@@ -28,7 +28,7 @@ const static NSUInteger kColumnsCount = 3;
     NSUInteger currentColumn = 0;
     CGFloat size = self.view.bounds.size.width/kColumnsCount;
     
-    for (NSString *iconName in [FIEntypoIcon iconNames]) {
+    for (NSString *iconName in [self.iconClass iconNames]) {
         if (currentColumn && currentColumn % kColumnsCount == 0) {
             currentColumn = 0;
             currentRow++;
@@ -39,25 +39,7 @@ const static NSUInteger kColumnsCount = 3;
                                            size,
                                            size)] autorelease];
         iconView.backgroundColor = [UIColor clearColor];
-        iconView.icon = [FIEntypoIcon iconWithName:iconName];
-        iconView.padding = 2;
-        iconView.iconColor = [self randomColor];
-        [scrollView addSubview:iconView];
-        currentColumn++;
-    }
-    
-    for (NSString *iconName in [FIEntypoSocialIcon iconNames]) {
-        if (currentColumn % kColumnsCount == 0) {
-            currentColumn = 0;
-            currentRow++;
-        }
-        FIIconView *iconView = [[[FIIconView alloc] initWithFrame:
-                                CGRectMake(currentColumn * size,
-                                           currentRow * size,
-                                           size,
-                                           size)] autorelease];
-        iconView.backgroundColor = [UIColor clearColor];
-        iconView.icon = [FIEntypoSocialIcon iconWithName:iconName];
+        iconView.icon = [self.iconClass iconWithName:iconName];
         iconView.padding = 2;
         iconView.iconColor = [self randomColor];
         [scrollView addSubview:iconView];
@@ -67,7 +49,6 @@ const static NSUInteger kColumnsCount = 3;
     CGSize contentSize = CGSizeMake(kColumnsCount * size,
                                     (currentRow + 1) * size);
     [scrollView setContentSize:contentSize];
-    
 }
 
 - (UIColor *)randomColor {

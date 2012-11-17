@@ -14,6 +14,10 @@
 
 #pragma mark - Overriden methods
 
++ (NSString *)fontKitName {
+    return @"Entypo";
+}
+
 + (FIFont *)iconFont {
     return [FIFont entypoFont];
 }

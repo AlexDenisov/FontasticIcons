@@ -10,4 +10,6 @@
 
 @interface FIViewController : UIViewController
 
+@property (nonatomic, retain) Class iconClass;
+
 @end

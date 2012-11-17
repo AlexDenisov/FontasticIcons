@@ -51,4 +51,12 @@
     return [[FIMetaInfoManager sharedManager] iconSetForClass:self];
 }
 
++ (NSString *)fontKitName {
+    return nil;
+}
+
+- (NSString *)fontKitName {
+    return [[self class] fontKitName];
+}
+
 @end

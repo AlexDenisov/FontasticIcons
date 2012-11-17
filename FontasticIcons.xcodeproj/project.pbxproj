@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA31B9A71657E194002A9EDD /* FIFontListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9A61657E194002A9EDD /* FIFontListViewController.m */; };
 		CA7C55C5163DC00700AC32A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C4163DC00700AC32A3 /* UIKit.framework */; };
 		CA7C55C7163DC00700AC32A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C6163DC00700AC32A3 /* Foundation.framework */; };
 		CA7C55C9163DC00700AC32A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C8163DC00700AC32A3 /* CoreGraphics.framework */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA31B9A51657E194002A9EDD /* FIFontListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFontListViewController.h; sourceTree = "<group>"; };
+		CA31B9A61657E194002A9EDD /* FIFontListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFontListViewController.m; sourceTree = "<group>"; };
 		CA7C55C0163DC00700AC32A3 /* FontasticIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontasticIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7C55C4163DC00700AC32A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA7C55C6163DC00700AC32A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 				CA7C55DD163DC00700AC32A3 /* FIViewController.m */,
 				CA7C55DF163DC00700AC32A3 /* FIViewController.xib */,
 				CA7C55CB163DC00700AC32A3 /* Supporting Files */,
+				CA31B9A51657E194002A9EDD /* FIFontListViewController.h */,
+				CA31B9A61657E194002A9EDD /* FIFontListViewController.m */,
 			);
 			name = Sample;
 			path = FontasticIcons/Sample;
@@ -339,6 +344,7 @@
 				CA7C5606163E3AAD00AC32A3 /* FIEntypoIcon.m in Sources */,
 				CA7C561A163EFBCC00AC32A3 /* FIEntypoSocialIcon.m in Sources */,
 				CA7C561E163F060500AC32A3 /* FIMetaInfoManager.m in Sources */,
+				CA31B9A71657E194002A9EDD /* FIFontListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

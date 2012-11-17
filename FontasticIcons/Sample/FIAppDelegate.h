@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class FIViewController;
-
 @interface FIAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) FIViewController *viewController;
+@property (strong, nonatomic) UIViewController *viewController;
 
 @end
