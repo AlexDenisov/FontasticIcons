@@ -11,3 +11,4 @@
 #import "FIIconView.h"
 #import "FIEntypoIcon.h"
 #import "FIEntypoSocialIcon.h"
+#import "FIFontAwesomeIcon.h"
