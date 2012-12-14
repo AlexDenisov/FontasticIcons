@@ -12,3 +12,4 @@
 #import "FIEntypoIcon.h"
 #import "FIEntypoSocialIcon.h"
 #import "FIFontAwesomeIcon.h"
+#import "FIIconicIcon.h"
