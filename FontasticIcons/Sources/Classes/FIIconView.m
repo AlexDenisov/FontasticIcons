@@ -30,7 +30,7 @@
         self.iconColor = [UIColor blackColor];
     }
     CGColorRef color = self.iconColor.CGColor;
-    NSString *iconString = self.icon.iconString;
+    NSString *iconString = (self.icon.iconString) ? self.icon.iconString : @"";
     NSDictionary *attributesDict = [NSDictionary dictionaryWithObjectsAndKeys:
                                     (id)font, (NSString *)kCTFontAttributeName,
                                     color, (NSString *)kCTForegroundColorAttributeName,
