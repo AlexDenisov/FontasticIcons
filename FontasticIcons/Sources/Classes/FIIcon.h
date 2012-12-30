@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FIIcon : NSObject
+@interface FIIcon : NSObject <NSCopying>
 
 @property (nonatomic, copy) NSString *iconString;
 @property (nonatomic, copy) NSString *iconName;
 
 + (FIIcon *)iconWithName:(NSString *)anIconName;
+- (id)initWithName:(NSString *)anIconName;
 + (NSArray *)iconNames;
 
 + (NSString *)fontSetName;

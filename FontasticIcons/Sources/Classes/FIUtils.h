@@ -9,18 +9,20 @@
 #import <Foundation/Foundation.h>
 
 #if __has_feature(objc_arc)
-    #define arcsafe_retain(X) (X)
-    #define arcsafe_retain_unused(X)
-    #define arcsafe_release(X)
+    #define arcsafe_retain(...) (__VA_ARGS__)
+    #define arcsafe_retain_unused(...)
+    #define arcsafe_release(...)
     #define arcsafe_super_dealloc()
-    #define arcsafe_autorelease(X) (X)
-    #define arcsafe_autorelease_unused(X)
+    #define arcsafe_autorelease(...) (__VA_ARGS__)
+    #define arcsafe_autorelease_unused(__VA_ARGS__)
+    #define arcsafe_toll_free_bridge(TYPE, ...) ((__bridge TYPE) __VA_ARGS__)
 #else
-    #define arcsafe_retain(X) [(X) retain]
-    #define arcsafe_retain_unused(X) [(X) retain]
-    #define arcsafe_release(X) [(X) release]
+    #define arcsafe_retain(...) [(__VA_ARGS__) retain]
+    #define arcsafe_retain_unused(...) [(__VA_ARGS__) retain]
+    #define arcsafe_release(...) [(__VA_ARGS__) release]
     #define arcsafe_super_dealloc() [super dealloc]
-    #define arcsafe_autorelease(X) [(X) autorelease]
-    #define arcsafe_autorelease_unused(X) [(X) autorelease]
+    #define arcsafe_autorelease(...) [(__VA_ARGS__) autorelease]
+    #define arcsafe_autorelease_unused(...) [(__VA_ARGS__) autorelease]
+    #define arcsafe_toll_free_bridge(TYPE, ...) ((TYPE) __VA_ARGS__)
 #endif
 

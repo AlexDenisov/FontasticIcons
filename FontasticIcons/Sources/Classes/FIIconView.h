@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FIIconRendering.h"
 
-@class FIIcon;
+@class FIIconLayer;
 
-@interface FIIconView : UIView
+@interface FIIconView : UIView <FIIconRendering>
 
-@property (nonatomic, readwrite) CGFloat padding;
-@property (nonatomic, strong) UIColor *iconColor;
-@property (nonatomic, strong) FIIcon *icon;
+- (FIIconLayer *)iconLayer;
 
 @end

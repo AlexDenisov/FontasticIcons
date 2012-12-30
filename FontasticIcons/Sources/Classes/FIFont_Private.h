@@ -13,6 +13,7 @@
 
 + (FIFont *)fontWithName:(NSString *)aName ofType:(NSString *)aType;
 - (FIFont *)initWithFontName:(NSString *)aName ofType:(NSString *)aType;
+- (NSString *)UIFontName;
 - (CTFontRef)fontRef;
 
 @end

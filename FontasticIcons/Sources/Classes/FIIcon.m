@@ -45,10 +45,15 @@
 }
 
 + (FIIcon *)iconWithName:(NSString *)anIconName {
-    FIIcon *icon = [self new];
-    icon.iconName = anIconName;
-    icon.iconString = [self iconKeyForName:anIconName];
-    return arcsafe_autorelease(icon);
+    return [[self alloc] initWithName:anIconName];
+}
+
+- (id)initWithName:(NSString *)anIconName {
+    if (self = [self init]) {
+        self.iconName = anIconName;
+        self.iconString = [self.class iconKeyForName:anIconName];
+    }
+    return self;
 }
 
 + (NSDictionary *)iconsDictionary {
@@ -65,6 +70,10 @@
 
 - (NSString *)fontSetName {
     return [[self class] fontSetName];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[self.class allocWithZone:zone] initWithName:self.iconName];
 }
 
 @end

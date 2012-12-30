@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "FIIconView.h"
+#import "FIIconLayer.h"
 #import "FIEntypoIcon.h"
 #import "FIEntypoSocialIcon.h"
 #import "FIFontAwesomeIcon.h"
