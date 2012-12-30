@@ -14,8 +14,33 @@
 
 @implementation FIIconLayer
 
+#pragma mark self
++ (UIImage *)imageWithBounds:(CGRect)bounds icon:(FIIcon *)icon color:(UIColor *)color {
+    FIIconLayer *renderer = [[self class] layer];
+    renderer.bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
+    renderer.padding = bounds.origin;
+    renderer.icon = icon;
+    renderer.iconColor = color;
+    return renderer.image;
+}
+
+- (UIImage *)image {
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
+    [self renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 #pragma mark self <FIIconRendering>
 @synthesize padding=_padding, iconColor=_iconColor, icon= _icon;
+
+- (void)setPadding:(CGPoint)padding {
+    if (!(CGPointEqualToPoint(padding, _padding))) {
+        _padding = padding;
+        [self setNeedsDisplay];
+    }
+}
 
 - (void)setIconColor:(UIColor *)iconColor {
     if (![iconColor isEqual:_iconColor]) {
@@ -35,7 +60,8 @@
 - (void)drawInContext:(CGContextRef)ctx {
     UIGraphicsPushContext(ctx);
     const CGFloat kFontOversize = 1000;
-    CGRect bounds = self.bounds;
+    CGRect bounds = CGRectMake(self.bounds.origin.x + self.padding.x, self.bounds.origin.y + self.padding.y,
+            self.bounds.size.width - self.padding.x * 2, self.bounds.size.height - self.padding.y * 2);
 
     UIFont *font = [UIFont fontWithName:[[self.icon.class metaFont] UIFontName] size:kFontOversize];
     CGSize oversize = [self.icon.iconString sizeWithFont:font];

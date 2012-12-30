@@ -15,11 +15,13 @@
 @implementation FIIcon
 
 + (void)initialize {
-    FIMetaInfoManager *manager = [FIMetaInfoManager sharedManager];
-    [manager registerFont:[self iconFont]
-                 forClass:self];
-    [manager registerIconSet:[self iconsDictionary]
-                    forClass:self];
+    if (self != [FIIcon class]) {
+        FIMetaInfoManager *manager = [FIMetaInfoManager sharedManager];
+        [manager registerFont:[self iconFont]
+                     forClass:self];
+        [manager registerIconSet:[self iconsDictionary]
+                        forClass:self];
+    }
 }
 
 - (void)dealloc {
@@ -44,8 +46,13 @@
     return [[FIMetaInfoManager sharedManager] fontForClass:self];
 }
 
++ (FIIcon *)iconWithName:(NSString *)anIconName fontSetName:(NSString *)aFontName {
+    return [[[FIMetaInfoManager sharedManager] iconClassForFontName:aFontName] iconWithName:anIconName];
+}
+
 + (FIIcon *)iconWithName:(NSString *)anIconName {
-    return [[self alloc] initWithName:anIconName];
+    FIIcon *icon = [[self alloc] initWithName:anIconName];
+    return icon.iconString ? arcsafe_autorelease(icon) : nil;
 }
 
 - (id)initWithName:(NSString *)anIconName {

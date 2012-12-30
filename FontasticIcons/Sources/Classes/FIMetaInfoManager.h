@@ -15,6 +15,7 @@
 + (FIMetaInfoManager *)sharedManager;
 - (void)registerFont:(FIFont *)aFont forClass:(Class)aClass;
 - (FIFont *)fontForClass:(Class)aClass;
+- (Class)iconClassForFontName:(NSString *)aName;
 - (void)registerIconSet:(NSDictionary *)anIcons forClass:(Class)aClass;
 - (NSDictionary *)iconSetForClass:(Class)aClass;
 

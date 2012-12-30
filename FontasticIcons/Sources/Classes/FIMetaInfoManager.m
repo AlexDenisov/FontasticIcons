@@ -7,10 +7,12 @@
 //
 
 #import "FIMetaInfoManager.h"
+#import "FIFont.h"
 
 @implementation FIMetaInfoManager
 {
     NSMutableDictionary *fonts;
+    NSMutableDictionary *iconClasses;
     NSMutableDictionary *iconSets;
 }
 
@@ -27,6 +29,7 @@ static id _instance = nil;
     self = [super init];
     if (self) {
         self->fonts = [NSMutableDictionary new];
+        self->iconClasses = [NSMutableDictionary new];
         self->iconSets = [NSMutableDictionary new];
     }
     return self;
@@ -36,11 +39,17 @@ static id _instance = nil;
     NSString *key = NSStringFromClass(aClass);
     [self->fonts setValue:aFont
                    forKey:key];
+    [self->iconClasses setValue:aClass
+                         forKey:aFont.fontName];
 }
 
 - (FIFont *)fontForClass:(Class)aClass {
     NSString *key = NSStringFromClass(aClass);
     return [self->fonts valueForKey:key];
+}
+
+- (Class)iconClassForFontName:(NSString *)aName {
+    return [self->iconClasses valueForKey:aName];
 }
 
 - (void)registerIconSet:(NSDictionary *)anIcons forClass:(Class)aClass {

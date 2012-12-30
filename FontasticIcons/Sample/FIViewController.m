@@ -40,7 +40,7 @@ const static NSUInteger kColumnsCount = 3;
                                            size)] autorelease];
         iconView.backgroundColor = [UIColor clearColor];
         iconView.icon = [self.iconClass iconWithName:iconName];
-        iconView.padding = 2;
+        iconView.padding = CGPointMake(2, 2);
         iconView.iconColor = [self randomColor];
         UITapGestureRecognizer *recognizer = [[[UITapGestureRecognizer alloc]
                                               initWithTarget:self

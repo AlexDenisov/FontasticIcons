@@ -13,6 +13,7 @@
 #import "FIEntypoSocialIcon.h"
 #import "FIFontAwesomeIcon.h"
 #import "FIIconicIcon.h"
+#import "FIIconLayer.h"
 
 @implementation FIFontListViewController
 {
@@ -53,6 +54,9 @@
     }
     Class iconKit = _icons[indexPath.row];
     cell.textLabel.text = [iconKit performSelector:@selector(fontSetName)];
+    cell.imageView.image = [FIIconLayer imageWithBounds:CGRectMake(0, 0, 32, 32)
+                                                   icon:[FIIcon iconWithName:@"star" fontSetName:cell.textLabel.text]
+                                                  color:[UIColor orangeColor]];
     return cell;
 }
 
