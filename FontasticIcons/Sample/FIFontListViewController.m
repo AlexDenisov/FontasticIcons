@@ -9,11 +9,7 @@
 #import "FIFontListViewController.h"
 #import "FIViewController.h"
 
-#import "FIEntypoIcon.h"
-#import "FIEntypoSocialIcon.h"
-#import "FIFontAwesomeIcon.h"
-#import "FIIconicIcon.h"
-#import "FIIconLayer.h"
+#import "FontasticIcons.h"
 
 @implementation FIFontListViewController
 {
@@ -53,10 +49,11 @@
                                       reuseIdentifier:kCellIdentifier] autorelease];
     }
     Class iconKit = _icons[indexPath.row];
-    cell.textLabel.text = [iconKit performSelector:@selector(fontSetName)];
-    cell.imageView.image = [FIIconLayer imageWithBounds:CGRectMake(0, 0, 32, 32)
-                                                   icon:[FIIcon iconWithName:@"star" fontSetName:cell.textLabel.text]
-                                                  color:[UIColor orangeColor]];
+    cell.textLabel.text = [iconKit fontSetName];
+    // [[iconKit] iconWithName:@"star"]…or:
+    cell.imageView.image = [[FIIcon iconWithName:@"star" fontSetName:cell.textLabel.text]
+                                                     imageWithBounds:CGRectMake(0, 0, 32, 32)
+                                                              color:[UIColor orangeColor]];
     return cell;
 }
 

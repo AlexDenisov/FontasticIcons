@@ -11,7 +11,6 @@
 
 @interface FIIconLayer : CALayer <FIIconRendering>
 
-+ (UIImage *)imageWithBounds:(CGRect)bounds icon:(FIIcon *)icon color:(UIColor *)color;
 - (UIImage *)image;
 
 @end

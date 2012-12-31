@@ -15,15 +15,6 @@
 @implementation FIIconLayer
 
 #pragma mark self
-+ (UIImage *)imageWithBounds:(CGRect)bounds icon:(FIIcon *)icon color:(UIColor *)color {
-    FIIconLayer *renderer = [[self class] layer];
-    renderer.bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
-    renderer.padding = bounds.origin;
-    renderer.icon = icon;
-    renderer.iconColor = color;
-    return renderer.image;
-}
-
 - (UIImage *)image {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
     [self renderInContext:UIGraphicsGetCurrentContext()];
@@ -62,15 +53,16 @@
     const CGFloat kFontOversize = 1000;
     CGRect bounds = CGRectMake(self.bounds.origin.x + self.padding.x, self.bounds.origin.y + self.padding.y,
             self.bounds.size.width - self.padding.x * 2, self.bounds.size.height - self.padding.y * 2);
-
+    //region calculate scale of oversize glyph to aspect fit bounds
     UIFont *font = [UIFont fontWithName:[[self.icon.class metaFont] UIFontName] size:kFontOversize];
     CGSize oversize = [self.icon.iconString sizeWithFont:font];
     float scale = fminf(bounds.size.width / oversize.width, bounds.size.height / oversize.height);
-
+    //endregion
+    //region scale font size and center drawing rectangle
     font = [font fontWithSize:kFontOversize * scale];
     CGRect rect = CGRectMake(bounds.origin.x, bounds.origin.y, oversize.width * scale, oversize.height * scale);
     rect = CGRectOffset(rect, (bounds.size.width - rect.size.width) / 2, (bounds.size.height - rect.size.height) / 2);
-
+    //endregion
     [self.iconColor set];
     [self.icon.iconString drawInRect:rect withFont:font];
     UIGraphicsPopContext();
