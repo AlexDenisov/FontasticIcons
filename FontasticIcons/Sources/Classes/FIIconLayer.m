@@ -24,11 +24,11 @@
 }
 
 #pragma mark self <FIIconRendering>
-@synthesize padding=_padding, iconColor=_iconColor, icon= _icon;
+@synthesize inset = _inset, iconColor=_iconColor, icon= _icon;
 
-- (void)setPadding:(CGPoint)padding {
-    if (!(CGPointEqualToPoint(padding, _padding))) {
-        _padding = padding;
+- (void)setInset:(CGPoint)inset {
+    if (!(CGPointEqualToPoint(inset, _inset))) {
+        _inset = inset;
         [self setNeedsDisplay];
     }
 }
@@ -51,8 +51,8 @@
 - (void)drawInContext:(CGContextRef)ctx {
     UIGraphicsPushContext(ctx);
     const CGFloat kFontOversize = 1000;
-    CGRect bounds = CGRectMake(self.bounds.origin.x + self.padding.x, self.bounds.origin.y + self.padding.y,
-            self.bounds.size.width - self.padding.x * 2, self.bounds.size.height - self.padding.y * 2);
+    CGRect bounds = CGRectMake(self.bounds.origin.x + self.inset.x, self.bounds.origin.y + self.inset.y,
+            self.bounds.size.width - self.inset.x * 2, self.bounds.size.height - self.inset.y * 2);
     //region calculate scale of oversize glyph to aspect fit bounds
     UIFont *font = [UIFont fontWithName:[[self.icon.class metaFont] UIFontName] size:kFontOversize];
     CGSize oversize = [self.icon.iconString sizeWithFont:font];

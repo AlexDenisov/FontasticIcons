@@ -16,8 +16,17 @@
     return (id) self.layer;
 }
 
+- (CGFloat)padding {
+    // prefer vertical padding value for relevance to landscape buttons
+    return self.iconLayer.inset.y ? : self.iconLayer.inset.x;
+}
+
+- (void)setPadding:(CGFloat)padding {
+    self.iconLayer.inset = CGPointMake(padding, padding);
+}
+
 #pragma mark self <FIIconRendering>
-@dynamic padding, iconColor, icon;
+@dynamic inset, iconColor, icon;
 
 #pragma mark super
 + (Class)layerClass {

@@ -15,7 +15,7 @@
 - (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color {
     FIIconLayer *renderer = [FIIconLayer layer];
     renderer.bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
-    renderer.padding = bounds.origin;
+    renderer.inset = bounds.origin;
     renderer.icon = self;
     renderer.iconColor = color;
     return renderer.image;

@@ -10,7 +10,7 @@
 
 @protocol FIIconRendering
 
-@property (nonatomic, assign) CGPoint padding;
+@property (nonatomic, assign) CGPoint inset;
 @property (nonatomic, copy) UIColor *iconColor;
 @property (nonatomic, copy) FIIcon *icon;
 

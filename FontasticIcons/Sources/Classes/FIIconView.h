@@ -13,6 +13,7 @@
 
 @interface FIIconView : UIView <FIIconRendering>
 
-- (FIIconLayer *)iconLayer;
+@property(nonatomic, strong, readonly) FIIconLayer *iconLayer;
+@property (nonatomic, assign) CGFloat padding;
 
 @end
