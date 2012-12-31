@@ -7,10 +7,11 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import "FIRenderer.h"
 #import "FIIconRendering.h"
 
-@interface FIIconLayer : CALayer <FIIconRendering>
+typedef id <FIRenderer, FIIconRendering> FIIconRenderer;
 
-- (UIImage *)image;
+@interface FIIconLayer : CALayer <FIRenderer, FIIconRendering>
 
 @end

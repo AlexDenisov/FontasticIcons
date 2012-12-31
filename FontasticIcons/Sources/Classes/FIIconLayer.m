@@ -14,7 +14,7 @@
 
 @implementation FIIconLayer
 
-#pragma mark self
+#pragma mark self <FIRenderer>
 - (UIImage *)image {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
     [self renderInContext:UIGraphicsGetCurrentContext()];
@@ -51,8 +51,9 @@
 - (void)drawInContext:(CGContextRef)ctx {
     UIGraphicsPushContext(ctx);
     const CGFloat kFontOversize = 1000;
-    CGRect bounds = CGRectMake(self.bounds.origin.x + self.inset.x, self.bounds.origin.y + self.inset.y,
-            self.bounds.size.width - self.inset.x * 2, self.bounds.size.height - self.inset.y * 2);
+    CGRect bounds = CGContextGetClipBoundingBox(ctx);
+    bounds = CGRectMake(bounds.origin.x + self.inset.x, bounds.origin.y + self.inset.y,
+            bounds.size.width - self.inset.x * 2, bounds.size.height - self.inset.y * 2);
     //region calculate scale of oversize glyph to aspect fit bounds
     UIFont *font = [UIFont fontWithName:[[self.icon.class metaFont] UIFontName] size:kFontOversize];
     CGSize oversize = [self.icon.iconString sizeWithFont:font];
