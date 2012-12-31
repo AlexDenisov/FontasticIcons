@@ -19,13 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _icons = [[NSArray alloc] initWithArray:
-              @[
-                [FIEntypoIcon class],
-                [FIEntypoSocialIcon class],
-                [FIFontAwesomeIcon class],
-                [FIIconicIcon class]
-              ]];
+    _icons = [[FIIcon bundledFonts] retain];
     _fontListTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _fontListTableView.delegate = self;
     _fontListTableView.dataSource = self;
@@ -48,10 +42,10 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:kCellIdentifier] autorelease];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     Class iconKit = _icons[indexPath.row];
     cell.textLabel.text = [iconKit fontSetName];
-    // [[iconKit] iconWithName:@"star"]…or:
-    cell.imageView.image = [[FIIcon iconWithName:@"star" fontSetName:cell.textLabel.text]
+    cell.imageView.image = [[FIIcon iconWithName:@"star" fontSetName:cell.textLabel.text] // [[iconKit] iconWithName:@"star"]
                                                      imageWithBounds:CGRectMake(0, 0, 32, 32)
                                                               color:[UIColor orangeColor]];
     return cell;

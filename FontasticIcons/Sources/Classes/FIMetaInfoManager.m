@@ -7,7 +7,7 @@
 //
 
 #import "FIMetaInfoManager.h"
-#import "FIFont.h"
+#import "FIIcon+Impl.h"
 
 @implementation FIMetaInfoManager
 {
@@ -40,7 +40,7 @@ static id _instance = nil;
     [self->fonts setValue:aFont
                    forKey:key];
     [self->iconClasses setValue:aClass
-                         forKey:aFont.fontName];
+                         forKey:[aClass fontSetName]];
 }
 
 - (FIFont *)fontForClass:(Class)aClass {
@@ -49,6 +49,12 @@ static id _instance = nil;
 }
 
 - (Class)iconClassForFontName:(NSString *)aName {
+#ifdef dispatch_once
+    static dispatch_once_t once[1];
+    dispatch_once(once, ^{ // available since iOS 4.0
+        [FIIcon bundledFonts]; // initialize provided implementations
+    });
+#endif
     return [self->iconClasses valueForKey:aName];
 }
 

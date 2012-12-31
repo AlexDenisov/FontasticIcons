@@ -10,7 +10,4 @@
 
 #import "FIIconView.h"
 #import "FIIcon+FIIconRenderer.h"
-#import "FIEntypoIcon.h"
-#import "FIEntypoSocialIcon.h"
-#import "FIFontAwesomeIcon.h"
-#import "FIIconicIcon.h"
+#import "FIIcon+Impl.h"
