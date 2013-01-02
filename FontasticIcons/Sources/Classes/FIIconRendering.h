@@ -11,7 +11,7 @@
 @protocol FIIconRendering
 
 @property (nonatomic, copy) FIIcon *icon;
-@property (nonatomic, copy) UIColor *iconColor;
+@property (nonatomic, retain) UIColor *iconColor; // only copyable since iOS 6.0
 @property (nonatomic, assign) CGPoint inset;
 
 @end
