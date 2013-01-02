@@ -48,7 +48,7 @@
 }
 
 - (NSString *)fontName {
-    return (NSString *)CTFontCopyFullName(self->_font);
+    return (NSString *)CTFontCopyFullName(self.fontRef);
 }
 
 #pragma mark - Fonts

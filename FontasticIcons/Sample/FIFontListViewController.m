@@ -9,10 +9,7 @@
 #import "FIFontListViewController.h"
 #import "FIViewController.h"
 
-#import "FIEntypoIcon.h"
-#import "FIEntypoSocialIcon.h"
-#import "FIFontAwesomeIcon.h"
-#import "FIIconicIcon.h"
+#import "FontasticIcons.h"
 
 @implementation FIFontListViewController
 {
@@ -22,13 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _icons = [[NSArray alloc] initWithArray:
-              @[
-                [FIEntypoIcon class],
-                [FIEntypoSocialIcon class],
-                [FIFontAwesomeIcon class],
-                [FIIconicIcon class]
-              ]];
+    _icons = [[FIIcon bundledFonts] retain];
     _fontListTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _fontListTableView.delegate = self;
     _fontListTableView.dataSource = self;
@@ -51,8 +42,12 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:kCellIdentifier] autorelease];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     Class iconKit = _icons[indexPath.row];
-    cell.textLabel.text = [iconKit performSelector:@selector(fontSetName)];
+    cell.textLabel.text = [iconKit fontSetName];
+    cell.imageView.image = [[FIIcon iconWithName:@"star" fontSetName:cell.textLabel.text] // [[iconKit] iconWithName:@"star"]
+                                                     imageWithBounds:CGRectMake(0, 0, 32, 32)
+                                                              color:[UIColor orangeColor]];
     return cell;
 }
 
