@@ -44,7 +44,7 @@
 
 - (void)setIconColor:(UIColor *)iconColor {
     if (![iconColor isEqual:_iconColor]) {
-        _iconColor = iconColor.copy;
+        _iconColor = arcsafe_retain(iconColor);
         [self setIconAttribute:kCTForegroundColorAttributeName value:iconColor.CGColor];
     }
 }
