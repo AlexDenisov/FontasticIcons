@@ -32,7 +32,7 @@
 }
 
 #pragma mark self <FIIconRendering>
-@synthesize inset = _inset, iconColor = _iconColor, icon = _icon;
+@synthesize icon = _icon, iconColor = _iconColor, inset = _inset;
 
 - (void)setIcon:(FIIcon *)icon {
     CFTypeRef font = (CFTypeRef) [[icon.class metaFont] fontRef];
@@ -45,7 +45,7 @@
 - (void)setIconColor:(UIColor *)iconColor {
     if (![iconColor isEqual:_iconColor]) {
         _iconColor = iconColor.copy;
-        [self setIconAttribute:kCTForegroundColorAttributeName value:_iconColor.CGColor];
+        [self setIconAttribute:kCTForegroundColorAttributeName value:iconColor.CGColor];
     }
 }
 
@@ -58,8 +58,7 @@
 
 #pragma mark super : NSObject
 - (id)init {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         iconAttributes = [[NSMutableDictionary alloc] initWithCapacity:2];
         self.needsDisplayOnBoundsChange = YES;
         self.contentsGravity = kCAGravityResizeAspect;
