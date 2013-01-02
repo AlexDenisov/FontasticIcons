@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0E070F38B9176978991745E /* FIIcon+Impl.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E071BA8380551D25FD2D4E /* FIIcon+Impl.m */; };
+		B0E072FAE9EBF48B1CDDCAED /* FIIcon+FIIconRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07DAC8153129F1E3083B1 /* FIIcon+FIIconRenderer.m */; };
+		B0E074089E50B3F02CC2D35A /* FIIconLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07850BEB4C2B283D2B5ED /* FIIconLayer.m */; };
 		CA31B9A71657E194002A9EDD /* FIFontListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9A61657E194002A9EDD /* FIFontListViewController.m */; };
 		CA31B9CE165807F5002A9EDD /* FIFontAwesomeIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9CD165807F5002A9EDD /* FIFontAwesomeIcon.m */; };
 		CA31B9D816581D73002A9EDD /* fontawesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA31B9D716581D73002A9EDD /* fontawesome.ttf */; };
@@ -32,9 +35,21 @@
 		CA7C5609163E433400AC32A3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C5608163E433400AC32A3 /* CoreText.framework */; };
 		CA7C561A163EFBCC00AC32A3 /* FIEntypoSocialIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */; };
 		CA7C561E163F060500AC32A3 /* FIMetaInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */; };
+		E1B6DBF51693A4A600B6704C /* FIIconLayer+FIRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */; };
+		E1EC0266168FE25D004A8EDD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EC0263168FE23B004A8EDD /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0E0700E6FC3A32A3DF49F94 /* FIIconLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIconLayer.h; sourceTree = "<group>"; };
+		B0E071BA8380551D25FD2D4E /* FIIcon+Impl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIcon+Impl.m"; sourceTree = "<group>"; };
+		B0E0777366E59C96383968B1 /* FIIconRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIconRendering.h; sourceTree = "<group>"; };
+		B0E07850BEB4C2B283D2B5ED /* FIIconLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIIconLayer.m; sourceTree = "<group>"; };
+		B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIconLayer+FIRenderer.m"; sourceTree = "<group>"; };
+		B0E07BBBF4C52B8C81F77A17 /* FIIcon+Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIcon+Impl.h"; sourceTree = "<group>"; };
+		B0E07CBF20E7F6200491F0BF /* FIRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRenderer.h; sourceTree = "<group>"; };
+		B0E07DAC8153129F1E3083B1 /* FIIcon+FIIconRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIcon+FIIconRenderer.m"; sourceTree = "<group>"; };
+		B0E07DB134AFAE78AD220A42 /* FIIconLayer+FIRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIconLayer+FIRenderer.h"; sourceTree = "<group>"; };
+		B0E07F9CA8E68482CC5775F0 /* FIIcon+FIIconRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIcon+FIIconRenderer.h"; sourceTree = "<group>"; };
 		CA31B9A51657E194002A9EDD /* FIFontListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFontListViewController.h; sourceTree = "<group>"; };
 		CA31B9A61657E194002A9EDD /* FIFontListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFontListViewController.m; sourceTree = "<group>"; };
 		CA31B9CC165807F5002A9EDD /* FIFontAwesomeIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFontAwesomeIcon.h; sourceTree = "<group>"; };
@@ -78,6 +93,8 @@
 		CA7C561C163F060500AC32A3 /* FIMetaInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIMetaInfoManager.h; sourceTree = "<group>"; };
 		CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIMetaInfoManager.m; sourceTree = "<group>"; };
 		CA7C562D163FAC5300AC32A3 /* FontasticIcons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontasticIcons.h; sourceTree = "<group>"; };
+		E1EC0263168FE23B004A8EDD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E1EC02671690028C004A8EDD /* FontasticIcons.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = FontasticIcons.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EC0266168FE25D004A8EDD /* QuartzCore.framework in Frameworks */,
 				CA7C5609163E433400AC32A3 /* CoreText.framework in Frameworks */,
 				CA7C55C5163DC00700AC32A3 /* UIKit.framework in Frameworks */,
 				CA7C55C7163DC00700AC32A3 /* Foundation.framework in Frameworks */,
@@ -116,6 +134,7 @@
 		CA7C55B5163DC00700AC32A3 = {
 			isa = PBXGroup;
 			children = (
+				E1EC02671690028C004A8EDD /* FontasticIcons.podspec */,
 				CA7C55E7163DC28500AC32A3 /* Sources */,
 				CA7C55CA163DC00700AC32A3 /* Sample */,
 				CA7C55C3163DC00700AC32A3 /* Frameworks */,
@@ -134,6 +153,7 @@
 		CA7C55C3163DC00700AC32A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1EC0263168FE23B004A8EDD /* QuartzCore.framework */,
 				CA7C5608163E433400AC32A3 /* CoreText.framework */,
 				CA7C55C4163DC00700AC32A3 /* UIKit.framework */,
 				CA7C55C6163DC00700AC32A3 /* Foundation.framework */,
@@ -188,7 +208,7 @@
 				CA7C561B163F049100AC32A3 /* FIMetaInfoManager */,
 				CA7C5616163EFB4A00AC32A3 /* FIFont */,
 				CA7C5615163EFB2F00AC32A3 /* FIIcon */,
-				CA7C5614163EFB2100AC32A3 /* FIIconView */,
+				CA7C5614163EFB2100AC32A3 /* FIIconRendering */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -199,6 +219,8 @@
 				CA31B9E3165823F4002A9EDD /* Iconic */,
 				CA31B9E1165823E2002A9EDD /* FontAwesome */,
 				CA7C5617163EFB9900AC32A3 /* Entypo */,
+				B0E071BA8380551D25FD2D4E /* FIIcon+Impl.m */,
+				B0E07BBBF4C52B8C81F77A17 /* FIIcon+Impl.h */,
 			);
 			name = Impl;
 			sourceTree = "<group>";
@@ -241,13 +263,21 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		CA7C5614163EFB2100AC32A3 /* FIIconView */ = {
+		CA7C5614163EFB2100AC32A3 /* FIIconRendering */ = {
 			isa = PBXGroup;
 			children = (
 				CA7C55ED163DC4E000AC32A3 /* FIIconView.h */,
 				CA7C55EE163DC4E000AC32A3 /* FIIconView.m */,
+				B0E0700E6FC3A32A3DF49F94 /* FIIconLayer.h */,
+				B0E07850BEB4C2B283D2B5ED /* FIIconLayer.m */,
+				B0E0777366E59C96383968B1 /* FIIconRendering.h */,
+				B0E07DAC8153129F1E3083B1 /* FIIcon+FIIconRenderer.m */,
+				B0E07F9CA8E68482CC5775F0 /* FIIcon+FIIconRenderer.h */,
+				B0E07CBF20E7F6200491F0BF /* FIRenderer.h */,
+				B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */,
+				B0E07DB134AFAE78AD220A42 /* FIIconLayer+FIRenderer.h */,
 			);
-			name = FIIconView;
+			name = FIIconRendering;
 			sourceTree = "<group>";
 		};
 		CA7C5615163EFB2F00AC32A3 /* FIIcon */ = {
@@ -369,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B6DBF51693A4A600B6704C /* FIIconLayer+FIRenderer.m in Sources */,
 				CA7C55D1163DC00700AC32A3 /* main.m in Sources */,
 				CA7C55D5163DC00700AC32A3 /* FIAppDelegate.m in Sources */,
 				CA7C55DE163DC00700AC32A3 /* FIViewController.m in Sources */,
@@ -381,6 +412,9 @@
 				CA31B9A71657E194002A9EDD /* FIFontListViewController.m in Sources */,
 				CA31B9CE165807F5002A9EDD /* FIFontAwesomeIcon.m in Sources */,
 				CA31B9E616582411002A9EDD /* FIIconicIcon.m in Sources */,
+				B0E074089E50B3F02CC2D35A /* FIIconLayer.m in Sources */,
+				B0E072FAE9EBF48B1CDDCAED /* FIIcon+FIIconRenderer.m in Sources */,
+				B0E070F38B9176978991745E /* FIIcon+Impl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

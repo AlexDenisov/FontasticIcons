@@ -6,71 +6,40 @@
 //  Copyright (c) 2012 Alex Denisov. All rights reserved.
 //
 
-#import <CoreText/CoreText.h>
-#import "FIUtils.h"
-
 #import "FIIconView.h"
-#import "FIIcon.h"
-#import "FIIcon_Private.h"
-#import "FIFont.h"
-#import "FIFont_Private.h"
+#import "FIIconLayer.h"
 
 @implementation FIIconView
 
-- (void)dealloc {
-    self.icon = nil;
-    self.iconColor = nil;
-    arcsafe_super_dealloc();
+#pragma mark self
+- (FIIconLayer *)iconLayer {
+    return (id) self.layer;
 }
 
-- (void)drawRect:(CGRect)rect {
-    [super drawRect:rect];
-    CTFontRef font = [[[self.icon class] metaFont] fontRef];
-    if (self.iconColor == nil) {
-        self.iconColor = [UIColor blackColor];
+- (CGFloat)padding {
+    // prefer vertical padding value for relevance to landscape buttons
+    return self.iconLayer.inset.y ? : self.iconLayer.inset.x;
+}
+
+- (void)setPadding:(CGFloat)padding {
+    self.iconLayer.inset = CGPointMake(padding, padding);
+}
+
+#pragma mark self <FIIconRendering>
+@dynamic icon, iconColor, inset;
+
+#pragma mark super
++ (Class)layerClass {
+    return [FIIconLayer class];
+}
+
+#pragma mark super : NSObject
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    if ([self.iconLayer respondsToSelector:[anInvocation selector]]) {
+        [anInvocation invokeWithTarget:self.iconLayer];
+    } else {
+        [super forwardInvocation:anInvocation];
     }
-    CGColorRef color = self.iconColor.CGColor;
-    NSString *iconString = (self.icon.iconString) ? self.icon.iconString : @"";
-    NSDictionary *attributesDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    (id)font, (NSString *)kCTFontAttributeName,
-                                    color, (NSString *)kCTForegroundColorAttributeName,
-                                    nil];
-    
-    NSAttributedString *attrString = [[NSMutableAttributedString alloc]
-                                       initWithString:iconString
-                                       attributes:attributesDict];
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
-    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)attrString,
-                                   CFRangeMake(0, iconString.length),
-                                   kCTForegroundColorAttributeName,
-                                   color);
-    CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef) attrString);
-    CGRect imageBounds = CTLineGetImageBounds(line, context);
-    CGFloat width = imageBounds.size.width;
-    CGFloat height = imageBounds.size.height;
-    
-    CGFloat padding = self.padding;
-    
-    width += padding;
-    height += padding;
-    
-    float sx = self.bounds.size.width / width;
-    float sy = self.bounds.size.height / height;
-    
-    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
-    
-    CGContextTranslateCTM(context, 1, self.bounds.size.height);
-    CGContextScaleCTM(context, 1, -1);
-    CGContextScaleCTM(context, sx, sy);
-    
-    CGContextSetTextPosition(context, -imageBounds.origin.x + padding/2, -imageBounds.origin.y + padding/2);
-    
-    CTLineDraw(line, context);
-    CFRelease(line);
-    
-    arcsafe_release(attrString);
 }
 
 @end

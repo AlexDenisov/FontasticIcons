@@ -15,11 +15,12 @@
 @implementation FIIcon
 
 + (void)initialize {
-    FIMetaInfoManager *manager = [FIMetaInfoManager sharedManager];
-    [manager registerFont:[self iconFont]
-                 forClass:self];
-    [manager registerIconSet:[self iconsDictionary]
-                    forClass:self];
+    if (self != [FIIcon class]) {
+        [[self manager] registerFont:[self iconFont]
+                            forClass:self];
+        [[self manager] registerIconSet:[self iconsDictionary]
+                               forClass:self];
+    }
 }
 
 - (void)dealloc {
@@ -41,14 +42,24 @@
 }
 
 + (FIFont *)metaFont {
-    return [[FIMetaInfoManager sharedManager] fontForClass:self];
+    return [[self manager] fontForClass:self];
+}
+
++ (FIIcon *)iconWithName:(NSString *)anIconName fontSetName:(NSString *)aFontName {
+    return [[[self manager] iconClassForFontName:aFontName] iconWithName:anIconName];
 }
 
 + (FIIcon *)iconWithName:(NSString *)anIconName {
-    FIIcon *icon = [self new];
-    icon.iconName = anIconName;
-    icon.iconString = [self iconKeyForName:anIconName];
-    return arcsafe_autorelease(icon);
+    FIIcon *icon = arcsafe_autorelease([[self alloc] initWithName:anIconName]);
+    return icon.iconString ? icon : nil;
+}
+
+- (id)initWithName:(NSString *)anIconName {
+    if (self = [self init]) {
+        self.iconName = anIconName;
+        self.iconString = [self.class iconKeyForName:anIconName];
+    }
+    return self;
 }
 
 + (NSDictionary *)iconsDictionary {
@@ -56,7 +67,7 @@
 }
 
 + (NSDictionary *)metaIconsDictionary {
-    return [[FIMetaInfoManager sharedManager] iconSetForClass:self];
+    return [[self manager] iconSetForClass:self];
 }
 
 + (NSString *)fontSetName {
@@ -65,6 +76,14 @@
 
 - (NSString *)fontSetName {
     return [[self class] fontSetName];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[self.class allocWithZone:zone] initWithName:self.iconName];
+}
+
++ (FIMetaInfoManager *)manager {
+    return [FIMetaInfoManager sharedManager];
 }
 
 @end
