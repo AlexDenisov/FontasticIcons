@@ -51,10 +51,6 @@
     return (NSString *)CTFontCopyFullName(self.fontRef);
 }
 
-- (NSString *)UIFontName {
-    return (NSString *)CTFontCopyPostScriptName(self.fontRef);
-}
-
 #pragma mark - Fonts
 
 + (FIFont *)entypoFont {

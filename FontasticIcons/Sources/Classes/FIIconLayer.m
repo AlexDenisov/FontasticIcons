@@ -12,19 +12,42 @@
 #import "FIIcon_Private.h"
 #import "FIFont_Private.h"
 
-@implementation FIIconLayer
+@implementation FIIconLayer {
+    NSMutableDictionary *iconAttributes;
+}
 
-#pragma mark self <FIRenderer>
-- (UIImage *)image {
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
-    [self renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
+#pragma mark self
+- (NSAttributedString *)iconString {
+    return arcsafe_autorelease([[NSAttributedString alloc] initWithString:self.icon.iconString ? : @""
+                                                               attributes:iconAttributes]);
+}
+
+- (void)setIconAttribute:(CFStringRef)name value:(CFTypeRef)value {
+    if (value) {
+        iconAttributes[arcsafe_toll_free_bridge(NSString *, name)] = arcsafe_toll_free_bridge(id, value);
+    } else {
+        [iconAttributes removeObjectForKey:arcsafe_toll_free_bridge(NSString *, name)];
+    }
+    [self setNeedsDisplay];
 }
 
 #pragma mark self <FIIconRendering>
-@synthesize inset = _inset, iconColor=_iconColor, icon= _icon;
+@synthesize inset = _inset, iconColor = _iconColor, icon = _icon;
+
+- (void)setIcon:(FIIcon *)icon {
+    CFTypeRef font = (CFTypeRef) [[icon.class metaFont] fontRef];
+    if (font != [[_icon.class metaFont] fontRef] || ![icon.iconString isEqualToString:_icon.iconString]) {
+        _icon = icon.copy;
+        [self setIconAttribute:kCTFontAttributeName value:font];
+    }
+}
+
+- (void)setIconColor:(UIColor *)iconColor {
+    if (![iconColor isEqual:_iconColor]) {
+        _iconColor = iconColor.copy;
+        [self setIconAttribute:kCTForegroundColorAttributeName value:_iconColor.CGColor];
+    }
+}
 
 - (void)setInset:(CGPoint)inset {
     if (!(CGPointEqualToPoint(inset, _inset))) {
@@ -33,54 +56,23 @@
     }
 }
 
-- (void)setIconColor:(UIColor *)iconColor {
-    if (![iconColor isEqual:_iconColor]) {
-        _iconColor = iconColor.copy;
-        [self setNeedsDisplay];
-    }
-}
-
-- (void)setIcon:(FIIcon *)icon {
-    if (![icon.iconString isEqualToString:_icon.iconString] || ![icon.fontSetName isEqualToString:_icon.fontSetName]) {
-        _icon = icon.copy;
-        [self setNeedsDisplay];
-    }
-}
-
-#pragma mark super
-- (void)drawInContext:(CGContextRef)ctx {
-    UIGraphicsPushContext(ctx);
-    const CGFloat kFontOversize = 1000;
-    CGRect bounds = CGContextGetClipBoundingBox(ctx);
-    bounds = CGRectMake(bounds.origin.x + self.inset.x, bounds.origin.y + self.inset.y,
-            bounds.size.width - self.inset.x * 2, bounds.size.height - self.inset.y * 2);
-    //region calculate scale of oversize glyph to aspect fit bounds
-    UIFont *font = [UIFont fontWithName:[[self.icon.class metaFont] UIFontName] size:kFontOversize];
-    CGSize oversize = [self.icon.iconString sizeWithFont:font];
-    float scale = fminf(bounds.size.width / oversize.width, bounds.size.height / oversize.height);
-    //endregion
-    //region scale font size and center drawing rectangle
-    font = [font fontWithSize:kFontOversize * scale];
-    CGRect rect = CGRectMake(bounds.origin.x, bounds.origin.y, oversize.width * scale, oversize.height * scale);
-    rect = CGRectOffset(rect, (bounds.size.width - rect.size.width) / 2, (bounds.size.height - rect.size.height) / 2);
-    //endregion
-    [self.iconColor set];
-    [self.icon.iconString drawInRect:rect withFont:font];
-    UIGraphicsPopContext();
-}
-
 #pragma mark super : NSObject
 - (id)init {
     self = [super init];
     if (self) {
+        iconAttributes = [[NSMutableDictionary alloc] initWithCapacity:2];
         self.needsDisplayOnBoundsChange = YES;
+        self.contentsGravity = kCAGravityResizeAspect;
+        // http://markpospesel.wordpress.com/2012/07/10/on-the-importance-of-setting-contentsscale-in-catextlayer/
+        self.contentsScale = [UIScreen mainScreen].scale;
     }
     return self;
 }
 
 - (void)dealloc {
-    self.icon = nil;
-    self.iconColor = nil;
+    arcsafe_release(_icon);
+    arcsafe_release(_iconColor);
+    arcsafe_release(iconAttributes);
     arcsafe_super_dealloc();
 }
 

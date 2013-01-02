@@ -7,11 +7,11 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "FIRenderer.h"
 #import "FIIconRendering.h"
 
-typedef id <FIRenderer, FIIconRendering> FIIconRenderer;
+@interface FIIconLayer : CALayer <FIIconRendering>
 
-@interface FIIconLayer : CALayer <FIRenderer, FIIconRendering>
+@property(nonatomic, copy, readonly) NSAttributedString *iconString;
+-(void)setIconAttribute:(CFStringRef)name value:(CFTypeRef)value;
 
 @end

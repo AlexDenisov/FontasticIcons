@@ -7,7 +7,7 @@
 //
 
 #import "FIIcon.h"
-#import "FIIconLayer.h"
+#import "FIIconLayer+FIRenderer.h"
 
 @interface FIIcon (FIIconRenderer)
 

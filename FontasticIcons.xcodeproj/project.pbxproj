@@ -35,6 +35,7 @@
 		CA7C5609163E433400AC32A3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C5608163E433400AC32A3 /* CoreText.framework */; };
 		CA7C561A163EFBCC00AC32A3 /* FIEntypoSocialIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */; };
 		CA7C561E163F060500AC32A3 /* FIMetaInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */; };
+		E1B6DBF51693A4A600B6704C /* FIIconLayer+FIRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */; };
 		E1EC0266168FE25D004A8EDD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EC0263168FE23B004A8EDD /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +44,11 @@
 		B0E071BA8380551D25FD2D4E /* FIIcon+Impl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIcon+Impl.m"; sourceTree = "<group>"; };
 		B0E0777366E59C96383968B1 /* FIIconRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIconRendering.h; sourceTree = "<group>"; };
 		B0E07850BEB4C2B283D2B5ED /* FIIconLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIIconLayer.m; sourceTree = "<group>"; };
+		B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIconLayer+FIRenderer.m"; sourceTree = "<group>"; };
 		B0E07BBBF4C52B8C81F77A17 /* FIIcon+Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIcon+Impl.h"; sourceTree = "<group>"; };
 		B0E07CBF20E7F6200491F0BF /* FIRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRenderer.h; sourceTree = "<group>"; };
 		B0E07DAC8153129F1E3083B1 /* FIIcon+FIIconRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIcon+FIIconRenderer.m"; sourceTree = "<group>"; };
+		B0E07DB134AFAE78AD220A42 /* FIIconLayer+FIRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIconLayer+FIRenderer.h"; sourceTree = "<group>"; };
 		B0E07F9CA8E68482CC5775F0 /* FIIcon+FIIconRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIcon+FIIconRenderer.h"; sourceTree = "<group>"; };
 		CA31B9A51657E194002A9EDD /* FIFontListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFontListViewController.h; sourceTree = "<group>"; };
 		CA31B9A61657E194002A9EDD /* FIFontListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFontListViewController.m; sourceTree = "<group>"; };
@@ -271,6 +274,8 @@
 				B0E07DAC8153129F1E3083B1 /* FIIcon+FIIconRenderer.m */,
 				B0E07F9CA8E68482CC5775F0 /* FIIcon+FIIconRenderer.h */,
 				B0E07CBF20E7F6200491F0BF /* FIRenderer.h */,
+				B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */,
+				B0E07DB134AFAE78AD220A42 /* FIIconLayer+FIRenderer.h */,
 			);
 			name = FIIconRendering;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B6DBF51693A4A600B6704C /* FIIconLayer+FIRenderer.m in Sources */,
 				CA7C55D1163DC00700AC32A3 /* main.m in Sources */,
 				CA7C55D5163DC00700AC32A3 /* FIAppDelegate.m in Sources */,
 				CA7C55DE163DC00700AC32A3 /* FIViewController.m in Sources */,
