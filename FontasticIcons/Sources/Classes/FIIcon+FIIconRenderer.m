@@ -11,16 +11,17 @@
 @implementation FIIcon (FIIconRenderer)
 
 #pragma mark self
-+ (FIIconRenderer)renderer {
-    return [FIIconLayer layer];
+- (FIIconRenderer)renderer {
+    FIIconLayer *renderer = [FIIconLayer layer];
+    renderer.icon = self;
+    return renderer;
 }
 
 - (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color {
-    FIIconRenderer renderer = [self.class renderer];
+    FIIconRenderer renderer = [self renderer];
     renderer.bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
     renderer.inset = bounds.origin;
     renderer.iconColor = color;
-    renderer.icon = self;
     return renderer.image;
 }
 
