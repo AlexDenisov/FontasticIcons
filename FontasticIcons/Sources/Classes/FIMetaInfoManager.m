@@ -49,9 +49,9 @@ static id _instance = nil;
 }
 
 - (Class)iconClassForFontName:(NSString *)aName {
-#ifdef dispatch_once
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_4_0
     static dispatch_once_t once[1];
-    dispatch_once(once, ^{ // available since iOS 4.0
+    dispatch_once(once, ^{
         [FIIcon bundledFonts]; // initialize provided implementations
     });
 #endif

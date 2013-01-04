@@ -13,5 +13,6 @@
 
 @property(nonatomic, copy, readonly) NSAttributedString *iconString;
 -(void)setIconAttribute:(CFStringRef)name value:(CFTypeRef)value;
+-(void)setIcon:(FIIcon *)icon withContentsScale:(CGFloat)contentsScale;
 
 @end
