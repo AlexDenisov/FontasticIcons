@@ -34,19 +34,24 @@
     [super drawInContext:ctx];
 }
 
-#pragma mark private
-- (void)setTransformForContext:(CGContextRef)ctx bounds:(CGRect)bounds iconBounds:(CGRect)iconBounds {
-    CGPoint scale = [self scaleForBounds:bounds iconBounds:iconBounds];
-    CGAffineTransform t = CGAffineTransformScale(CGAffineTransformMakeTranslation(
-            bounds.origin.x, bounds.size.height + bounds.origin.y), scale.x, -scale.y);
-    CGContextConcatCTM(ctx, t);
-    CGRect scaleBounds = CGRectApplyAffineTransform(bounds, CGAffineTransformInvert(t));
-    CGContextSetTextPosition(ctx,
-            -iconBounds.origin.x + (scaleBounds.size.width - iconBounds.size.width) / 2,
-            -iconBounds.origin.y + (scaleBounds.size.height - iconBounds.size.height) / 2);
+- (void)renderInContext:(CGContextRef)ctx {
+    if (self.geometryFlipped) {
+        CGContextConcatCTM(ctx, CGAffineTransformMake(1, 0, 0, -1, 0, CGContextGetClipBoundingBox(ctx).size.height));
+    }
+    [super renderInContext:ctx];
 }
 
-- (CGPoint)scaleForBounds:(CGRect)bounds iconBounds:(CGRect)iconBounds {
+#pragma mark private
+- (void)setTransformForContext:(CGContextRef)ctx bounds:(CGRect)bounds iconBounds:(CGRect)iconBounds {
+    CGAffineTransform scale = [self scaleForBounds:bounds iconBounds:iconBounds];
+    CGContextSetTextMatrix(ctx, scale);
+    iconBounds = CGRectApplyAffineTransform(iconBounds, scale);
+    CGContextSetTextPosition(ctx,
+            bounds.origin.x - iconBounds.origin.x + (bounds.size.width - iconBounds.size.width) / 2,
+            bounds.origin.y - iconBounds.origin.y + (bounds.size.height - iconBounds.size.height) / 2);
+}
+
+- (CGAffineTransform)scaleForBounds:(CGRect)bounds iconBounds:(CGRect)iconBounds {
     CGFloat sx = bounds.size.width / iconBounds.size.width;
     CGFloat sy = bounds.size.height / iconBounds.size.height;
     if ([self.contentsGravity isEqualToString:kCAGravityResizeAspectFill]) {
@@ -54,7 +59,7 @@
     } else if (![self.contentsGravity isEqualToString:kCAGravityResize]) {
         sx = sy = fminf(sx, sy);
     }
-    return CGPointMake(sx, sy);
+    return CGAffineTransformMakeScale(sx, sy);
 }
 
 @end
