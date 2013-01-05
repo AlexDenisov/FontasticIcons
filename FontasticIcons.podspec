@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { 'Alex Denisov' => '1101.debian@gmail.com' }
   s.source       = { :git => 'https://github.com/AlexDenisov/FontasticIcons.git', :tag => "#{s.version}" }
-  s.platform     = :ios, '3.2'
+  s.platform     = :ios, '4.0'
   s.source_files = 'FontasticIcons/Sources/Classes'
   s.resources    = 'FontasticIcons/Sources/Resources/Fonts/*'
   s.frameworks   = 'CoreText', 'QuartzCore'
