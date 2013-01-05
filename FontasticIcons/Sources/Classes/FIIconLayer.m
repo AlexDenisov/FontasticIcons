@@ -36,12 +36,10 @@
     if (font != [[_icon.class metaFont] fontRef] || ![icon.iconString isEqualToString:_icon.iconString]) {
         _icon = icon.copy;
         [self setIconAttribute:kCTFontAttributeName value:font];
-#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_4_0
         // necessary for retina: http://markpospesel.wordpress.com/2012/07/10/on-the-importance-of-setting-contentsscale-in-catextlayer/
         // but UIView overrides initialized value: http://stackoverflow.com/a/9479176/672921
         // and setting during rendering or overriding property are both inflexible and ineffective
         self.contentsScale = contentsScale ? : [UIScreen mainScreen].scale;
-#endif
     }
 }
 
