@@ -22,45 +22,65 @@
     @"glass" : @"\U0001f378",
     @"music" : @"\U0000266b",
     @"search" : @"\U0001f50d",
-    @"mail" : @"\U00002709",
-    @"mail-alt" : @"\U0000f0e0",
+    @"mail" : @"\U00002709", // deprecated
+    @"envelope" : @"\U00002709",
+    @"mail-alt" : @"\U0000f0e0", // deprecated
+    @"envelope-alt" : @"\U0000f0e0",
     @"heart" : @"\U00002665",
     @"heart-empty" : @"\U00002661",
     @"star" : @"\U00002605",
     @"star-empty" : @"\U00002606",
     @"star-half" : @"\U0000e701",
     @"user" : @"\U0001f464",
-    @"users" : @"\U0001f465",
+    @"users" : @"\U0001f465", // deprecated
+    @"group" : @"\U0001f465",
     @"user-md" : @"\U0000f200",
-    @"video" : @"\U0001f3ac",
-    @"videocam" : @"\U0001f3a5",
+    @"video" : @"\U0001f3ac", // deprecated
+    @"film" : @"\U0001f3ac",
+    @"videocam" : @"\U0001f3a5", // deprecated
+    @"facetime-video" : @"\U0001f3a5",
     @"picture" : @"\U0001f304",
     @"camera" : @"\U0001f4f7",
-    @"camera-alt" : @"\U0000e70f",
+    @"camera-alt" : @"\U0000e70f", // deprecated
+    @"camera-retro" : @"\U0000e70f",
     @"th-large" : @"\U0000e708",
     @"th" : @"\U0000268f",
     @"th-list" : @"\U00002630",
     @"ok" : @"\U00002713",
-    @"ok-circle" : @"\U00002714",
-    @"ok-circle2" : @"\U0000e702",
-    @"cancel" : @"\U00002715",
-    @"cancel-circle" : @"\U00002716",
-    @"cancel-circle2" : @"\U0000e703",
+    @"ok-sign" : @"\U00002714",
+    @"ok-circle2" : @"\U0000e702", // deprecated
+    @"ok-circle" : @"\U0000e702", // renamed
+    @"cancel" : @"\U00002715", // deprecated
+    @"remove" : @"\U00002715",
+    @"cancel-circle" : @"\U00002716", // deprecated
+    @"remove-sign" : @"\U00002716",
+    @"cancel-circle2" : @"\U0000e703", // deprecated
+    @"remove-circle" : @"\U0000e703",
     @"plus" : @"\U00002b00",
-    @"plus-circle" : @"\U00002795",
+    @"plus-circle" : @"\U00002795", // deprecated
+    @"plus-sign" : @"\U00002795",
     @"minus" : @"\U00002d00",
-    @"minus-circle" : @"\U00002796",
-    @"help-circle" : @"\U0000e704",
-    @"info-circle" : @"\U0000e705",
+    @"minus-circle" : @"\U00002796", // deprecated
+    @"minus-sign" : @"\U00002796",
+    @"help-circle" : @"\U0000e704", // deprecated
+    @"question-sign" : @"\U0000e704",
+    @"info-circle" : @"\U0000e705", // deprecated
+    @"info-sign" : @"\U0000e705",
     @"home" : @"\U00002302",
     @"link" : @"\U0001f517",
-    @"link-ext" : @"\U0000f08e",
-    @"attach" : @"\U0001f4ce",
+    @"link-ext" : @"\U0000f08e", // deprecated
+    @"external-link" : @"\U0000f08e",
+    @"attach" : @"\U0001f4ce", // deprecated
+    @"paper-clip" : @"\U0001f4ce",
     @"lock" : @"\U0001f512",
-    @"lock-open" : @"\U0001f513",
-    @"pin" : @"\U0001f4cc",
-    @"eye" : @"\U0000e70a",
-    @"eye-off" : @"\U0000e70b",
+    @"lock-open" : @"\U0001f513", // deprecated
+    @"unlock" : @"\U0001f513",
+    @"pin" : @"\U0001f4cc", // deprecated
+    @"pushpin" : @"\U0001f4cc",
+    @"eye" : @"\U0000e70a", // deprecated
+    @"eye-open" : @"\U0000e70a",
+    @"eye-off" : @"\U0000e70b", // deprecated
+    @"eye-close" : @"\U0000e70b",
     @"tag" : @"\U0000e70c",
     @"tags" : @"\U0000e70d",
     @"bookmark" : @"\U0001f516",
@@ -68,98 +88,152 @@
     @"flag" : @"\U00002691",
     @"thumbs-up" : @"\U0001f44d",
     @"thumbs-down" : @"\U0001f44e",
-    @"download" : @"\U0001f4e5",
-    @"upload" : @"\U0001f4e4",
-    @"forward" : @"\U000027a6",
-    @"export" : @"\U0000e715",
+    @"download-alt" : @"\U0001f4e5",
+    @"upload-alt" : @"\U0001f4e4",
+    @"share-alt" : @"\U000027a6",
+    @"export" : @"\U0000e715", // deprecated
+    @"share" : @"\U0000e715",
     @"pencil" : @"\U0000270e",
     @"edit" : @"\U0000270d",
     @"print" : @"\U0000e716",
     @"retweet" : @"\U0000e717",
-    @"comment" : @"\U0000e718",
-    @"chat" : @"\U0000e720",
-    @"comment" : @"\U0000f0e5",
-    @"chat" : @"\U0000f0e6",
+    @"comment" : @"\U0000e718", // renamed
+    @"comments" : @"\U0000e720",
+    @"comment-alt" : @"\U0000f0e5",
+    @"chat" : @"\U0000f0e6", // deprecated
+    @"comments-alt" : @"\U0000f0e6",
     @"bell" : @"\U0001f514",
-    @"attention" : @"\U000026a0",
-    @"attention-circle" : @"\U00002757",
-    @"location" : @"\U0000e724",
+    @"attention" : @"\U000026a0", // deprecated
+    @"warning-sign" : @"\U000026a0",
+    @"attention-circle" : @"\U00002757", // deprecated
+    @"exclamation-sign" : @"\U00002757",
+    @"location" : @"\U0000e724", // deprecated
+    @"map-marker" : @"\U0000e724",
     @"trash" : @"\U0000e729",
-    @"doc" : @"\U0001f4c4",
-    @"docs" : @"\U0000f0c5",
-    @"folder" : @"\U0001f4c1",
+    @"doc" : @"\U0001f4c4", // deprecated
+    @"file" : @"\U0001f4c4",
+    @"docs" : @"\U0000f0c5", // deprecated
+    @"copy" : @"\U0000f0c5",
+    @"folder" : @"\U0001f4c1", // deprecated
+    @"folder-close" : @"\U0001f4c1",
     @"folder-open" : @"\U0001f4c2",
     @"rss" : @"\U0000f09e",
     @"phone" : @"\U0001f4de",
-    @"phone-squared" : @"\U0000f098",
-    @"menu" : @"\U0000f0c9",
+    @"phone-squared" : @"\U0000f098", // deprecated
+    @"phone-sign" : @"\U0000f098",
+    @"menu" : @"\U0000f0c9", // deprecated
+    @"reorder" : @"\U0000f0c9",
     @"cog" : @"\U00002699",
-    @"cog-alt" : @"\U000026ef",
+    @"cog-alt" : @"\U000026ef", // deprecated
+    @"cogs" : @"\U000026ef",
     @"wrench" : @"\U0001f527",
-    @"basket" : @"\U0000e73d",
+    @"basket" : @"\U0000e73d", // deprecated
+    @"shopping-cart" : @"\U0000e73d",
     @"calendar" : @"\U0001f4c5",
-    @"login" : @"\U0000e740",
-    @"logout" : @"\U0000e741",
+    @"login" : @"\U0000e740", // deprecated
+    @"signin" : @"\U0000e740",
+    @"logout" : @"\U0000e741", // deprecated
+    @"signout" : @"\U0000e741",
     @"volume-off" : @"\U0001f507",
     @"volume-down" : @"\U0001f509",
     @"volume-up" : @"\U0001f50a",
     @"headphones" : @"\U0001f3a7",
-    @"clock" : @"\U0001f554",
-    @"block" : @"\U0001f6ab",
+    @"clock" : @"\U0001f554", // deprecated
+    @"time" : @"\U0001f554",
+    @"block" : @"\U0001f6ab", // deprecated
+    @"ban-circle" : @"\U0001f6ab",
     @"resize-full" : @"\U0000e744",
-    @"resize-full-alt" : @"\U0000f0b2",
+    @"resize-full-alt" : @"\U0000f0b2", // deprecated
+    @"fullscreen" : @"\U0000f0b2",
     @"resize-small" : @"\U0000e746",
     @"resize-vertical" : @"\U00002b0c",
     @"resize-horizontal" : @"\U00002b0d",
     @"move" : @"\U0000f047",
     @"zoom-in" : @"\U0000e750",
     @"zoom-out" : @"\U0000e751",
-    @"down-circle2" : @"\U0000e758",
-    @"up-circle2" : @"\U0000e75b",
-    @"down-dir" : @"\U000025be",
-    @"up-dir" : @"\U000025b4",
-    @"left-dir" : @"\U000025c2",
-    @"right-dir" : @"\U000025b8",
-    @"down-open" : @"\U0000e75c",
-    @"left-open" : @"\U0000e75d",
-    @"right-open" : @"\U0000e75e",
-    @"up-open" : @"\U0000e75f",
-    @"down" : @"\U00002193",
-    @"left" : @"\U00002190",
-    @"right" : @"\U00002192",
-    @"up" : @"\U00002191",
-    @"right-hand" : @"\U0000261e",
-    @"left-hand" : @"\U0000261c",
-    @"up-hand" : @"\U0000261d",
-    @"down-hand" : @"\U0000261f",
-    @"left-circled" : @"\U0000f0a8",
-    @"right-circled" : @"\U0000f0a9",
-    @"up-circled" : @"\U0000f0aa",
-    @"down-circled" : @"\U0000f0ab",
-    @"cw" : @"\U000027f3",
-    @"ccw" : @"\U000027f2",
-    @"arrows-cw" : @"\U0000e760",
-    @"shuffle" : @"\U0001f500",
+    @"down-circle2" : @"\U0000e758", // deprecated
+    @"download" : @"\U0000e758", // renamed
+    @"up-circle2" : @"\U0000e75b", // deprecated
+    @"upload" : @"\U0000e75b", // renamed
+    @"down-dir" : @"\U000025be", // deprecated
+    @"caret-down" : @"\U000025be",
+    @"up-dir" : @"\U000025b4", // deprecated
+    @"caret-up" : @"\U000025b4",
+    @"left-dir" : @"\U000025c2", // deprecated
+    @"caret-left" : @"\U000025c2",
+    @"right-dir" : @"\U000025b8", // deprecated
+    @"caret-right" : @"\U000025b8",
+    @"down-open" : @"\U0000e75c", // deprecated
+    @"chevron-down" : @"\U0000e75c",
+    @"left-open" : @"\U0000e75d", // deprecated
+    @"chevron-left" : @"\U0000e75d",
+    @"right-open" : @"\U0000e75e", // deprecated
+    @"chevron-right" : @"\U0000e75e",
+    @"up-open" : @"\U0000e75f", // deprecated
+    @"chevron-up" : @"\U0000e75f",
+    @"down" : @"\U00002193", // deprecated
+    @"arrow-down" : @"\U00002193",
+    @"left" : @"\U00002190", // deprecated
+    @"arrow-left" : @"\U00002190",
+    @"right" : @"\U00002192", // deprecated
+    @"arrow-right" : @"\U00002192",
+    @"up" : @"\U00002191", // deprecated
+    @"arrow-up" : @"\U00002191",
+    @"right-hand" : @"\U0000261e", // deprecated
+    @"hand-right" : @"\U0000261e",
+    @"left-hand" : @"\U0000261c", // deprecated
+    @"hand-left" : @"\U0000261c",
+    @"up-hand" : @"\U0000261d", // deprecated
+    @"hand-up" : @"\U0000261d",
+    @"down-hand" : @"\U0000261f", // deprecated
+    @"hand-down" : @"\U0000261f",
+    @"left-circled" : @"\U0000f0a8", // deprecated
+    @"circle-arrow-left" : @"\U0000f0a8",
+    @"right-circled" : @"\U0000f0a9", // deprecated
+    @"circle-arrow-right" : @"\U0000f0a9",
+    @"up-circled" : @"\U0000f0aa", // deprecated
+    @"circle-arrow-up" : @"\U0000f0aa",
+    @"down-circled" : @"\U0000f0ab", // deprecated
+    @"circle-arrow-down" : @"\U0000f0ab",
+    @"cw" : @"\U000027f3", // deprecated
+    @"repeat" : @"\U000027f3",
+    @"ccw" : @"\U000027f2", // deprecated
+    @"undo" : @"\U000027f2",
+    @"arrows-cw" : @"\U0000e760", // deprecated
+    @"refresh" : @"\U0000e760",
+    @"shuffle" : @"\U0001f500", // deprecated
+    @"random" : @"\U0001f500",
     @"play" : @"\U000025b6",
-    @"play-circle2" : @"\U0000e761",
+    @"play-circle2" : @"\U0000e761", // deprecated
+    @"play-circle" : @"\U0000e761",
     @"stop" : @"\U000025aa",
     @"pause" : @"\U00002389",
-    @"to-end" : @"\U000023ed",
-    @"to-end-alt" : @"\U0000e762",
-    @"to-start" : @"\U000023ee",
-    @"to-start-alt" : @"\U0000e763",
-    @"fast-fw" : @"\U000023e9",
-    @"fast-bw" : @"\U000023ea",
+    @"to-end" : @"\U000023ed", // deprecated
+    @"step-forward" : @"\U000023ed",
+    @"to-end-alt" : @"\U0000e762", // deprecated
+    @"fast-forward" : @"\U0000e762",
+    @"to-start" : @"\U000023ee", // deprecated
+    @"step-backward" : @"\U000023ee",
+    @"to-start-alt" : @"\U0000e763", // deprecated
+    @"fast-backward" : @"\U0000e763",
+    @"fast-fw" : @"\U000023e9", // deprecated
+    @"forward" : @"\U000023e9", // renamed
+    @"fast-bw" : @"\U000023ea", // deprecated
+    @"backward" : @"\U000023ea",
     @"eject" : @"\U00002ecf",
-    @"target" : @"\U0001f3af",
+    @"target" : @"\U0001f3af", // deprecated
+    @"screenshot" : @"\U0001f3af",
     @"signal" : @"\U0001f4f6",
-    @"award" : @"\U0001f3c9",
+    @"award" : @"\U0001f3c9", // deprecated
+    @"trophy" : @"\U0001f3c9",
     @"inbox" : @"\U0000e777",
     @"globe" : @"\U0001f30e",
     @"cloud" : @"\U00002601",
-    @"flash" : @"\U000026a1",
+    @"flash" : @"\U000026a1", // deprecated
+    @"bolt" : @"\U000026a1",
     @"umbrella" : @"\U00002602",
-    @"flight" : @"\U00002708",
+    @"flight" : @"\U00002708", // deprecated
+    @"plane" : @"\U00002708",
     @"leaf" : @"\U0001f342",
     @"font" : @"\U0000e779",
     @"bold" : @"\U0000e77a",
@@ -173,13 +247,17 @@
     @"list" : @"\U0000e782",
     @"indent-left" : @"\U0000e783",
     @"indent-right" : @"\U0000e784",
-    @"list-bullet" : @"\U0000f0ca",
-    @"list-numbered" : @"\U0000f0cb",
-    @"strike" : @"\U0000f0cc",
+    @"list-bullet" : @"\U0000f0ca", // deprecated
+    @"list-ul" : @"\U0000f0ca",
+    @"list-numbered" : @"\U0000f0cb", // deprecated
+    @"list-ol" : @"\U0000f0cb",
+    @"strike" : @"\U0000f0cc", // deprecated
+    @"strikethrough" : @"\U0000f0cc",
     @"underline" : @"\U0000f0cd",
     @"table" : @"\U0000f0ce",
     @"columns" : @"\U0000f0db",
-    @"scissors" : @"\U00002702",
+    @"scissors" : @"\U00002702", // deprecated
+    @"cut" : @"\U00002702",
     @"paste" : @"\U0000f0ea",
     @"briefcase" : @"\U0001f4bc",
     @"off" : @"\U0000e78e",
@@ -188,7 +266,8 @@
     @"qrcode" : @"\U0000e791",
     @"barcode" : @"\U0000e792",
     @"book" : @"\U0001f4d5",
-    @"ajust" : @"\U0000e793",
+    @"ajust" : @"\U0000e793", // deprecated
+    @"adjust" : @"\U0000e793",
     @"tint" : @"\U0000e794",
     @"check" : @"\U00002611",
     @"check-empty" : @"\U0000f096",
@@ -196,10 +275,13 @@
     @"gift" : @"\U0001f381",
     @"fire" : @"\U0001f525",
     @"magnet" : @"\U0000e7a1",
-    @"chart-bar" : @"\U0001f4ca",
+    @"chart-bar" : @"\U0001f4ca", // deprecated
+    @"bar-chart" : @"\U0001f4ca",
     @"credit-card" : @"\U0001f4b3",
-    @"floppy" : @"\U0001f4be",
-    @"megaphone" : @"\U0001f4e3",
+    @"floppy" : @"\U0001f4be", // deprecated
+    @"save" : @"\U0001f4be",
+    @"megaphone" : @"\U0001f4e3", // deprecated
+    @"bullhorn" : @"\U0001f4e3",
     @"hdd" : @"\U0000f0a0",
     @"key" : @"\U0001f511",
     @"certificate" : @"\U0000f0a3",
@@ -212,22 +294,32 @@
     @"sort" : @"\U0000f0dc",
     @"sort-down" : @"\U0000f0dd",
     @"sort-up" : @"\U0000f0de",
-    @"hammer" : @"\U0001f528",
+    @"hammer" : @"\U0001f528", // deprecated
+    @"legal" : @"\U0001f528",
     @"gauge" : @"\U0000f0e4",
     @"sitemap" : @"\U0000f0e8",
-    @"github-squared" : @"\U0000f300",
+    @"github-squared" : @"\U0000f300", // deprecated
+    @"github-sign" : @"\U0000f300",
     @"github" : @"\U0000f09b",
-    @"twitter-squared" : @"\U0000f304",
+    @"twitter-squared" : @"\U0000f304", // deprecated
+    @"twitter-sign" : @"\U0000f304",
     @"twitter" : @"\U0000f099",
-    @"facebook-squared" : @"\U0000f308",
+    @"facebook-squared" : @"\U0000f308", // deprecated
+    @"facebook-sign" : @"\U0000f308",
     @"facebook" : @"\U0000f09a",
-    @"linkedin-squared" : @"\U0000f30c",
+    @"linkedin-squared" : @"\U0000f30c", // deprecated
+    @"linkedin-sign" : @"\U0000f30c",
     @"linkedin" : @"\U0000f0e1",
-    @"pinterest-circled" : @"\U0000f0d2",
-    @"pinterest-squared" : @"\U0000f0d3",
-    @"gplus-squared" : @"\U0000f0d4",
-    @"gplus" : @"\U0000f0d5",
-    @"blank" : @"\U0000f0c8",
+    @"pinterest-circled" : @"\U0000f0d2", // deprecated
+    @"pinterest" : @"\U0000f0d2",
+    @"pinterest-squared" : @"\U0000f0d3", // deprecated
+    @"pinterest-sign" : @"\U0000f0d3",
+    @"gplus-squared" : @"\U0000f0d4", // deprecated
+    @"google-plus-sign" : @"\U0000f0d4",
+    @"gplus" : @"\U0000f0d5", // deprecated
+    @"google-plus" : @"\U0000f0d5",
+    @"blank" : @"\U0000f0c8", // deprecated
+    @"sign-blank" : @"\U0000f0c8",
     @"lemon" : @"\U0001f34b"
     };
 }
@@ -246,12 +338,20 @@
     return [self iconWithName:@"search"];
 }
 
-+ (FIIcon *)mailIcon {
++ (FIIcon *)mailIcon { // deprecated
     return [self iconWithName:@"mail"];
 }
 
-+ (FIIcon *)mailAltIcon {
++ (FIIcon *)envelopeIcon {
+    return [self iconWithName:@"envelope"];
+}
+
++ (FIIcon *)mailAltIcon { // deprecated
     return [self iconWithName:@"mail-alt"];
+}
+
++ (FIIcon *)envelopeAltIcon {
+    return [self iconWithName:@"envelope-alt"];
 }
 
 + (FIIcon *)heartIcon {
@@ -278,20 +378,32 @@
     return [self iconWithName:@"user"];
 }
 
-+ (FIIcon *)usersIcon {
++ (FIIcon *)usersIcon { // deprecated
     return [self iconWithName:@"users"];
+}
+
++ (FIIcon *)groupIcon {
+    return [self iconWithName:@"group"];
 }
 
 + (FIIcon *)userMdIcon {
     return [self iconWithName:@"user-md"];
 }
 
-+ (FIIcon *)videoIcon {
++ (FIIcon *)videoIcon { // deprecated
     return [self iconWithName:@"video"];
 }
 
-+ (FIIcon *)videocamIcon {
++ (FIIcon *)filmIcon {
+    return [self iconWithName:@"film"];
+}
+
++ (FIIcon *)videocamIcon { // deprecated
     return [self iconWithName:@"videocam"];
+}
+
++ (FIIcon *)facetimeVideoIcon {
+    return [self iconWithName:@"facetime-video"];
 }
 
 + (FIIcon *)pictureIcon {
@@ -302,8 +414,12 @@
     return [self iconWithName:@"camera"];
 }
 
-+ (FIIcon *)cameraAltIcon {
++ (FIIcon *)cameraAltIcon { // deprecated
     return [self iconWithName:@"camera-alt"];
+}
+
++ (FIIcon *)cameraRetroIcon {
+    return [self iconWithName:@"camera-retro"];
 }
 
 + (FIIcon *)thLargeIcon {
@@ -322,48 +438,80 @@
     return [self iconWithName:@"ok"];
 }
 
-+ (FIIcon *)okCircleIcon {
-    return [self iconWithName:@"ok-circle"];
++ (FIIcon *)okSignIcon {
+    return [self iconWithName:@"ok-sign"];
 }
 
-+ (FIIcon *)okCircle2Icon {
++ (FIIcon *)okCircle2Icon { // deprecated
     return [self iconWithName:@"ok-circle2"];
 }
 
-+ (FIIcon *)cancelIcon {
++ (FIIcon *)okCircleIcon { // renamed
+    return [self iconWithName:@"ok-circle"];
+}
+
++ (FIIcon *)cancelIcon { // deprecated
     return [self iconWithName:@"cancel"];
 }
 
-+ (FIIcon *)cancelCircleIcon {
++ (FIIcon *)removeIcon {
+    return [self iconWithName:@"remove"];
+}
+
++ (FIIcon *)cancelCircleIcon { // deprecated
     return [self iconWithName:@"cancel-circle"];
 }
 
-+ (FIIcon *)cancelCircle2Icon {
++ (FIIcon *)removeCircleIcon {
+    return [self iconWithName:@"remove-circle"];
+}
+
++ (FIIcon *)cancelCircle2Icon { // deprecated
     return [self iconWithName:@"cancel-circle2"];
+}
+
++ (FIIcon *)removeSignIcon {
+    return [self iconWithName:@"remove-sign"];
 }
 
 + (FIIcon *)plusIcon {
     return [self iconWithName:@"plus"];
 }
 
-+ (FIIcon *)plusCircleIcon {
++ (FIIcon *)plusCircleIcon { // deprecated
     return [self iconWithName:@"plus-circle"];
+}
+
++ (FIIcon *)plusSignIcon {
+    return [self iconWithName:@"plus-sign"];
 }
 
 + (FIIcon *)minusIcon {
     return [self iconWithName:@"minus"];
 }
 
-+ (FIIcon *)minusCircleIcon {
++ (FIIcon *)minusCircleIcon { // deprecated
     return [self iconWithName:@"minus-circle"];
 }
 
-+ (FIIcon *)helpCircleIcon {
++ (FIIcon *)minusSignIcon {
+    return [self iconWithName:@"minus-sign"];
+}
+
++ (FIIcon *)helpCircleIcon { // deprecated
     return [self iconWithName:@"help-circle"];
 }
 
-+ (FIIcon *)infoCircleIcon {
++ (FIIcon *)questionSignIcon {
+    return [self iconWithName:@"question-sign"];
+}
+
++ (FIIcon *)infoCircleIcon { // deprecated
     return [self iconWithName:@"info-circle"];
+}
+
++ (FIIcon *)infoSignIcon {
+    return [self iconWithName:@"info-sign"];
 }
 
 + (FIIcon *)homeIcon {
@@ -374,32 +522,56 @@
     return [self iconWithName:@"link"];
 }
 
-+ (FIIcon *)linkExtIcon {
++ (FIIcon *)linkExtIcon { // deprecated
     return [self iconWithName:@"link-ext"];
 }
 
-+ (FIIcon *)attachIcon {
++ (FIIcon *)externalLinkIcon {
+    return [self iconWithName:@"external-link"];
+}
+
++ (FIIcon *)attachIcon { // deprecated
     return [self iconWithName:@"attach"];
+}
+
++ (FIIcon *)paperClipIcon {
+    return [self iconWithName:@"paper-clip"];
 }
 
 + (FIIcon *)lockIcon {
     return [self iconWithName:@"lock"];
 }
 
-+ (FIIcon *)lockOpenIcon {
++ (FIIcon *)lockOpenIcon { // deprecated
     return [self iconWithName:@"lock-open"];
 }
 
-+ (FIIcon *)pinIcon {
++ (FIIcon *)unlockIcon {
+    return [self iconWithName:@"unlock"];
+}
+
++ (FIIcon *)pinIcon { // deprecated
     return [self iconWithName:@"pin"];
 }
 
-+ (FIIcon *)eyeIcon {
++ (FIIcon *)pushpinIcon {
+    return [self iconWithName:@"pushpin"];
+}
+
++ (FIIcon *)eyeIcon { // deprecated
     return [self iconWithName:@"eye"];
 }
 
-+ (FIIcon *)eyeOffIcon {
++ (FIIcon *)eyeOpenIcon {
+    return [self iconWithName:@"eye-open"];
+}
+
++ (FIIcon *)eyeOffIcon { // deprecated
     return [self iconWithName:@"eye-off"];
+}
+
++ (FIIcon *)eyeCloseIcon {
+    return [self iconWithName:@"eye-close"];
 }
 
 + (FIIcon *)tagIcon {
@@ -430,20 +602,24 @@
     return [self iconWithName:@"thumbs-down"];
 }
 
-+ (FIIcon *)downloadIcon {
-    return [self iconWithName:@"download"];
++ (FIIcon *)downloadAltIcon {
+    return [self iconWithName:@"download-alt"];
 }
 
-+ (FIIcon *)uploadIcon {
-    return [self iconWithName:@"upload"];
++ (FIIcon *)uploadAltIcon {
+    return [self iconWithName:@"upload-alt"];
 }
 
-+ (FIIcon *)forwardIcon {
-    return [self iconWithName:@"forward"];
++ (FIIcon *)shareAltIcon {
+    return [self iconWithName:@"share-alt"];
 }
 
-+ (FIIcon *)exportIcon {
++ (FIIcon *)exportIcon { // deprecated
     return [self iconWithName:@"export"];
+}
+
++ (FIIcon *)shareIcon {
+    return [self iconWithName:@"share"];
 }
 
 + (FIIcon *)pencilIcon {
@@ -462,44 +638,80 @@
     return [self iconWithName:@"retweet"];
 }
 
-+ (FIIcon *)commentIcon {
++ (FIIcon *)commentIcon { // renamed
     return [self iconWithName:@"comment"];
 }
 
-+ (FIIcon *)chatIcon {
++ (FIIcon *)commentsIcon {
+    return [self iconWithName:@"comments"];
+}
+
++ (FIIcon *)commentAltIcon {
+    return [self iconWithName:@"comment-alt"];
+}
+
++ (FIIcon *)chatIcon { // deprecated
     return [self iconWithName:@"chat"];
+}
+
++ (FIIcon *)commentsAltIcon {
+    return [self iconWithName:@"comments-alt"];
 }
 
 + (FIIcon *)bellIcon {
     return [self iconWithName:@"bell"];
 }
 
-+ (FIIcon *)attentionIcon {
++ (FIIcon *)attentionIcon { // deprecated
     return [self iconWithName:@"attention"];
 }
 
-+ (FIIcon *)attentionCircleIcon {
++ (FIIcon *)warningSignIcon {
+    return [self iconWithName:@"warning-sign"];
+}
+
++ (FIIcon *)attentionCircleIcon { // deprecated
     return [self iconWithName:@"attention-circle"];
 }
 
-+ (FIIcon *)locationIcon {
++ (FIIcon *)exclamationSignIcon {
+    return [self iconWithName:@"exclamation-sign"];
+}
+
++ (FIIcon *)locationIcon { // deprecated
     return [self iconWithName:@"location"];
+}
+
++ (FIIcon *)mapMarkerIcon {
+    return [self iconWithName:@"map-marker"];
 }
 
 + (FIIcon *)trashIcon {
     return [self iconWithName:@"trash"];
 }
 
-+ (FIIcon *)docIcon {
++ (FIIcon *)docIcon { // deprecated
     return [self iconWithName:@"doc"];
 }
 
-+ (FIIcon *)docsIcon {
++ (FIIcon *)fileIcon {
+    return [self iconWithName:@"file"];
+}
+
++ (FIIcon *)docsIcon { // deprecated
     return [self iconWithName:@"docs"];
 }
 
-+ (FIIcon *)folderIcon {
++ (FIIcon *)copyIcon {
+    return [self iconWithName:@"copy"];
+}
+
++ (FIIcon *)folderIcon { // deprecated
     return [self iconWithName:@"folder"];
+}
+
++ (FIIcon *)folderCloseIcon {
+    return [self iconWithName:@"folder-close"];
 }
 
 + (FIIcon *)folderOpenIcon {
@@ -514,40 +726,64 @@
     return [self iconWithName:@"phone"];
 }
 
-+ (FIIcon *)phoneSquaredIcon {
++ (FIIcon *)phoneSquaredIcon { // deprecated
     return [self iconWithName:@"phone-squared"];
 }
 
-+ (FIIcon *)menuIcon {
++ (FIIcon *)phoneSignIcon {
+    return [self iconWithName:@"phone-sign"];
+}
+
++ (FIIcon *)menuIcon { // deprecated
     return [self iconWithName:@"menu"];
+}
+
++ (FIIcon *)reorderIcon {
+    return [self iconWithName:@"reorder"];
 }
 
 + (FIIcon *)cogIcon {
     return [self iconWithName:@"cog"];
 }
 
-+ (FIIcon *)cogAltIcon {
++ (FIIcon *)cogAltIcon { // deprecated
     return [self iconWithName:@"cog-alt"];
+}
+
++ (FIIcon *)cogsIcon {
+    return [self iconWithName:@"cogs"];
 }
 
 + (FIIcon *)wrenchIcon {
     return [self iconWithName:@"wrench"];
 }
 
-+ (FIIcon *)basketIcon {
++ (FIIcon *)basketIcon { // deprecated
     return [self iconWithName:@"basket"];
+}
+
++ (FIIcon *)shoppingCartIcon {
+    return [self iconWithName:@"shopping-cart"];
 }
 
 + (FIIcon *)calendarIcon {
     return [self iconWithName:@"calendar"];
 }
 
-+ (FIIcon *)loginIcon {
++ (FIIcon *)loginIcon { // deprecated
     return [self iconWithName:@"login"];
 }
 
-+ (FIIcon *)logoutIcon {
++ (FIIcon *)signinIcon {
+    return [self iconWithName:@"signin"];
+}
+
++ (FIIcon *)logoutIcon { // deprecated
     return [self iconWithName:@"logout"];
+}
+
++ (FIIcon *)signoutIcon {
+    return [self iconWithName:@"signout"];
 }
 
 + (FIIcon *)volumeOffIcon {
@@ -566,20 +802,32 @@
     return [self iconWithName:@"headphones"];
 }
 
-+ (FIIcon *)clockIcon {
++ (FIIcon *)clockIcon { // deprecated
     return [self iconWithName:@"clock"];
 }
 
-+ (FIIcon *)blockIcon {
++ (FIIcon *)timeIcon {
+    return [self iconWithName:@"time"];
+}
+
++ (FIIcon *)blockIcon { // deprecated
     return [self iconWithName:@"block"];
+}
+
++ (FIIcon *)banCircleIcon {
+    return [self iconWithName:@"ban-circle"];
 }
 
 + (FIIcon *)resizeFullIcon {
     return [self iconWithName:@"resize-full"];
 }
 
-+ (FIIcon *)resizeFullAltIcon {
++ (FIIcon *)resizeFullAltIcon { // deprecated
     return [self iconWithName:@"resize-full-alt"];
+}
+
++ (FIIcon *)fullscreenIcon {
+    return [self iconWithName:@"fullscreen"];
 }
 
 + (FIIcon *)resizeSmallIcon {
@@ -606,116 +854,224 @@
     return [self iconWithName:@"zoom-out"];
 }
 
-+ (FIIcon *)downCircle2Icon {
++ (FIIcon *)downCircle2Icon { // deprecated
     return [self iconWithName:@"down-circle2"];
 }
 
-+ (FIIcon *)upCircle2Icon {
++ (FIIcon *)downloadIcon { // renamed
+    return [self iconWithName:@"download"];
+}
+
++ (FIIcon *)upCircle2Icon { // deprecated
     return [self iconWithName:@"up-circle2"];
 }
 
-+ (FIIcon *)downDirIcon {
++ (FIIcon *)uploadIcon { // renamed
+    return [self iconWithName:@"upload"];
+}
+
++ (FIIcon *)downDirIcon { // deprecated
     return [self iconWithName:@"down-dir"];
 }
 
-+ (FIIcon *)upDirIcon {
++ (FIIcon *)caretDownIcon {
+    return [self iconWithName:@"caret-down"];
+}
+
++ (FIIcon *)upDirIcon { // deprecated
     return [self iconWithName:@"up-dir"];
 }
 
-+ (FIIcon *)leftDirIcon {
++ (FIIcon *)caretUpIcon {
+    return [self iconWithName:@"caret-up"];
+}
+
++ (FIIcon *)leftDirIcon { // deprecated
     return [self iconWithName:@"left-dir"];
 }
 
-+ (FIIcon *)rightDirIcon {
++ (FIIcon *)caretLeftIcon {
+    return [self iconWithName:@"caret-left"];
+}
+
++ (FIIcon *)rightDirIcon { // deprecated
     return [self iconWithName:@"right-dir"];
 }
 
-+ (FIIcon *)downOpenIcon {
++ (FIIcon *)caretRightIcon {
+    return [self iconWithName:@"caret-right"];
+}
+
++ (FIIcon *)downOpenIcon { // deprecated
     return [self iconWithName:@"down-open"];
 }
 
-+ (FIIcon *)leftOpenIcon {
++ (FIIcon *)chevronDownIcon {
+    return [self iconWithName:@"chevron-down"];
+}
+
++ (FIIcon *)leftOpenIcon { // deprecated
     return [self iconWithName:@"left-open"];
 }
 
-+ (FIIcon *)rightOpenIcon {
++ (FIIcon *)chevronLeftIcon {
+    return [self iconWithName:@"chevron-left"];
+}
+
++ (FIIcon *)rightOpenIcon { // deprecated
     return [self iconWithName:@"right-open"];
 }
 
-+ (FIIcon *)upOpenIcon {
++ (FIIcon *)chevronRightIcon {
+    return [self iconWithName:@"chevron-right"];
+}
+
++ (FIIcon *)upOpenIcon { // deprecated
     return [self iconWithName:@"up-open"];
 }
 
-+ (FIIcon *)downIcon {
++ (FIIcon *)chevronUpIcon {
+    return [self iconWithName:@"chevron-up"];
+}
+
++ (FIIcon *)downIcon { // deprecated
     return [self iconWithName:@"down"];
 }
 
-+ (FIIcon *)leftIcon {
++ (FIIcon *)arrowDownIcon {
+    return [self iconWithName:@"arrow-down"];
+}
+
++ (FIIcon *)leftIcon { // deprecated
     return [self iconWithName:@"left"];
 }
 
-+ (FIIcon *)rightIcon {
++ (FIIcon *)arrowLeftIcon {
+    return [self iconWithName:@"arrow-left"];
+}
+
++ (FIIcon *)rightIcon { // deprecated
     return [self iconWithName:@"right"];
 }
 
-+ (FIIcon *)upIcon {
++ (FIIcon *)arrowRightIcon {
+    return [self iconWithName:@"arrow-right"];
+}
+
++ (FIIcon *)upIcon { // deprecated
     return [self iconWithName:@"up"];
 }
 
-+ (FIIcon *)rightHandIcon {
++ (FIIcon *)arrowUpIcon {
+    return [self iconWithName:@"arrow-up"];
+}
+
++ (FIIcon *)rightHandIcon { // deprecated
     return [self iconWithName:@"right-hand"];
 }
 
-+ (FIIcon *)leftHandIcon {
++ (FIIcon *)handRightIcon {
+    return [self iconWithName:@"hand-right"];
+}
+
++ (FIIcon *)leftHandIcon { // deprecated
     return [self iconWithName:@"left-hand"];
 }
 
-+ (FIIcon *)upHandIcon {
++ (FIIcon *)handLeftIcon {
+    return [self iconWithName:@"hand-left"];
+}
+
++ (FIIcon *)upHandIcon { // deprecated
     return [self iconWithName:@"up-hand"];
 }
 
-+ (FIIcon *)downHandIcon {
++ (FIIcon *)handUpIcon {
+    return [self iconWithName:@"hand-up"];
+}
+
++ (FIIcon *)downHandIcon { // deprecated
     return [self iconWithName:@"down-hand"];
 }
 
-+ (FIIcon *)leftCircledIcon {
++ (FIIcon *)handDownIcon {
+    return [self iconWithName:@"hand-down"];
+}
+
++ (FIIcon *)leftCircledIcon { // deprecated
     return [self iconWithName:@"left-circled"];
 }
 
-+ (FIIcon *)rightCircledIcon {
++ (FIIcon *)circleArrowLeftIcon {
+    return [self iconWithName:@"circle-arrow-left"];
+}
+
++ (FIIcon *)rightCircledIcon { // deprecated
     return [self iconWithName:@"right-circled"];
 }
 
-+ (FIIcon *)upCircledIcon {
++ (FIIcon *)circleArrowRightIcon {
+    return [self iconWithName:@"circle-arrow-right"];
+}
+
++ (FIIcon *)upCircledIcon { // deprecated
     return [self iconWithName:@"up-circled"];
 }
 
-+ (FIIcon *)downCircledIcon {
++ (FIIcon *)circleArrowUpIcon {
+    return [self iconWithName:@"circle-arrow-up"];
+}
+
++ (FIIcon *)downCircledIcon { // deprecated
     return [self iconWithName:@"down-circled"];
 }
 
-+ (FIIcon *)cwIcon {
++ (FIIcon *)circleArrowDownIcon {
+    return [self iconWithName:@"circle-arrow-down"];
+}
+
++ (FIIcon *)cwIcon { // deprecated
     return [self iconWithName:@"cw"];
 }
 
-+ (FIIcon *)ccwIcon {
++ (FIIcon *)repeatIcon {
+    return [self iconWithName:@"repeat"];
+}
+
++ (FIIcon *)ccwIcon { // deprecated
     return [self iconWithName:@"ccw"];
 }
 
-+ (FIIcon *)arrowsCwIcon {
++ (FIIcon *)undoIcon {
+    return [self iconWithName:@"undo"];
+}
+
++ (FIIcon *)arrowsCwIcon { // deprecated
     return [self iconWithName:@"arrows-cw"];
 }
 
-+ (FIIcon *)shuffleIcon {
++ (FIIcon *)refreshIcon {
+    return [self iconWithName:@"refresh"];
+}
+
++ (FIIcon *)shuffleIcon { // deprecated
     return [self iconWithName:@"shuffle"];
+}
+
++ (FIIcon *)randomIcon {
+    return [self iconWithName:@"random"];
 }
 
 + (FIIcon *)playIcon {
     return [self iconWithName:@"play"];
 }
 
-+ (FIIcon *)playCircle2Icon {
++ (FIIcon *)playCircle2Icon { // deprecated
     return [self iconWithName:@"play-circle2"];
+}
+
++ (FIIcon *)playCircleIcon {
+    return [self iconWithName:@"play-circle"];
 }
 
 + (FIIcon *)stopIcon {
@@ -726,44 +1082,76 @@
     return [self iconWithName:@"pause"];
 }
 
-+ (FIIcon *)toEndIcon {
++ (FIIcon *)toEndIcon { // deprecated
     return [self iconWithName:@"to-end"];
 }
 
-+ (FIIcon *)toEndAltIcon {
++ (FIIcon *)stepForwardIcon {
+    return [self iconWithName:@"step-forward"];
+}
+
++ (FIIcon *)toEndAltIcon { // deprecated
     return [self iconWithName:@"to-end-alt"];
 }
 
-+ (FIIcon *)toStartIcon {
++ (FIIcon *)fastForwardIcon {
+    return [self iconWithName:@"fast-forward"];
+}
+
++ (FIIcon *)toStartIcon { // deprecated
     return [self iconWithName:@"to-start"];
 }
 
-+ (FIIcon *)toStartAltIcon {
++ (FIIcon *)stepBackwardIcon {
+    return [self iconWithName:@"step-backward"];
+}
+
++ (FIIcon *)toStartAltIcon { // deprecated
     return [self iconWithName:@"to-start-alt"];
 }
 
-+ (FIIcon *)fastFwIcon {
++ (FIIcon *)fastBackwardIcon {
+    return [self iconWithName:@"fast-backward"];
+}
+
++ (FIIcon *)fastFwIcon { // deprecated
     return [self iconWithName:@"fast-fw"];
 }
 
-+ (FIIcon *)fastBwIcon {
++ (FIIcon *)forwardIcon { // renamed
+    return [self iconWithName:@"forward"];
+}
+
++ (FIIcon *)fastBwIcon { // deprecated
     return [self iconWithName:@"fast-bw"];
+}
+
++ (FIIcon *)backwardIcon {
+    return [self iconWithName:@"backward"];
 }
 
 + (FIIcon *)ejectIcon {
     return [self iconWithName:@"eject"];
 }
 
-+ (FIIcon *)targetIcon {
++ (FIIcon *)targetIcon { // deprecated
     return [self iconWithName:@"target"];
+}
+
++ (FIIcon *)screenshotIcon {
+    return [self iconWithName:@"screenshot"];
 }
 
 + (FIIcon *)signalIcon {
     return [self iconWithName:@"signal"];
 }
 
-+ (FIIcon *)awardIcon {
++ (FIIcon *)awardIcon { // deprecated
     return [self iconWithName:@"award"];
+}
+
++ (FIIcon *)trophyIcon {
+    return [self iconWithName:@"trophy"];
 }
 
 + (FIIcon *)inboxIcon {
@@ -778,16 +1166,24 @@
     return [self iconWithName:@"cloud"];
 }
 
-+ (FIIcon *)flashIcon {
++ (FIIcon *)flashIcon { // deprecated
     return [self iconWithName:@"flash"];
+}
+
++ (FIIcon *)boltIcon {
+    return [self iconWithName:@"bolt"];
 }
 
 + (FIIcon *)umbrellaIcon {
     return [self iconWithName:@"umbrella"];
 }
 
-+ (FIIcon *)flightIcon {
++ (FIIcon *)flightIcon { // deprecated
     return [self iconWithName:@"flight"];
+}
+
++ (FIIcon *)planeIcon {
+    return [self iconWithName:@"plane"];
 }
 
 + (FIIcon *)leafIcon {
@@ -842,16 +1238,28 @@
     return [self iconWithName:@"indent-right"];
 }
 
-+ (FIIcon *)listBulletIcon {
++ (FIIcon *)listBulletIcon { // deprecated
     return [self iconWithName:@"list-bullet"];
 }
 
-+ (FIIcon *)listNumberedIcon {
++ (FIIcon *)listUlIcon {
+    return [self iconWithName:@"list-ul"];
+}
+
++ (FIIcon *)listNumberedIcon { // deprecated
     return [self iconWithName:@"list-numbered"];
 }
 
-+ (FIIcon *)strikeIcon {
++ (FIIcon *)listOlIcon {
+    return [self iconWithName:@"list-ol"];
+}
+
++ (FIIcon *)strikeIcon { // deprecated
     return [self iconWithName:@"strike"];
+}
+
++ (FIIcon *)strikethroughIcon {
+    return [self iconWithName:@"strikethrough"];
 }
 
 + (FIIcon *)underlineIcon {
@@ -866,8 +1274,12 @@
     return [self iconWithName:@"columns"];
 }
 
-+ (FIIcon *)scissorsIcon {
++ (FIIcon *)scissorsIcon { // deprecated
     return [self iconWithName:@"scissors"];
+}
+
++ (FIIcon *)cutIcon {
+    return [self iconWithName:@"cut"];
 }
 
 + (FIIcon *)pasteIcon {
@@ -902,8 +1314,12 @@
     return [self iconWithName:@"book"];
 }
 
-+ (FIIcon *)ajustIcon {
++ (FIIcon *)ajustIcon { // deprecated
     return [self iconWithName:@"ajust"];
+}
+
++ (FIIcon *)adjustIcon {
+    return [self iconWithName:@"adjust"];
 }
 
 + (FIIcon *)tintIcon {
@@ -934,20 +1350,32 @@
     return [self iconWithName:@"magnet"];
 }
 
-+ (FIIcon *)chartBarIcon {
++ (FIIcon *)chartBarIcon { // deprecated
     return [self iconWithName:@"chart-bar"];
+}
+
++ (FIIcon *)barChartIcon {
+    return [self iconWithName:@"bar-chart"];
 }
 
 + (FIIcon *)creditCardIcon {
     return [self iconWithName:@"credit-card"];
 }
 
-+ (FIIcon *)floppyIcon {
++ (FIIcon *)floppyIcon { // deprecated
     return [self iconWithName:@"floppy"];
 }
 
-+ (FIIcon *)megaphoneIcon {
++ (FIIcon *)saveIcon {
+    return [self iconWithName:@"save"];
+}
+
++ (FIIcon *)megaphoneIcon { // deprecated
     return [self iconWithName:@"megaphone"];
+}
+
++ (FIIcon *)bullhornIcon {
+    return [self iconWithName:@"bullhorn"];
 }
 
 + (FIIcon *)hddIcon {
@@ -998,8 +1426,12 @@
     return [self iconWithName:@"sort-up"];
 }
 
-+ (FIIcon *)hammerIcon {
++ (FIIcon *)hammerIcon { // deprecated
     return [self iconWithName:@"hammer"];
+}
+
++ (FIIcon *)legalIcon {
+    return [self iconWithName:@"legal"];
 }
 
 + (FIIcon *)gaugeIcon {
@@ -1010,56 +1442,92 @@
     return [self iconWithName:@"sitemap"];
 }
 
-+ (FIIcon *)githubSquaredIcon {
++ (FIIcon *)githubSquaredIcon { // deprecated
     return [self iconWithName:@"github-squared"];
+}
+
++ (FIIcon *)githubSignIcon {
+    return [self iconWithName:@"github-sign"];
 }
 
 + (FIIcon *)githubIcon {
     return [self iconWithName:@"github"];
 }
 
-+ (FIIcon *)twitterSquaredIcon {
++ (FIIcon *)twitterSquaredIcon { // deprecated
     return [self iconWithName:@"twitter-squared"];
+}
+
++ (FIIcon *)twitterSignIcon {
+    return [self iconWithName:@"twitter-sign"];
 }
 
 + (FIIcon *)twitterIcon {
     return [self iconWithName:@"twitter"];
 }
 
-+ (FIIcon *)facebookSquaredIcon {
++ (FIIcon *)facebookSquaredIcon { // deprecated
     return [self iconWithName:@"facebook-squared"];
+}
+
++ (FIIcon *)facebookSignIcon {
+    return [self iconWithName:@"facebook-sign"];
 }
 
 + (FIIcon *)facebookIcon {
     return [self iconWithName:@"facebook"];
 }
 
-+ (FIIcon *)linkedinSquaredIcon {
++ (FIIcon *)linkedinSquaredIcon { // deprecated
     return [self iconWithName:@"linkedin-squared"];
+}
+
++ (FIIcon *)linkedinSignIcon {
+    return [self iconWithName:@"linkedin-sign"];
 }
 
 + (FIIcon *)linkedinIcon {
     return [self iconWithName:@"linkedin"];
 }
 
-+ (FIIcon *)pinterestCircledIcon {
++ (FIIcon *)pinterestCircledIcon { // deprecated
     return [self iconWithName:@"pinterest-circled"];
 }
 
-+ (FIIcon *)pinterestSquaredIcon {
++ (FIIcon *)pinterestIcon {
+    return [self iconWithName:@"pinterest"];
+}
+
++ (FIIcon *)pinterestSquaredIcon { // deprecated
     return [self iconWithName:@"pinterest-squared"];
 }
 
-+ (FIIcon *)gplusSquaredIcon {
++ (FIIcon *)pinterestSignIcon {
+    return [self iconWithName:@"pinterest-sign"];
+}
+
++ (FIIcon *)gplusSquaredIcon { // deprecated
     return [self iconWithName:@"gplus-squared"];
 }
 
-+ (FIIcon *)gplusIcon {
++ (FIIcon *)googlePlusSignIcon {
+    return [self iconWithName:@"google-plus-sign"];
+}
+
++ (FIIcon *)gplusIcon { // deprecated
     return [self iconWithName:@"gplus"];
 }
 
-+ (FIIcon *)blankIcon {
++ (FIIcon *)googlePlusIcon {
+    return [self iconWithName:@"google-plus"];
+}
+
++ (FIIcon *)blankIcon { // deprecated
     return [self iconWithName:@"blank"];
+}
+
++ (FIIcon *)signBlankIcon {
+    return [self iconWithName:@"sign-blank"];
 }
 
 + (FIIcon *)lemonIcon {
