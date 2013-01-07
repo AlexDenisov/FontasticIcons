@@ -63,7 +63,8 @@
 }
 
 + (NSDictionary *)iconsDictionary {
-    return nil;
+    return [NSDictionary dictionaryWithContentsOfFile:[[
+            NSBundle mainBundle] pathForResource:[self fontSetName] ofType:@"strings" inDirectory:@"Strings"]];
 }
 
 + (NSDictionary *)metaIconsDictionary {

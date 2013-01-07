@@ -25,8 +25,7 @@
 - (id)initWithFontName:(NSString *)aName ofType:(NSString *)aType {
     self = [super init];
     if (self) {
-        NSString *fontPath = [[NSBundle mainBundle] pathForResource:aName
-                                                             ofType:aType];
+        NSString *fontPath = [[NSBundle mainBundle] pathForResource:aName ofType:aType inDirectory:@"Fonts"];
         NSData *data = [[NSData alloc] initWithContentsOfFile:fontPath];
         CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((CFDataRef)data);
         arcsafe_release(data);
