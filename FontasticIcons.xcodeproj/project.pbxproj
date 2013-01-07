@@ -12,9 +12,7 @@
 		B0E074089E50B3F02CC2D35A /* FIIconLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07850BEB4C2B283D2B5ED /* FIIconLayer.m */; };
 		CA31B9A71657E194002A9EDD /* FIFontListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9A61657E194002A9EDD /* FIFontListViewController.m */; };
 		CA31B9CE165807F5002A9EDD /* FIFontAwesomeIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9CD165807F5002A9EDD /* FIFontAwesomeIcon.m */; };
-		CA31B9D816581D73002A9EDD /* fontawesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA31B9D716581D73002A9EDD /* fontawesome.ttf */; };
 		CA31B9E616582411002A9EDD /* FIIconicIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9E516582411002A9EDD /* FIIconicIcon.m */; };
-		CA31B9EC16582871002A9EDD /* iconic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA31B9EB16582871002A9EDD /* iconic.otf */; };
 		CA7C55C5163DC00700AC32A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C4163DC00700AC32A3 /* UIKit.framework */; };
 		CA7C55C7163DC00700AC32A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C6163DC00700AC32A3 /* Foundation.framework */; };
 		CA7C55C9163DC00700AC32A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C55C8163DC00700AC32A3 /* CoreGraphics.framework */; };
@@ -29,12 +27,12 @@
 		CA7C55EF163DC4E000AC32A3 /* FIIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55EE163DC4E000AC32A3 /* FIIconView.m */; };
 		CA7C55F5163DC6C900AC32A3 /* FIIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55F4163DC6C900AC32A3 /* FIIcon.m */; };
 		CA7C55F8163DC81800AC32A3 /* FIFont.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C55F7163DC81800AC32A3 /* FIFont.m */; };
-		CA7C55FD163DCD2F00AC32A3 /* Entypo-Social.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55FB163DCD2F00AC32A3 /* Entypo-Social.otf */; };
-		CA7C55FE163DCD2F00AC32A3 /* Entypo.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA7C55FC163DCD2F00AC32A3 /* Entypo.otf */; };
 		CA7C5606163E3AAD00AC32A3 /* FIEntypoIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5605163E3AAD00AC32A3 /* FIEntypoIcon.m */; };
 		CA7C5609163E433400AC32A3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C5608163E433400AC32A3 /* CoreText.framework */; };
 		CA7C561A163EFBCC00AC32A3 /* FIEntypoSocialIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */; };
 		CA7C561E163F060500AC32A3 /* FIMetaInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */; };
+		E183779716BE361500525AB5 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = E183779516BE361500525AB5 /* Fonts */; };
+		E183779816BE361500525AB5 /* Strings in Resources */ = {isa = PBXBuildFile; fileRef = E183779616BE361500525AB5 /* Strings */; };
 		E1B6DBF51693A4A600B6704C /* FIIconLayer+FIRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */; };
 		E1EC0266168FE25D004A8EDD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EC0263168FE23B004A8EDD /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -54,10 +52,8 @@
 		CA31B9A61657E194002A9EDD /* FIFontListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFontListViewController.m; sourceTree = "<group>"; };
 		CA31B9CC165807F5002A9EDD /* FIFontAwesomeIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFontAwesomeIcon.h; sourceTree = "<group>"; };
 		CA31B9CD165807F5002A9EDD /* FIFontAwesomeIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFontAwesomeIcon.m; sourceTree = "<group>"; };
-		CA31B9D716581D73002A9EDD /* fontawesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fontawesome.ttf; sourceTree = "<group>"; };
 		CA31B9E416582411002A9EDD /* FIIconicIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIconicIcon.h; sourceTree = "<group>"; };
 		CA31B9E516582411002A9EDD /* FIIconicIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIIconicIcon.m; sourceTree = "<group>"; };
-		CA31B9EB16582871002A9EDD /* iconic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconic.otf; sourceTree = "<group>"; };
 		CA7C55C0163DC00700AC32A3 /* FontasticIcons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontasticIcons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7C55C4163DC00700AC32A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA7C55C6163DC00700AC32A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,8 +77,6 @@
 		CA7C55F6163DC81800AC32A3 /* FIFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFont.h; sourceTree = "<group>"; };
 		CA7C55F7163DC81800AC32A3 /* FIFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFont.m; sourceTree = "<group>"; };
 		CA7C55FA163DC8B800AC32A3 /* FIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIUtils.h; sourceTree = "<group>"; };
-		CA7C55FB163DCD2F00AC32A3 /* Entypo-Social.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Entypo-Social.otf"; sourceTree = "<group>"; };
-		CA7C55FC163DCD2F00AC32A3 /* Entypo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.otf; sourceTree = "<group>"; };
 		CA7C55FF163E37AA00AC32A3 /* FIFont_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIFont_Private.h; sourceTree = "<group>"; };
 		CA7C5604163E3AAD00AC32A3 /* FIEntypoIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIEntypoIcon.h; sourceTree = "<group>"; };
 		CA7C5605163E3AAD00AC32A3 /* FIEntypoIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIEntypoIcon.m; sourceTree = "<group>"; };
@@ -93,6 +87,8 @@
 		CA7C561C163F060500AC32A3 /* FIMetaInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIMetaInfoManager.h; sourceTree = "<group>"; };
 		CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIMetaInfoManager.m; sourceTree = "<group>"; };
 		CA7C562D163FAC5300AC32A3 /* FontasticIcons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontasticIcons.h; sourceTree = "<group>"; };
+		E183779516BE361500525AB5 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = FontasticIcons/Sources/Resources/Fonts; sourceTree = SOURCE_ROOT; };
+		E183779616BE361500525AB5 /* Strings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Strings; sourceTree = "<group>"; };
 		E1EC0263168FE23B004A8EDD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E1EC02671690028C004A8EDD /* FontasticIcons.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = FontasticIcons.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,17 +221,6 @@
 			name = Impl;
 			sourceTree = "<group>";
 		};
-		CA7C55F0163DC4F400AC32A3 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				CA31B9EB16582871002A9EDD /* iconic.otf */,
-				CA31B9D716581D73002A9EDD /* fontawesome.ttf */,
-				CA7C55FB163DCD2F00AC32A3 /* Entypo-Social.otf */,
-				CA7C55FC163DCD2F00AC32A3 /* Entypo.otf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		CA7C55F1163DC51500AC32A3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +235,8 @@
 		CA7C55F2163DC52B00AC32A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CA7C55F0163DC4F400AC32A3 /* Fonts */,
+				E183779516BE361500525AB5 /* Fonts */,
+				E183779616BE361500525AB5 /* Strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -385,10 +371,8 @@
 				CA7C55D9163DC00700AC32A3 /* Default@2x.png in Resources */,
 				CA7C55DB163DC00700AC32A3 /* Default-568h@2x.png in Resources */,
 				CA7C55E1163DC00700AC32A3 /* FIViewController.xib in Resources */,
-				CA7C55FD163DCD2F00AC32A3 /* Entypo-Social.otf in Resources */,
-				CA7C55FE163DCD2F00AC32A3 /* Entypo.otf in Resources */,
-				CA31B9D816581D73002A9EDD /* fontawesome.ttf in Resources */,
-				CA31B9EC16582871002A9EDD /* iconic.otf in Resources */,
+				E183779716BE361500525AB5 /* Fonts in Resources */,
+				E183779816BE361500525AB5 /* Strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

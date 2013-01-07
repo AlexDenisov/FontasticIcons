@@ -1,0 +1,53 @@
+//
+//  EntypoSocial.strings
+//  FontasticIcons
+//
+//  Created by Ben Kreeger on 7.1.13.
+//  Copyright (c) 2012 Alex Denisov. All rights reserved.
+//
+
+"behance" = "\U0000F34E";
+"c-dribbble" = "\U0000F31C";
+"c-facebook" = "\U0000F30D";
+"c-flickr" = "\U0000F304";
+"c-github" = "\U0000F301";
+"c-google+" = "\U0000F310";
+"c-lastfm" = "\U0000F322";
+"c-linkedin" = "\U0000F319";
+"c-pinterest" = "\U0000F313";
+"c-rdio" = "\U0000F325";
+"c-skype" = "\U0000F33A";
+"c-spotify" = "\U0000F328";
+"c-stumbleupon" = "\U0000F31F";
+"c-tumblr" = "\U0000F316";
+"c-twitter" = "\U0000F30A";
+"c-vimeo" = "\U0000F307";
+"dribbble" = "\U0000F31B";
+"dropbox" = "\U0000F330";
+"evernote" = "\U0000F333";
+"facebook" = "\U0000F30C";
+"flattr" = "\U0000F336";
+"flickr" = "\U0000F303";
+"github" = "\U0000F300";
+"google+" = "\U0000F30F";
+"google-circles" = "\U0000F351";
+"instagram" = "\U0000F32D";
+"lastfm" = "\U0000F321";
+"linkedin" = "\U0000F318";
+"mixi" = "\U0000F34B";
+"paypal" = "\U0000F342";
+"picasa" = "\U0000F345";
+"pinterest" = "\U0000F312";
+"qq" = "\U0000F32A";
+"rdio" = "\U0000F324";
+"renren" = "\U0000F33C";
+"s-facebook" = "\U0000F30E";
+"sina-weibo" = "\U0000F33F";
+"skype" = "\U0000F339";
+"soundcloud" = "\U0000F348";
+"spotify" = "\U0000F327";
+"stumbleupon" = "\U0000F31E";
+"tumblr" = "\U0000F315";
+"twitter" = "\U0000F309";
+"vimeo" = "\U0000F306";
+"vk" = "\U0000F354";

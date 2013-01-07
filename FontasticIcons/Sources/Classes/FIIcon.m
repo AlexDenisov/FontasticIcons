@@ -63,11 +63,22 @@
 }
 
 + (NSDictionary *)iconsDictionary {
-    return nil;
+    return [NSDictionary dictionaryWithContentsOfFile:[[
+            NSBundle mainBundle] pathForResource:self.fontStringsName ofType:@"strings" inDirectory:@"Strings"]];
 }
 
 + (NSDictionary *)metaIconsDictionary {
     return [[self manager] iconSetForClass:self];
+}
+
++ (NSString *)fontStringsName {
+    return [[NSRegularExpression regularExpressionWithPattern:@"\\W+"
+                                                      options:NSRegularExpressionUseUnicodeWordBoundaries
+                                                        error:nil]
+                             stringByReplacingMatchesInString:self.fontSetName
+                                                      options:(NSMatchingOptions) 0
+                                                        range:NSMakeRange(0, self.fontSetName.length)
+                                                 withTemplate:@""];
 }
 
 + (NSString *)fontSetName {
