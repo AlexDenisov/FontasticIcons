@@ -58,7 +58,13 @@ static id _instance = nil;
 
 - (void)registerIconSet:(NSDictionary *)anIcons forClass:(Class)aClass {
     NSString *key = NSStringFromClass(aClass);
-    [self->iconSets setValue:anIcons
+    NSMutableDictionary *icons = anIcons.mutableCopy;
+    [icons enumerateKeysAndObjectsUsingBlock:^(NSString *name, NSString *glyph, BOOL *stop) {
+        if (icons[glyph]) { // value is non-recursive alias
+            icons[name] = icons[glyph]; // deprecated key lookup by alias
+        }
+    }];
+    [self->iconSets setValue:icons.copy
                       forKey:key];
 }
 
