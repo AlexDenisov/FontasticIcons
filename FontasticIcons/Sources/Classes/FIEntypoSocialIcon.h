@@ -9,6 +9,9 @@
 #import "FIIcon.h"
 
 @interface FIEntypoSocialIcon : FIIcon
+@end
+
+@interface FIEntypoSocialIcon (Forwarding)
 
 + (FIIcon *)githubIcon;
 + (FIIcon *)githubCircleIcon;

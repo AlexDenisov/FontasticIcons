@@ -9,6 +9,9 @@
 #import "FIIcon.h"
 
 @interface FIFontAwesomeIcon : FIIcon
+@end
+
+@interface FIFontAwesomeIcon (Forwarding)
 
 + (FIIcon *)glassIcon;
 + (FIIcon *)musicIcon;
