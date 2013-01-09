@@ -9,6 +9,9 @@
 #import "FIIcon.h"
 
 @interface FIEntypoIcon : FIIcon
+@end
+
+@interface FIEntypoIcon (Forwarding)
 
 + (FIIcon *)phoneIcon;
 + (FIIcon *)mobileIcon;

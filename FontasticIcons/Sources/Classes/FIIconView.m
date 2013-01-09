@@ -34,12 +34,10 @@
 }
 
 #pragma mark super : NSObject
-- (void)forwardInvocation:(NSInvocation *)anInvocation {
-    if ([self.iconLayer respondsToSelector:[anInvocation selector]]) {
-        [anInvocation invokeWithTarget:self.iconLayer];
-    } else {
-        [super forwardInvocation:anInvocation];
-    }
+// http://www.mikeash.com/pyblog/friday-qa-2009-03-27-objective-c-message-forwarding.html
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    FIIconLayer *target = self.iconLayer;
+    return [target respondsToSelector:aSelector] ? target : [super forwardingTargetForSelector:aSelector];
 }
 
 @end

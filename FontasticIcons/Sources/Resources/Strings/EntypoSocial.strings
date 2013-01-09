@@ -5,23 +5,24 @@
 //  Created by Ben Kreeger on 7.1.13.
 //  Copyright (c) 2012 Alex Denisov. All rights reserved.
 //
+// https://github.com/danielbruce/entypo/blob/master/font/entypo.css
 
 "behance" = "\UF34E";
-"c-dribbble" = "\UF31C";
-"c-facebook" = "\UF30D";
-"c-flickr" = "\UF304";
-"c-github" = "\UF301";
-"c-google+" = "\UF310";
-"c-lastfm" = "\UF322";
-"c-linkedin" = "\UF319";
-"c-pinterest" = "\UF313";
-"c-rdio" = "\UF325";
-"c-skype" = "\UF33A";
-"c-spotify" = "\UF328";
-"c-stumbleupon" = "\UF31F";
-"c-tumblr" = "\UF316";
-"c-twitter" = "\UF30A";
-"c-vimeo" = "\UF307";
+"dribbbleCircle" = "\UF31C";
+"facebookCircle" = "\UF30D";
+"flickrCircle" = "\UF304";
+"githubCircle" = "\UF301";
+"googlePlusCircle" = "\UF310";
+"lastfmCircle" = "\UF322";
+"linkedinCircle" = "\UF319";
+"pinterestCircle" = "\UF313";
+"rdioCircle" = "\UF325";
+"skypeCircle" = "\UF33A";
+"spotifyCircle" = "\UF328";
+"stumbleuponCircle" = "\UF31F";
+"tumblrCircle" = "\UF316";
+"twitterCircle" = "\UF30A";
+"vimeoCircle" = "\UF307";
 "dribbble" = "\UF31B";
 "dropbox" = "\UF330";
 "evernote" = "\UF333";
@@ -29,8 +30,8 @@
 "flattr" = "\UF336";
 "flickr" = "\UF303";
 "github" = "\UF300";
-"google+" = "\UF30F";
-"google-circles" = "\UF351";
+"googlePlus" = "\UF30F";
+"googleCircles" = "\UF351";
 "instagram" = "\UF32D";
 "lastfm" = "\UF321";
 "linkedin" = "\UF318";
@@ -41,8 +42,8 @@
 "qq" = "\UF32A";
 "rdio" = "\UF324";
 "renren" = "\UF33C";
-"s-facebook" = "\UF30E";
-"sina-weibo" = "\UF33F";
+"facebookSquare" = "\UF30E";
+"sinaWeibo" = "\UF33F";
 "skype" = "\UF339";
 "soundcloud" = "\UF348";
 "spotify" = "\UF327";

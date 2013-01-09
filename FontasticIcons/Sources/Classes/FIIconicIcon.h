@@ -9,6 +9,9 @@
 #import "FIIcon.h"
 
 @interface FIIconicIcon : FIIcon
+@end
+
+@interface FIIconicIcon (Forwarding)
 
 + (FIIcon *)hashIcon;
 + (FIIcon *)questionMarkIcon;
@@ -160,6 +163,6 @@
 + (FIIcon *)linkIcon;
 + (FIIcon *)wrenchIcon;
 + (FIIcon *)clockIcon;
-+ (FIIcon *)e08aIcon;
++ (FIIcon *)paperclipIcon;
 
 @end
