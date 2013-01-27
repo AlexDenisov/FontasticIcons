@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _icons = [[FIIcon bundledFonts] retain];
+    _icons = [FIIcon bundledFonts];
     _fontListTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _fontListTableView.delegate = self;
     _fontListTableView.dataSource = self;
@@ -39,8 +39,8 @@
     UITableViewCell *cell = nil;
     cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:kCellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:kCellIdentifier];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     Class iconKit = _icons[indexPath.row];
@@ -63,7 +63,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     controller.iconClass = iconKit;
     [self.navigationController pushViewController:controller
                                          animated:YES];
-    [controller release];
 }
 
 @end

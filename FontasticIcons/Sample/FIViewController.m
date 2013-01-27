@@ -22,7 +22,7 @@ const static NSUInteger kColumnsCount = 3;
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    UIScrollView *scrollView = [[[UIScrollView alloc] initWithFrame:self.view.frame] autorelease];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:scrollView];    
     NSUInteger currentRow = 0;
     NSUInteger currentColumn = 0;
@@ -33,18 +33,18 @@ const static NSUInteger kColumnsCount = 3;
             currentColumn = 0;
             currentRow++;
         }
-        FIIconView *iconView = [[[FIIconView alloc] initWithFrame:
+        FIIconView *iconView = [[FIIconView alloc] initWithFrame:
                                 CGRectMake(currentColumn * size,
                                            currentRow * size,
                                            size,
-                                           size)] autorelease];
+                                           size)];
         iconView.backgroundColor = [UIColor clearColor];
         iconView.icon = [self.iconClass iconWithName:iconName];
         iconView.padding = 2;
         iconView.iconColor = [self randomColor];
-        UITapGestureRecognizer *recognizer = [[[UITapGestureRecognizer alloc]
+        UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc]
                                               initWithTarget:self
-                                              action:@selector(iconSelected:)] autorelease];
+                                              action:@selector(iconSelected:)];
         recognizer.numberOfTapsRequired = 1;
         [iconView addGestureRecognizer:recognizer];
         [scrollView addSubview:iconView];

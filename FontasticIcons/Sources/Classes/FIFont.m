@@ -8,8 +8,6 @@
 
 #import <CoreText/CoreText.h>
 #import "FIFont_Private.h"
-#import "FIFont.h"
-#import "FIUtils.h"
 
 @implementation FIFont
 {
@@ -17,9 +15,7 @@
 }
 
 + (FIFont *)fontWithName:(NSString *)aName ofType:(NSString *)aType {
-    FIFont *font = [[FIFont alloc] initWithFontName:aName
-                                             ofType:aType];
-    return arcsafe_autorelease(font);
+    return [[FIFont alloc] initWithFontName:aName ofType:aType];
 }
 
 - (id)initWithFontName:(NSString *)aName ofType:(NSString *)aType {
@@ -27,13 +23,12 @@
     if (self) {
         NSString *fontPath = [[NSBundle mainBundle] pathForResource:aName ofType:aType inDirectory:@"Fonts"];
         NSData *data = [[NSData alloc] initWithContentsOfFile:fontPath];
-        CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((CFDataRef)data);
-        arcsafe_release(data);
-        
+        CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
+
         CGFontRef cgFont = CGFontCreateWithDataProvider(fontProvider);
         CGDataProviderRelease(fontProvider);
         
-        CTFontDescriptorRef fontDescriptor = CTFontDescriptorCreateWithAttributes((CFDictionaryRef)@{});
+        CTFontDescriptorRef fontDescriptor = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)@{});
         CTFontRef font = CTFontCreateWithGraphicsFont(cgFont, 0, NULL, fontDescriptor);
         CFRelease(fontDescriptor);
         CGFontRelease(cgFont);
@@ -47,7 +42,7 @@
 }
 
 - (NSString *)fontName {
-    return (NSString *)CTFontCopyFullName(self.fontRef);
+    return (__bridge_transfer NSString *)CTFontCopyFullName(self.fontRef);
 }
 
 #pragma mark - Fonts
