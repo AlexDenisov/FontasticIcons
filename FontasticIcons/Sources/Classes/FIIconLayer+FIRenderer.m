@@ -8,7 +8,6 @@
 
 #import <CoreText/CoreText.h>
 #import "FIIconLayer+FIRenderer.h"
-#import "FIUtils.h"
 
 @implementation FIIconLayer (FIRenderer)
 
@@ -25,7 +24,7 @@
 
 #pragma mark super
 - (void)drawInContext:(CGContextRef)ctx {
-    CTLineRef line = CTLineCreateWithAttributedString(arcsafe_toll_free_bridge(CFAttributedStringRef, self.iconString));
+    CTLineRef line = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef) self.iconString);
     [self setTransformForContext:ctx
                           bounds:CGRectInset(CGContextGetClipBoundingBox(ctx), self.inset.x, self.inset.y)
                       iconBounds:CTLineGetImageBounds(line, ctx)];

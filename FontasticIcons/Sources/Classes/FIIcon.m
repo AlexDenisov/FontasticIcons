@@ -8,7 +8,6 @@
 
 #import <objc/runtime.h>
 #import "FIIcon.h"
-#import "FIUtils.h"
 #import "FIFont.h"
 #import "FIIcon_Private.h"
 #import "FIMetaInfoManager.h"
@@ -22,12 +21,6 @@
         [[self manager] registerIconSet:[self iconsDictionary]
                                forClass:self];
     }
-}
-
-- (void)dealloc {
-    self.iconString = nil;
-    self.iconName = nil;
-    arcsafe_super_dealloc();
 }
 
 + (NSArray *)iconNames {
@@ -51,7 +44,7 @@
 }
 
 + (FIIcon *)iconWithName:(NSString *)anIconName {
-    FIIcon *icon = arcsafe_autorelease([[self alloc] initWithName:anIconName]);
+    FIIcon *icon = [[self alloc] initWithName:anIconName];
     return icon.iconString ? icon : nil;
 }
 

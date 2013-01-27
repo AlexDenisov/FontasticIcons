@@ -76,7 +76,6 @@
 		CA7C55F4163DC6C900AC32A3 /* FIIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIIcon.m; sourceTree = "<group>"; };
 		CA7C55F6163DC81800AC32A3 /* FIFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFont.h; sourceTree = "<group>"; };
 		CA7C55F7163DC81800AC32A3 /* FIFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFont.m; sourceTree = "<group>"; };
-		CA7C55FA163DC8B800AC32A3 /* FIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIUtils.h; sourceTree = "<group>"; };
 		CA7C55FF163E37AA00AC32A3 /* FIFont_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIFont_Private.h; sourceTree = "<group>"; };
 		CA7C5604163E3AAD00AC32A3 /* FIEntypoIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIEntypoIcon.h; sourceTree = "<group>"; };
 		CA7C5605163E3AAD00AC32A3 /* FIEntypoIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIEntypoIcon.m; sourceTree = "<group>"; };
@@ -225,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				CA7C562B163FAC3000AC32A3 /* FontasticIcons */,
-				CA7C55F9163DC88A00AC32A3 /* Utils */,
 				CA7C55E8163DC49C00AC32A3 /* Base */,
 				CA7C55E9163DC4A300AC32A3 /* Impl */,
 			);
@@ -239,14 +237,6 @@
 				E183779616BE361500525AB5 /* Strings */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		CA7C55F9163DC88A00AC32A3 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				CA7C55FA163DC8B800AC32A3 /* FIUtils.h */,
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		CA7C5614163EFB2100AC32A3 /* FIIconRendering */ = {
@@ -430,6 +420,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -457,6 +448,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

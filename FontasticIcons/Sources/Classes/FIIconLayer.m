@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 Alex Denisov. All rights reserved.
 //
 
-#import "FIUtils.h"
-
 #import "FIIconLayer.h"
 #import "FIIcon_Private.h"
 #import "FIFont_Private.h"
@@ -18,15 +16,14 @@
 
 #pragma mark self
 - (NSAttributedString *)iconString {
-    return arcsafe_autorelease([[NSAttributedString alloc] initWithString:self.icon.iconString ? : @""
-                                                               attributes:iconAttributes]);
+    return [[NSAttributedString alloc] initWithString:self.icon.iconString ? : @"" attributes:iconAttributes];
 }
 
 - (void)setIconAttribute:(CFStringRef)name value:(CFTypeRef)value {
     if (value) {
-        iconAttributes[arcsafe_toll_free_bridge(NSString *, name)] = arcsafe_toll_free_bridge(id, value);
+        iconAttributes[(__bridge NSString *) name] = (__bridge id) value;
     } else {
-        [iconAttributes removeObjectForKey:arcsafe_toll_free_bridge(NSString *, name)];
+        [iconAttributes removeObjectForKey:(__bridge NSString *) name];
     }
     [self setNeedsDisplay];
 }
@@ -52,7 +49,7 @@
 
 - (void)setIconColor:(UIColor *)iconColor {
     if (![iconColor isEqual:_iconColor]) {
-        _iconColor = arcsafe_retain(iconColor);
+        _iconColor = iconColor;
         [self setIconAttribute:kCTForegroundColorAttributeName value:iconColor.CGColor];
     }
 }
@@ -73,13 +70,6 @@
         self.contentsGravity = kCAGravityResizeAspect;
     }
     return self;
-}
-
-- (void)dealloc {
-    arcsafe_release(_icon);
-    arcsafe_release(_iconColor);
-    arcsafe_release(iconAttributes);
-    arcsafe_super_dealloc();
 }
 
 @end
