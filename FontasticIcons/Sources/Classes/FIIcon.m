@@ -9,7 +9,7 @@
 #import <objc/runtime.h>
 #import "FIIcon.h"
 #import "FIFont.h"
-#import "FIIcon_Private.h"
+#import "FIIcon+Private.h"
 #import "FIMetaInfoManager.h"
 
 @implementation FIIcon
@@ -43,15 +43,15 @@
     return [[[self manager] iconClassForFontName:aFontName] iconWithName:anIconName];
 }
 
-+ (FIIcon *)iconWithName:(NSString *)anIconName {
++ (instancetype)iconWithName:(NSString *)anIconName {
     FIIcon *icon = [[self alloc] initWithName:anIconName];
     return icon.iconString ? icon : nil;
 }
 
 - (id)initWithName:(NSString *)anIconName {
     if (self = [self init]) {
-        self.iconName = anIconName;
-        self.iconString = [self.class iconKeyForName:anIconName];
+        _iconName = anIconName;
+        _iconString = [self.class metaIconsDictionary][anIconName];
     }
     return self;
 }

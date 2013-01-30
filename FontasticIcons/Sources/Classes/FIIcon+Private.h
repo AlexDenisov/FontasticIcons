@@ -1,5 +1,5 @@
 //
-//  FIIcon_Private.h
+//  FIIcon+Private.h
 //  FontasticIcons
 //
 //  Created by Alex Denisov on 29.10.12.
@@ -10,7 +10,7 @@
 
 @class FIFont;
 
-@interface FIIcon ()
+@interface FIIcon (Private)
 
 + (NSString *)iconKeyForName:(NSString *)anIconName;
 + (NSDictionary *)iconsDictionary;

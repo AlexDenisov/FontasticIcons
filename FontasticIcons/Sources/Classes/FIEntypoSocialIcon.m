@@ -7,12 +7,12 @@
 //
 
 #import "FIEntypoSocialIcon.h"
-#import "FIFont.h"
+#import "FIFont+Private.h"
 
 @implementation FIEntypoSocialIcon
 
 + (FIFont *)iconFont {
-    return [FIFont entypoSocialFont];
+    return [[FIFont class] fontWithName:@"Entypo-Social" ofType:@"otf"];
 }
 
 @end

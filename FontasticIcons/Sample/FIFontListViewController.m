@@ -47,7 +47,7 @@
     cell.textLabel.text = [iconKit fontSetName];
     FIIcon *icon = [iconKit performSelector:@selector(starIcon)];
     // TODO (#15): implement real unit/behavior testing
-    NSAssert(icon.iconString == [iconKit iconWithName:@"star"].iconString,
+    NSAssert(icon.iconString == ((FIIcon *) [iconKit iconWithName:@"star"]).iconString,
             @"Icon lookup by selector should match lookup by class");
     NSAssert(icon.iconString == [FIIcon iconWithName:@"star" fontSetName:cell.textLabel.text].iconString,
             @"Icon lookup by selector should match lookup by font name");

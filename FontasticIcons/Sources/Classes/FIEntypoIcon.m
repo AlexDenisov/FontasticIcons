@@ -7,14 +7,14 @@
 //
 
 #import "FIEntypoIcon.h"
-#import "FIFont.h"
+#import "FIFont+Private.h"
 
 @implementation FIEntypoIcon
 
 #pragma mark - Overriden methods
 
 + (FIFont *)iconFont {
-    return [FIFont entypoFont];
+    return [[FIFont class] fontWithName:@"Entypo" ofType:@"otf"];
 }
 
 @end

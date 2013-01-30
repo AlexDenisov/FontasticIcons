@@ -6,15 +6,8 @@
 //  Copyright (c) 2012 Alex Denisov. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface FIFont : NSObject
 
 - (NSString *)fontName;
-
-+ (FIFont *)entypoFont;
-+ (FIFont *)entypoSocialFont;
-+ (FIFont *)fontAwesomeFont;
-+ (FIFont *)iconicFont;
 
 @end
