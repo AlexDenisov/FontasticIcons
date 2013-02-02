@@ -13,6 +13,6 @@
 
 @interface FIIcon (Impl)
 
-+ (NSArray *)bundledFonts;
++ (NSArray *)bundledFonts; // TODO: migrate to NSOrderedSet for iOS 5.0
 
 @end

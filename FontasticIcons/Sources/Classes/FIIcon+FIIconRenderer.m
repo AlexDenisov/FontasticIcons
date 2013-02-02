@@ -18,7 +18,7 @@
 }
 
 - (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color {
-    FIIconRenderer renderer = [self renderer];
+    FIIconRenderer renderer = self.renderer;
     renderer.bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
     renderer.inset = bounds.origin;
     renderer.iconColor = color;

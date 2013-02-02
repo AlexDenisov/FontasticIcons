@@ -7,78 +7,56 @@
 //
 
 #import <objc/runtime.h>
-#import "FIIcon.h"
-#import "FIFont.h"
-#import "FIIcon+Private.h"
-#import "FIMetaInfoManager.h"
+#import "FIIcon+Impl.h"
+#import "FIFont+Private.h"
+
+static NSMutableDictionary *impls;
 
 @implementation FIIcon
 
 + (void)initialize {
-    if (self != [FIIcon class]) {
-        [[self manager] registerFont:[self iconFont]
-                            forClass:self];
-        [[self manager] registerIconSet:[self iconsDictionary]
-                               forClass:self];
+    if (self == [FIIcon class]) {
+        impls = [NSMutableDictionary dictionary];
+    } else {
+        NSAssert(!impls[self.font.name], @"FIIcon subclass must have unique font name");
+        impls[self.font.name] = self;
     }
 }
 
 + (NSArray *)iconNames {
-    return [[self metaIconsDictionary] allKeys];
+    return [self.class font].glyphMap.allKeys;
 }
 
-+ (NSString *)iconKeyForName:(NSString *)aName {
-    return [[self metaIconsDictionary] valueForKey:aName];
-}
-
-+ (FIFont *)iconFont {
-    return nil;
-}
-
-+ (FIFont *)metaFont {
-    return [[self manager] fontForClass:self];
-}
-
-+ (FIIcon *)iconWithName:(NSString *)anIconName fontSetName:(NSString *)aFontName {
-    return [[[self manager] iconClassForFontName:aFontName] iconWithName:anIconName];
++ (FIIcon *)iconWithName:(NSString *)anIconName fontName:(NSString *)aFontName {
+    return [self bundledFonts], [impls[aFontName] iconWithName:anIconName]; // initialize registered subclasses
 }
 
 + (instancetype)iconWithName:(NSString *)anIconName {
     FIIcon *icon = [[self alloc] initWithName:anIconName];
-    return icon.iconString ? icon : nil;
+    return icon.glyph ? icon : nil;
 }
 
 - (id)initWithName:(NSString *)anIconName {
     if (self = [self init]) {
-        _iconName = anIconName;
-        _iconString = [self.class metaIconsDictionary][anIconName];
+        _name = anIconName;
+        _glyph = [self.class font].glyphMap[anIconName];
     }
     return self;
 }
 
-+ (NSDictionary *)iconsDictionary {
-    return [NSDictionary dictionaryWithContentsOfFile:[[
-            NSBundle mainBundle] pathForResource:[self fontSetName] ofType:@"strings" inDirectory:@"Strings"]];
-}
-
-+ (NSDictionary *)metaIconsDictionary {
-    return [[self manager] iconSetForClass:self];
-}
-
-+ (NSString *)fontSetName {
-    return [[self metaFont] fontName];
-}
-
-- (NSString *)fontSetName {
-    return [[self class] fontSetName];
-}
-
 - (id)copyWithZone:(NSZone *)zone {
-    return [[self.class allocWithZone:zone] initWithName:self.iconName];
+    return [[self.class allocWithZone:zone] initWithName:self.name];
 }
 
-+ (FIMetaInfoManager *)manager {
-    return [FIMetaInfoManager sharedManager];
+#pragma mark - Equality
+
+- (NSUInteger)hash {
+    return [self.class font].hash ^ self.glyph.hash;
+}
+
+- (BOOL)isEqual:(id)other {
+    FIIcon *icon = [other isKindOfClass:self.class] ? other : nil;
+    return [[icon class].font isEqual:[self.class font]] && [icon.glyph isEqual:self.glyph];
 }
 
 #pragma mark - Forwarding

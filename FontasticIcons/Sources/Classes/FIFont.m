@@ -8,34 +8,52 @@
 
 #import "FIFont+Private.h"
 
-@implementation FIFont
-{
-    CTFontRef _font;
+static NSMutableDictionary *fonts;
+
+@implementation FIFont {
+    NSDictionary *_glyphMap;
 }
 
-+ (instancetype)fontWithName:(NSString *)aName ofType:(NSString *)aType {
-    return [[self alloc] initWithFontName:aName ofType:aType];
++ (instancetype)fontWithResourcePath:(NSString *)aResource {
+    static dispatch_once_t once[1];
+    dispatch_once(once, ^{ fonts = [NSMutableDictionary dictionary]; });
+    if (!fonts[aResource]) @synchronized (fonts) {
+        NSString *directory = aResource.stringByDeletingLastPathComponent;
+        NSString *path = [[NSBundle mainBundle] pathForResource:aResource.stringByDeletingPathExtension.lastPathComponent
+                                                         ofType:aResource.pathExtension
+                                                    inDirectory:directory.length ? directory : @"Fonts"];
+        fonts[aResource] = [[self alloc] initWithFontData:[NSData dataWithContentsOfFile:path]];
+    }
+    return fonts[aResource];
 }
 
-- (id)initWithFontName:(NSString *)aName ofType:(NSString *)aType {
+- (id)initWithFontData:(NSData *)aData {
     if (self = [super init]) {
-        NSString *fontPath = [[NSBundle mainBundle] pathForResource:aName ofType:aType inDirectory:@"Fonts"];
-        NSData *fontData = [[NSData alloc] initWithContentsOfFile:fontPath];
-        CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((__bridge CFDataRef)fontData);
+        CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((__bridge CFDataRef) aData);
         CGFontRef cgFont = CGFontCreateWithDataProvider(fontProvider);
-        self->_font = CTFontCreateWithGraphicsFont(cgFont, 0, NULL, NULL);
+        _textFont = CTFontCreateWithGraphicsFont(cgFont, 0, NULL, NULL);
         CGFontRelease(cgFont);
         CGDataProviderRelease(fontProvider);
     }
     return self;
 }
 
-- (CTFontRef)fontRef {
-    return self->_font;
+- (NSString *)name {
+    return (__bridge NSString *) CTFontCopyFullName(self.textFont);
 }
 
-- (NSString *)fontName {
-    return (__bridge NSString *)CTFontCopyFullName(self.fontRef);
+- (NSDictionary *)glyphMap {
+    if (!_glyphMap) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:self.name ofType:@"strings" inDirectory:@"Strings"];
+        NSMutableDictionary *glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+        [glyphMap enumerateKeysAndObjectsUsingBlock:^(NSString *name, NSString *glyph, BOOL *stop) {
+            if (glyphMap[glyph]) { // value is non-recursive alias
+                glyphMap[name] = glyphMap[glyph]; // deprecated key lookup by alias
+            }
+        }];
+        _glyphMap = glyphMap;
+    }
+    return _glyphMap;
 }
 
 @end
