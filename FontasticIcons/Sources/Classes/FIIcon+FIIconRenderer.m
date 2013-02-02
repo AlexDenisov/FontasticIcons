@@ -1,5 +1,5 @@
 //
-//  FIIcon(FIIconRenderer)
+//  FIIcon+FIIconRenderer.m
 //  FontasticIcons
 //
 //  Created by Jonathan Toland on 31.12.12.

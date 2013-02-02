@@ -1,5 +1,5 @@
 //
-//  FIIconLayer(FIRenderer)
+//  FIIconLayer+FIRenderer.h
 //  FontasticIcons
 //
 //  Created by Jonathan Toland on 1.1.13.
