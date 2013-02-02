@@ -11,9 +11,16 @@
 
 @interface FIFont ()
 
+@property (nonatomic, copy, readonly) NSString *glyphMapPath;
 @property (nonatomic, copy, readonly) NSDictionary *glyphMap;
 @property (nonatomic, assign, readonly) CTFontRef textFont;
 
 - (id)initWithFontData:(NSData *)aData;
+
+@end
+
+@protocol FIFontGlyphAliases
+
+@property (nonatomic, copy, readonly) NSString *glyphAliasMapPath;
 
 @end

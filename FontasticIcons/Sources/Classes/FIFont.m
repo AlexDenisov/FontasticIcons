@@ -42,18 +42,28 @@ static NSMutableDictionary *fonts;
     return (__bridge NSString *) CTFontCopyFullName(self.textFont);
 }
 
+- (NSString *)glyphMapPath {
+    return [[NSBundle mainBundle] pathForResource:self.name ofType:@"strings" inDirectory:@"Strings"];
+}
+
 - (NSDictionary *)glyphMap {
-    if (!_glyphMap) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:self.name ofType:@"strings" inDirectory:@"Strings"];
-        NSMutableDictionary *glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-        [glyphMap enumerateKeysAndObjectsUsingBlock:^(NSString *name, NSString *glyph, BOOL *stop) {
-            if (glyphMap[glyph]) { // value is non-recursive alias
-                glyphMap[name] = glyphMap[glyph]; // deprecated key lookup by alias
-            }
+    if (!_glyphMap) @synchronized(self) {
+        NSMutableDictionary *glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:self.glyphMapPath];
+        [self.glyphAliasMap enumerateKeysAndObjectsUsingBlock:^(NSString *alias, NSString *key, BOOL *stop) {
+            NSAssert(!glyphMap[alias], @"%@ %@ alias must not overwrite exisiting glyph", self.name, alias);
+            NSAssert(glyphMap[key], @"%@ %@ glyph must exist for %@ alias", self.name, key, alias);
+            glyphMap[alias] = glyphMap[key];
         }];
-        _glyphMap = glyphMap;
+        _glyphMap = glyphMap.copy;
     }
     return _glyphMap;
+}
+
+- (NSDictionary *)glyphAliasMap {
+    if ([self conformsToProtocol:@protocol(FIFontGlyphAliases)]) {
+        return [NSDictionary dictionaryWithContentsOfFile:((id <FIFontGlyphAliases>) self).glyphAliasMapPath];
+    }
+    return nil;
 }
 
 @end
