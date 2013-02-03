@@ -36,7 +36,8 @@
 }
 
 #pragma mark self <FIIconRendering>
-@synthesize icon = _icon, iconColor = _iconColor, inset = _inset;
+@synthesize icon = _icon, iconColor = _iconColor, iconInset = _iconInset;
+@synthesize iconStrokeColor = _iconStrokeColor, iconStrokeWidthRatio = _iconStrokeWidthRatio;
 
 - (void)setIcon:(FIIcon *)icon {
     [self setIcon:icon withContentsScale:0];
@@ -49,9 +50,23 @@
     }
 }
 
-- (void)setInset:(CGPoint)inset {
-    if (!(CGPointEqualToPoint(inset, _inset))) {
-        _inset = inset;
+- (void)setIconStrokeColor:(UIColor *)iconStrokeColor {
+    if (![iconStrokeColor isEqual:_iconStrokeColor]) {
+        _iconStrokeColor = iconStrokeColor;
+        [self setIconAttribute:kCTStrokeColorAttributeName value:iconStrokeColor.CGColor];
+    }
+}
+
+- (void)setIconStrokeWidthRatio:(CGFloat)iconStrokeWidthRatio {
+    if (iconStrokeWidthRatio != _iconStrokeWidthRatio) {
+        _iconStrokeWidthRatio = iconStrokeWidthRatio;
+        [self setNeedsDisplay];
+    }
+}
+
+- (void)setIconInset:(CGPoint)iconInset {
+    if (!(CGPointEqualToPoint(iconInset, _iconInset))) {
+        _iconInset = iconInset;
         [self setNeedsDisplay];
     }
 }
@@ -59,7 +74,7 @@
 #pragma mark super : NSObject
 - (id)init {
     if (self = [super init]) {
-        iconAttributes = [[NSMutableDictionary alloc] initWithCapacity:2];
+        iconAttributes = [[NSMutableDictionary alloc] initWithCapacity:4];
         self.geometryFlipped = YES;
         self.needsDisplayOnBoundsChange = YES;
         self.contentsGravity = kCAGravityResizeAspect;

@@ -8,6 +8,16 @@
 
 #import <CoreText/CoreText.h>
 #import "FIIconLayer+FIRenderer.h"
+#import "FIIcon.h"
+#import "FIFont+Private.h"
+
+typedef struct {
+    CGContextRef gfx;
+    CTLineRef line;
+    CGRect bounds;
+    CGRect iconBounds;
+    CGPoint scale;
+} IconContext;
 
 @implementation FIIconLayer (FIRenderer)
 
@@ -24,12 +34,9 @@
 
 #pragma mark super
 - (void)drawInContext:(CGContextRef)ctx {
-    CTLineRef line = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef) self.iconString);
-    [self setTransformForContext:ctx
-                          bounds:CGRectInset(CGContextGetClipBoundingBox(ctx), self.inset.x, self.inset.y)
-                      iconBounds:CTLineGetImageBounds(line, ctx)];
-    CTLineDraw(line, ctx);
-    CFRelease((CFTypeRef) line);
+    IconContext iconCtx;
+    iconCtx.gfx = ctx;
+    [self drawInIconContext:iconCtx];
     [super drawInContext:ctx];
 }
 
@@ -41,24 +48,53 @@
 }
 
 #pragma mark private
-- (void)setTransformForContext:(CGContextRef)ctx bounds:(CGRect)bounds iconBounds:(CGRect)iconBounds {
-    CGAffineTransform scale = [self scaleForBounds:bounds iconBounds:iconBounds];
-    CGContextSetTextMatrix(ctx, scale);
-    iconBounds = CGRectApplyAffineTransform(iconBounds, scale);
-    CGContextSetTextPosition(ctx,
-            bounds.origin.x - iconBounds.origin.x + (bounds.size.width - iconBounds.size.width) / 2,
-            bounds.origin.y - iconBounds.origin.y + (bounds.size.height - iconBounds.size.height) / 2);
+- (void)drawInIconContext:(IconContext)ctx {
+    [self setIconAttribute:kCTStrokeWidthAttributeName value:NULL];
+    ctx.line = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef) self.iconString);
+    ctx.bounds = CGRectInset(CGContextGetClipBoundingBox(ctx.gfx), self.iconInset.x, self.iconInset.y);
+    ctx.iconBounds = CTLineGetImageBounds(ctx.line, ctx.gfx);
+    ctx.scale = [self scaleForBoundedIconContext:ctx];
+    [self applyTransformForIconContext:ctx];
+    CTLineRef line = [self lineForScaledIconContext:ctx];
+    if (line != ctx.line) {
+        CFRelease(ctx.line);
+        ctx.line = line;
+    }
+    CTLineDraw(ctx.line, ctx.gfx);
+    CFRelease(ctx.line);
 }
 
-- (CGAffineTransform)scaleForBounds:(CGRect)bounds iconBounds:(CGRect)iconBounds {
-    CGFloat sx = bounds.size.width / iconBounds.size.width;
-    CGFloat sy = bounds.size.height / iconBounds.size.height;
-    if ([self.contentsGravity isEqualToString:kCAGravityResizeAspectFill]) {
+- (CGPoint)scaleForBoundedIconContext:(IconContext)ctx {
+    CGFloat sx = ctx.bounds.size.width / ctx.iconBounds.size.width;
+    CGFloat sy = ctx.bounds.size.height / ctx.iconBounds.size.height;
+    if ([self.contentsGravity isEqual:kCAGravityResizeAspectFill]) {
         sx = sy = fmaxf(sx, sy);
-    } else if (![self.contentsGravity isEqualToString:kCAGravityResize]) {
+    } else if (![self.contentsGravity isEqual:kCAGravityResize]) {
         sx = sy = fminf(sx, sy);
     }
-    return CGAffineTransformMakeScale(sx, sy);
+    return CGPointMake(sx, sy);
+}
+
+- (void)applyTransformForIconContext:(IconContext)ctx {
+    CGAffineTransform t = CGAffineTransformMakeScale(ctx.scale.x, ctx.scale.y);
+    CGContextSetTextMatrix(ctx.gfx, t);
+    ctx.iconBounds = CGRectApplyAffineTransform(ctx.iconBounds, t); // locally scoped
+    CGFloat tx = ctx.bounds.origin.x - ctx.iconBounds.origin.x;
+    tx += (ctx.bounds.size.width - ctx.iconBounds.size.width) / 2; // center horizontally
+    CGFloat ty = ctx.bounds.origin.y - ctx.iconBounds.origin.y;
+    ty += (ctx.bounds.size.height - ctx.iconBounds.size.height) / 2; // center vertically
+    CGContextSetTextPosition(ctx.gfx, tx, ty);
+}
+
+- (CTLineRef)lineForScaledIconContext:(IconContext)ctx {
+    CGFloat strokeWidth = self.iconStrokeWidthRatio;
+    if (strokeWidth) {
+        strokeWidth *= -CTFontGetSize([self.icon.class font].textFont); // negative preserves fill
+        strokeWidth *= ctx.scale.x == ctx.scale.y ? ctx.scale.x : sqrt(ctx.scale.x * ctx.scale.y); // geometric mean
+        [self setIconAttribute:kCTStrokeWidthAttributeName value:(__bridge CFNumberRef) @(strokeWidth)];
+        ctx.line = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef) self.iconString);
+    }
+    return ctx.line;
 }
 
 @end

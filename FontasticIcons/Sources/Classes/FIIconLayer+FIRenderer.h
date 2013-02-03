@@ -9,8 +9,7 @@
 #import "FIIconLayer.h"
 #import "FIRenderer.h"
 
-typedef id <FIRenderer, FIIconRendering> FIIconRenderer;
+typedef id <FIRenderer, FIIconRendering> FIIconRendererRef;
 
 @interface FIIconLayer (FIRenderer) <FIRenderer>
-
 @end
