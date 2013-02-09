@@ -42,6 +42,8 @@ const static NSUInteger kColumnsCount = 3;
         iconView.icon = [self.iconClass iconWithName:iconName];
         iconView.padding = 2;
         iconView.iconColor = [self randomColor];
+        iconView.iconStrokeColor = [self randomColor];
+        iconView.iconStrokeWidthRatio = 0.15;
         UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc]
                                               initWithTarget:self
                                               action:@selector(iconSelected:)];

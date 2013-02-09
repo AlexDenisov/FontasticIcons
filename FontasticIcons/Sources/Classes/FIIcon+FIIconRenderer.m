@@ -11,6 +11,10 @@
 @implementation FIIcon (FIIconRenderer)
 
 #pragma mark self
++ (FIIconRendererRef)rendererWithName:(NSString *)anIconName {
+    return ((FIIcon *) [self iconWithName:anIconName]).renderer;
+}
+
 - (FIIconRendererRef)renderer {
     FIIconLayer *renderer = [FIIconLayer layer];
     renderer.icon = self;

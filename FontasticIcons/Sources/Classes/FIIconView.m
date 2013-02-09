@@ -26,7 +26,7 @@
 }
 
 #pragma mark self <FIIconRendering>
-@dynamic icon, iconColor, iconInset;
+@dynamic icon, iconColor, iconStrokeColor, iconStrokeWidthRatio, iconInset;
 
 #pragma mark super
 + (Class)layerClass {
