@@ -17,13 +17,9 @@ static NSMutableDictionary *fonts;
 + (instancetype)fontWithResourcePath:(NSString *)aPath {
     static dispatch_once_t once[1];
     dispatch_once(once, ^{ fonts = [NSMutableDictionary dictionary]; });
+    aPath = [self pathForResource:aPath defaultDirectory:@"Fonts"];
     if (!fonts[aPath]) @synchronized (fonts) {
-        NSString *subpath = aPath.stringByDeletingLastPathComponent;
-        fonts[aPath] = [[self alloc] initWithFontData:[NSData
-                               dataWithContentsOfFile:[[NSBundle mainBundle]
-                                      pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
-                                               ofType:aPath.pathExtension
-                                          inDirectory:subpath.length ? subpath : @"Fonts"]]];
+        fonts[aPath] = [[self alloc] initWithFontData:[NSData dataWithContentsOfFile:aPath]];
     }
     return fonts[aPath];
 }
@@ -57,22 +53,45 @@ static NSMutableDictionary *fonts;
                                                  withTemplate:@""];
 }
 
+- (NSString *)glyphsPath {
+    return [self.objcName stringByAppendingString:@".strings"];
+}
+
 - (NSDictionary *)glyphMap {
     if (!_glyphMap) @synchronized(self) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:self.objcName ofType:@"strings" inDirectory:@"Strings"];
-        NSMutableDictionary *glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-        [glyphMap enumerateKeysAndObjectsUsingBlock:^(NSString *name, NSString *glyph, BOOL *stop) {
-            if (glyphMap[glyph]) { // value is non-recursive alias
-                glyphMap[name] = glyphMap[glyph]; // deprecated key lookup by alias
-            }
-        }];
-        _glyphMap = glyphMap.copy;
+        NSString *path = [self.class pathForResource:self.glyphsPath defaultDirectory:@"Strings"];
+        _glyphMap = self.aliasMap;
+        if (_glyphMap.count) {
+            NSMutableDictionary *glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+            [_glyphMap enumerateKeysAndObjectsUsingBlock:^(NSString *alias, NSString *name, BOOL *stop) {
+                NSAssert(!glyphMap[alias], @"%@ %@ alias must not overwrite exisiting glyph", self.name, alias);
+                NSAssert(glyphMap[name], @"%@ %@ glyph must exist for %@ alias", self.name, name, alias);
+                glyphMap[alias] = glyphMap[name];
+            }];
+            _glyphMap = glyphMap.copy;
+        } else {
+            _glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+        }
     }
     return _glyphMap;
 }
 
+- (NSDictionary *)aliasMap {
+    BOOL conforms = [self conformsToProtocol:@protocol(FIFontGlyphAliases)];
+    return conforms ? [NSDictionary dictionaryWithContentsOfFile:[self.class
+                                                 pathForResource:((id <FIFontGlyphAliases>) self).aliasesPath
+                                                defaultDirectory:@"Strings"]] : nil;
+}
+
 - (void)dealloc {
     CFRelease(_textFont);
+}
+
++ (NSString *)pathForResource:(NSString *)aPath defaultDirectory:(NSString *)aDirectory {
+    NSString *subpath = aPath.stringByDeletingLastPathComponent;
+    return [[NSBundle mainBundle] pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
+                                           ofType:aPath.pathExtension
+                                      inDirectory:subpath.length ? subpath : aDirectory];
 }
 
 @end
