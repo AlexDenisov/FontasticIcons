@@ -3,7 +3,7 @@
 //  FontasticIcons
 //
 //  Created by Jonathan Toland on 1.1.13.
-//  Copyright (c) 2012 Alex Denisov. All rights reserved.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
 //
 
 #import <CoreText/CoreText.h>
