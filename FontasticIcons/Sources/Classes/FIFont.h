@@ -8,6 +8,9 @@
 
 @interface FIFont : NSObject
 
-- (NSString *)fontName;
+@property (nonatomic, copy, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString *postScriptName;
+
++ (instancetype)fontWithResourcePath:(NSString *)aPath;
 
 @end

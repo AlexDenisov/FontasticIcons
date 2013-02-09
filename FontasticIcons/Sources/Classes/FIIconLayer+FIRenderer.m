@@ -1,5 +1,5 @@
 //
-//  FIIconLayer(FIRenderer)
+//  FIIconLayer+FIRenderer.m
 //  FontasticIcons
 //
 //  Created by Jonathan Toland on 1.1.13.
@@ -26,7 +26,7 @@
 - (void)drawInContext:(CGContextRef)ctx {
     CTLineRef line = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef) self.iconString);
     [self setTransformForContext:ctx
-                          bounds:CGRectInset(CGContextGetClipBoundingBox(ctx), self.inset.x, self.inset.y)
+                          bounds:CGRectInset(CGContextGetClipBoundingBox(ctx), self.iconInset.x, self.iconInset.y)
                       iconBounds:CTLineGetImageBounds(line, ctx)];
     CTLineDraw(line, ctx);
     CFRelease(line);

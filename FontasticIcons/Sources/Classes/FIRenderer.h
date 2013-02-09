@@ -1,5 +1,5 @@
 //
-//  FIRenderer
+//  FIRenderer.h
 //  FontasticIcons
 //
 //  Created by Jonathan Toland on 31.12.12.

@@ -7,7 +7,7 @@
 //
 
 #import "FIIconLayer.h"
-#import "FIIcon+Private.h"
+#import "FIIcon.h"
 #import "FIFont+Private.h"
 
 @implementation FIIconLayer {
@@ -16,7 +16,7 @@
 
 #pragma mark self
 - (NSAttributedString *)iconString {
-    return [[NSAttributedString alloc] initWithString:self.icon.iconString ? : @"" attributes:iconAttributes];
+    return [[NSAttributedString alloc] initWithString:self.icon.glyph ? : @"" attributes:iconAttributes];
 }
 
 - (void)setIconAttribute:(CFStringRef)name value:(CFTypeRef)value {
@@ -25,10 +25,9 @@
 }
 
 - (void)setIcon:(FIIcon *)icon withContentsScale:(CGFloat)contentsScale {
-    CFTypeRef font = (CFTypeRef) [[icon.class metaFont] fontRef];
-    if (font != [[_icon.class metaFont] fontRef] || ![icon.iconString isEqualToString:_icon.iconString]) {
-        _icon = icon.copy;
-        [self setIconAttribute:kCTFontAttributeName value:font];
+    if (![icon isEqual:_icon]) {
+        _icon = icon;
+        [self setIconAttribute:kCTFontAttributeName value:[icon.class font].textFont];
         // necessary for retina: http://markpospesel.wordpress.com/2012/07/10/on-the-importance-of-setting-contentsscale-in-catextlayer/
         // but UIView overrides initialized value: http://stackoverflow.com/a/9479176/672921
         // and setting during rendering or overriding property are both inflexible and ineffective
@@ -37,7 +36,7 @@
 }
 
 #pragma mark self <FIIconRendering>
-@synthesize icon = _icon, iconColor = _iconColor, inset = _inset;
+@synthesize icon = _icon, iconColor = _iconColor, iconInset = _iconInset;
 
 - (void)setIcon:(FIIcon *)icon {
     [self setIcon:icon withContentsScale:0];
@@ -50,9 +49,9 @@
     }
 }
 
-- (void)setInset:(CGPoint)inset {
-    if (!(CGPointEqualToPoint(inset, _inset))) {
-        _inset = inset;
+- (void)setIconInset:(CGPoint)iconInset {
+    if (!(CGPointEqualToPoint(iconInset, _iconInset))) {
+        _iconInset = iconInset;
         [self setNeedsDisplay];
     }
 }

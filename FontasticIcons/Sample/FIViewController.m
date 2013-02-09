@@ -69,7 +69,7 @@ const static NSUInteger kColumnsCount = 3;
 
 - (void)iconSelected:(UITapGestureRecognizer *)sender {
     FIIconView *view = (FIIconView *)sender.view;
-    [self.navigationItem setTitle:view.icon.iconName];
+    [self.navigationItem setTitle:view.icon.name];
 }
 
 @end

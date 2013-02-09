@@ -12,12 +12,19 @@
 
 #pragma mark self
 + (NSArray *)bundledFonts {
-    return @[
-             [FIEntypoIcon class],
-             [FIEntypoSocialIcon class],
-             [FIFontAwesomeIcon class],
-             [FIIconicIcon class]
-           ];
+    static NSArray *bundledFonts;
+    static dispatch_once_t once[1];
+    dispatch_once(once, ^{
+        bundledFonts = [[NSSet setWithArray:@[
+            [FIEntypoIcon class],
+            [FIEntypoSocialIcon class],
+            [FIFontAwesomeIcon class],
+            [FIIconicIcon class]
+        ]] sortedArrayUsingDescriptors:@[
+            [NSSortDescriptor sortDescriptorWithKey:@"font.name" ascending:YES]
+        ]];
+    });
+    return bundledFonts;
 }
 
 @end

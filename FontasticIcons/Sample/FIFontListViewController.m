@@ -44,12 +44,12 @@
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     Class iconKit = _icons[indexPath.row];
-    cell.textLabel.text = [iconKit fontSetName];
+    cell.textLabel.text = [iconKit font].name;
     FIIcon *icon = [iconKit performSelector:@selector(starIcon)];
     // TODO: real unit/behavior testing (#15)
-    NSAssert(icon.iconString == ((FIIcon *) [iconKit iconWithName:@"star"]).iconString,
+    NSAssert(!icon || [icon isEqual:[iconKit iconWithName:@"star"]],
             @"Icon lookup by selector should match lookup by class");
-    NSAssert(icon.iconString == [FIIcon iconWithName:@"star" fontSetName:cell.textLabel.text].iconString,
+    NSAssert(!icon || [icon isEqual:[FIIcon iconWithName:@"star" fontName:cell.textLabel.text]],
             @"Icon lookup by selector should match lookup by font name");
     cell.imageView.image = [icon imageWithBounds:CGRectMake(0, 0, 32, 32) color:[UIColor orangeColor]];
     return cell;

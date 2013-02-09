@@ -9,3 +9,4 @@
 #import "FIIconView.h"
 #import "FIIcon+FIIconRenderer.h"
 #import "FIIcon+Impl.h"
+#import "FIFont.h"

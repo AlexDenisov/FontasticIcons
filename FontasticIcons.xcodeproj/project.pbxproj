@@ -10,6 +10,7 @@
 		B0E070F38B9176978991745E /* FIIcon+Impl.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E071BA8380551D25FD2D4E /* FIIcon+Impl.m */; };
 		B0E072FAE9EBF48B1CDDCAED /* FIIcon+FIIconRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07DAC8153129F1E3083B1 /* FIIcon+FIIconRenderer.m */; };
 		B0E074089E50B3F02CC2D35A /* FIIconLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07850BEB4C2B283D2B5ED /* FIIconLayer.m */; };
+		B0E07A573ED2D4C754BBDC9B /* FIIcon+Forwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E073E5FC678D5BA8A5D8D2 /* FIIcon+Forwarding.m */; };
 		CA31B9A71657E194002A9EDD /* FIFontListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9A61657E194002A9EDD /* FIFontListViewController.m */; };
 		CA31B9CE165807F5002A9EDD /* FIFontAwesomeIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9CD165807F5002A9EDD /* FIFontAwesomeIcon.m */; };
 		CA31B9E616582411002A9EDD /* FIIconicIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9E516582411002A9EDD /* FIIconicIcon.m */; };
@@ -30,7 +31,6 @@
 		CA7C5606163E3AAD00AC32A3 /* FIEntypoIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5605163E3AAD00AC32A3 /* FIEntypoIcon.m */; };
 		CA7C5609163E433400AC32A3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C5608163E433400AC32A3 /* CoreText.framework */; };
 		CA7C561A163EFBCC00AC32A3 /* FIEntypoSocialIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */; };
-		CA7C561E163F060500AC32A3 /* FIMetaInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */; };
 		E183779716BE361500525AB5 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = E183779516BE361500525AB5 /* Fonts */; };
 		E183779816BE361500525AB5 /* Strings in Resources */ = {isa = PBXBuildFile; fileRef = E183779616BE361500525AB5 /* Strings */; };
 		E1B6DBF51693A4A600B6704C /* FIIconLayer+FIRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */; };
@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		B0E0700E6FC3A32A3DF49F94 /* FIIconLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIconLayer.h; sourceTree = "<group>"; };
 		B0E071BA8380551D25FD2D4E /* FIIcon+Impl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIcon+Impl.m"; sourceTree = "<group>"; };
+		B0E073E5FC678D5BA8A5D8D2 /* FIIcon+Forwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIcon+Forwarding.m"; sourceTree = "<group>"; };
 		B0E0777366E59C96383968B1 /* FIIconRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIIconRendering.h; sourceTree = "<group>"; };
 		B0E07850BEB4C2B283D2B5ED /* FIIconLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIIconLayer.m; sourceTree = "<group>"; };
 		B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIconLayer+FIRenderer.m"; sourceTree = "<group>"; };
@@ -79,12 +80,9 @@
 		CA7C55FF163E37AA00AC32A3 /* FIFont+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FIFont+Private.h"; sourceTree = "<group>"; };
 		CA7C5604163E3AAD00AC32A3 /* FIEntypoIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIEntypoIcon.h; sourceTree = "<group>"; };
 		CA7C5605163E3AAD00AC32A3 /* FIEntypoIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIEntypoIcon.m; sourceTree = "<group>"; };
-		CA7C5607163E3F5B00AC32A3 /* FIIcon+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FIIcon+Private.h"; sourceTree = "<group>"; };
 		CA7C5608163E433400AC32A3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		CA7C5618163EFBCC00AC32A3 /* FIEntypoSocialIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIEntypoSocialIcon.h; sourceTree = "<group>"; };
 		CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIEntypoSocialIcon.m; sourceTree = "<group>"; };
-		CA7C561C163F060500AC32A3 /* FIMetaInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIMetaInfoManager.h; sourceTree = "<group>"; };
-		CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIMetaInfoManager.m; sourceTree = "<group>"; };
 		CA7C562D163FAC5300AC32A3 /* FontasticIcons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontasticIcons.h; sourceTree = "<group>"; };
 		E183779516BE361500525AB5 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = FontasticIcons/Sources/Resources/Fonts; sourceTree = SOURCE_ROOT; };
 		E183779616BE361500525AB5 /* Strings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Strings; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 		CA7C55E8163DC49C00AC32A3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				CA7C561B163F049100AC32A3 /* FIMetaInfoManager */,
 				CA7C5616163EFB4A00AC32A3 /* FIFont */,
 				CA7C5615163EFB2F00AC32A3 /* FIIcon */,
 				CA7C5614163EFB2100AC32A3 /* FIIconRendering */,
@@ -259,9 +256,9 @@
 		CA7C5615163EFB2F00AC32A3 /* FIIcon */ = {
 			isa = PBXGroup;
 			children = (
-				CA7C5607163E3F5B00AC32A3 /* FIIcon+Private.h */,
 				CA7C55F3163DC6C900AC32A3 /* FIIcon.h */,
 				CA7C55F4163DC6C900AC32A3 /* FIIcon.m */,
+				B0E073E5FC678D5BA8A5D8D2 /* FIIcon+Forwarding.m */,
 			);
 			name = FIIcon;
 			sourceTree = "<group>";
@@ -285,15 +282,6 @@
 				CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */,
 			);
 			name = Entypo;
-			sourceTree = "<group>";
-		};
-		CA7C561B163F049100AC32A3 /* FIMetaInfoManager */ = {
-			isa = PBXGroup;
-			children = (
-				CA7C561C163F060500AC32A3 /* FIMetaInfoManager.h */,
-				CA7C561D163F060500AC32A3 /* FIMetaInfoManager.m */,
-			);
-			name = FIMetaInfoManager;
 			sourceTree = "<group>";
 		};
 		CA7C562B163FAC3000AC32A3 /* FontasticIcons */ = {
@@ -382,13 +370,13 @@
 				CA7C55F8163DC81800AC32A3 /* FIFont.m in Sources */,
 				CA7C5606163E3AAD00AC32A3 /* FIEntypoIcon.m in Sources */,
 				CA7C561A163EFBCC00AC32A3 /* FIEntypoSocialIcon.m in Sources */,
-				CA7C561E163F060500AC32A3 /* FIMetaInfoManager.m in Sources */,
 				CA31B9A71657E194002A9EDD /* FIFontListViewController.m in Sources */,
 				CA31B9CE165807F5002A9EDD /* FIFontAwesomeIcon.m in Sources */,
 				CA31B9E616582411002A9EDD /* FIIconicIcon.m in Sources */,
 				B0E074089E50B3F02CC2D35A /* FIIconLayer.m in Sources */,
 				B0E072FAE9EBF48B1CDDCAED /* FIIcon+FIIconRenderer.m in Sources */,
 				B0E070F38B9176978991745E /* FIIcon+Impl.m in Sources */,
+				B0E07A573ED2D4C754BBDC9B /* FIIcon+Forwarding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

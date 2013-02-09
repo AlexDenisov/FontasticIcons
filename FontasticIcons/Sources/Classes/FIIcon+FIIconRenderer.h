@@ -1,5 +1,5 @@
 //
-//  FIIcon(FIIconRenderer)
+//  FIIcon+FIIconRenderer.h
 //  FontasticIcons
 //
 //  Created by Jonathan Toland on 31.12.12.
@@ -11,7 +11,7 @@
 
 @interface FIIcon (FIIconRenderer)
 
-- (FIIconRenderer)renderer;
+- (FIIconRendererRef)renderer;
 - (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color;
 
 @end
