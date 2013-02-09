@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 Alex Denisov. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "FIIconView.h"
 #import "FIIcon+FIIconRenderer.h"
 #import "FIIcon+Impl.h"

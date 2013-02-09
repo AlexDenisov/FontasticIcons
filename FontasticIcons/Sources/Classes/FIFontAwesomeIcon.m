@@ -7,12 +7,12 @@
 //
 
 #import "FIFontAwesomeIcon.h"
-#import "FIFont.h"
+#import "FIFont+Private.h"
 
 @implementation FIFontAwesomeIcon
 
 + (FIFont *)iconFont {
-    return [FIFont fontAwesomeFont];
+    return [FIFont fontWithName:@"fontawesome" ofType:@"ttf"];
 }
 
 @end

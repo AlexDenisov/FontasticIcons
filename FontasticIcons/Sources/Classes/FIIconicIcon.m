@@ -7,12 +7,12 @@
 //
 
 #import "FIIconicIcon.h"
-#import "FIFont.h"
+#import "FIFont+Private.h"
 
 @implementation FIIconicIcon
 
 + (FIFont *)iconFont {
-    return [FIFont iconicFont];
+    return [FIFont fontWithName:@"iconic" ofType:@"otf"];
 }
 
 @end

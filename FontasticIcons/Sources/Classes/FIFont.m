@@ -6,33 +6,26 @@
 //  Copyright (c) 2012 Alex Denisov. All rights reserved.
 //
 
-#import <CoreText/CoreText.h>
-#import "FIFont_Private.h"
+#import "FIFont+Private.h"
 
 @implementation FIFont
 {
     CTFontRef _font;
 }
 
-+ (FIFont *)fontWithName:(NSString *)aName ofType:(NSString *)aType {
-    return [[FIFont alloc] initWithFontName:aName ofType:aType];
++ (instancetype)fontWithName:(NSString *)aName ofType:(NSString *)aType {
+    return [[self alloc] initWithFontName:aName ofType:aType];
 }
 
 - (id)initWithFontName:(NSString *)aName ofType:(NSString *)aType {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         NSString *fontPath = [[NSBundle mainBundle] pathForResource:aName ofType:aType inDirectory:@"Fonts"];
         NSData *data = [[NSData alloc] initWithContentsOfFile:fontPath];
         CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
-
         CGFontRef cgFont = CGFontCreateWithDataProvider(fontProvider);
         CGDataProviderRelease(fontProvider);
-        
-        CTFontDescriptorRef fontDescriptor = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)@{});
-        CTFontRef font = CTFontCreateWithGraphicsFont(cgFont, 0, NULL, fontDescriptor);
-        CFRelease(fontDescriptor);
+        self->_font = CTFontCreateWithGraphicsFont(cgFont, 0, NULL, NULL);
         CGFontRelease(cgFont);
-        self->_font = font;
     }
     return self;
 }
@@ -45,22 +38,8 @@
     return (__bridge_transfer NSString *)CTFontCopyFullName(self.fontRef);
 }
 
-#pragma mark - Fonts
-
-+ (FIFont *)entypoFont {
-    return [self fontWithName:@"Entypo" ofType:@"otf"];
-}
-
-+ (FIFont *)entypoSocialFont {
-    return [self fontWithName:@"Entypo-Social" ofType:@"otf"];
-}
-
-+ (FIFont *)fontAwesomeFont {
-    return [self fontWithName:@"fontawesome" ofType:@"ttf"];
-}
-
-+ (FIFont *)iconicFont {
-    return [self fontWithName:@"iconic" ofType:@"otf"];
+- (void)dealloc {
+    CFRelease(self->_font);
 }
 
 @end

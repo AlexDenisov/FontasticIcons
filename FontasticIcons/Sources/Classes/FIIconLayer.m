@@ -7,8 +7,8 @@
 //
 
 #import "FIIconLayer.h"
-#import "FIIcon_Private.h"
-#import "FIFont_Private.h"
+#import "FIIcon+Private.h"
+#import "FIFont+Private.h"
 
 @implementation FIIconLayer {
     NSMutableDictionary *iconAttributes;
@@ -20,11 +20,7 @@
 }
 
 - (void)setIconAttribute:(CFStringRef)name value:(CFTypeRef)value {
-    if (value) {
-        iconAttributes[(__bridge NSString *) name] = (__bridge id) value;
-    } else {
-        [iconAttributes removeObjectForKey:(__bridge NSString *) name];
-    }
+    [iconAttributes setValue:(__bridge id) value forKey:(__bridge NSString *) name];
     [self setNeedsDisplay];
 }
 

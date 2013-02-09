@@ -9,6 +9,7 @@
 @protocol FIRenderer
 
 @property(nonatomic, assign) CGRect bounds;
+
 - (void)renderInContext:(CGContextRef)ctx;
 - (UIImage *)image;
 

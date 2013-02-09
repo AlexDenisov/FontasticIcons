@@ -12,5 +12,4 @@
 typedef id <FIRenderer, FIIconRendering> FIIconRenderer;
 
 @interface FIIconLayer (FIRenderer) <FIRenderer>
-
 @end

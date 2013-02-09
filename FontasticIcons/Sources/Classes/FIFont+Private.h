@@ -1,5 +1,5 @@
 //
-//  FIFont_Private.h
+//  FIFont+Private.h
 //  FontasticIcons
 //
 //  Created by Alex Denisov on 29.10.12.
@@ -11,8 +11,8 @@
 
 @interface FIFont ()
 
-+ (FIFont *)fontWithName:(NSString *)aName ofType:(NSString *)aType;
-- (FIFont *)initWithFontName:(NSString *)aName ofType:(NSString *)aType;
++ (instancetype)fontWithName:(NSString *)aName ofType:(NSString *)aType;
+- (id)initWithFontName:(NSString *)aName ofType:(NSString *)aType;
 - (CTFontRef)fontRef;
 
 @end
