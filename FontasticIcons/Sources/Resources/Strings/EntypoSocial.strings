@@ -1,0 +1,54 @@
+//
+//  EntypoSocial.strings
+//  FontasticIcons
+//
+//  Created by Ben Kreeger on 7.1.13.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
+//
+// https://github.com/danielbruce/entypo/blob/master/font/entypo.css
+
+"behance" = "\UF34E";
+"dribbbleCircle" = "\UF31C";
+"facebookCircle" = "\UF30D";
+"flickrCircle" = "\UF304";
+"githubCircle" = "\UF301";
+"googlePlusCircle" = "\UF310";
+"lastfmCircle" = "\UF322";
+"linkedinCircle" = "\UF319";
+"pinterestCircle" = "\UF313";
+"rdioCircle" = "\UF325";
+"skypeCircle" = "\UF33A";
+"spotifyCircle" = "\UF328";
+"stumbleuponCircle" = "\UF31F";
+"tumblrCircle" = "\UF316";
+"twitterCircle" = "\UF30A";
+"vimeoCircle" = "\UF307";
+"dribbble" = "\UF31B";
+"dropbox" = "\UF330";
+"evernote" = "\UF333";
+"facebook" = "\UF30C";
+"flattr" = "\UF336";
+"flickr" = "\UF303";
+"github" = "\UF300";
+"googlePlus" = "\UF30F";
+"googleCircles" = "\UF351";
+"instagram" = "\UF32D";
+"lastfm" = "\UF321";
+"linkedin" = "\UF318";
+"mixi" = "\UF34B";
+"paypal" = "\UF342";
+"picasa" = "\UF345";
+"pinterest" = "\UF312";
+"qq" = "\UF32A";
+"rdio" = "\UF324";
+"renren" = "\UF33C";
+"facebookSquare" = "\UF30E";
+"sinaWeibo" = "\UF33F";
+"skype" = "\UF339";
+"soundcloud" = "\UF348";
+"spotify" = "\UF327";
+"stumbleupon" = "\UF31E";
+"tumblr" = "\UF315";
+"twitter" = "\UF309";
+"vimeo" = "\UF306";
+"vk" = "\UF354";

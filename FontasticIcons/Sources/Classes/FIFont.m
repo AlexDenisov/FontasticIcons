@@ -3,70 +3,95 @@
 //  FontasticIcons
 //
 //  Created by Alex Denisov on 28.10.12.
-//  Copyright (c) 2012 Alex Denisov. All rights reserved.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
 //
 
-#import <CoreText/CoreText.h>
-#import "FIFont_Private.h"
-#import "FIFont.h"
-#import "FIUtils.h"
+#import "FIFont+Private.h"
 
-@implementation FIFont
-{
-    CTFontRef _font;
+static NSMutableDictionary *fonts;
+
+@implementation FIFont {
+    NSDictionary *_glyphMap;
 }
 
-+ (FIFont *)fontWithName:(NSString *)aName ofType:(NSString *)aType {
-    FIFont *font = [[FIFont alloc] initWithFontName:aName
-                                             ofType:aType];
-    return arcsafe_autorelease(font);
++ (instancetype)fontWithResourcePath:(NSString *)aPath {
+    static dispatch_once_t once[1];
+    dispatch_once(once, ^{ fonts = [NSMutableDictionary dictionary]; });
+    aPath = [self pathForResource:aPath defaultDirectory:@"Fonts"];
+    if (!fonts[aPath]) @synchronized (fonts) {
+        fonts[aPath] = [[self alloc] initWithFontData:[NSData dataWithContentsOfFile:aPath]];
+    }
+    return fonts[aPath];
 }
 
-- (id)initWithFontName:(NSString *)aName ofType:(NSString *)aType {
-    self = [super init];
-    if (self) {
-        NSString *fontPath = [[NSBundle mainBundle] pathForResource:aName
-                                                             ofType:aType];
-        NSData *data = [[NSData alloc] initWithContentsOfFile:fontPath];
-        CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((CFDataRef)data);
-        arcsafe_release(data);
-        
+- (id)initWithFontData:(NSData *)aData {
+    if (self = [super init]) {
+        CGDataProviderRef fontProvider = CGDataProviderCreateWithCFData((__bridge CFDataRef) aData);
         CGFontRef cgFont = CGFontCreateWithDataProvider(fontProvider);
         CGDataProviderRelease(fontProvider);
-        
-        CTFontDescriptorRef fontDescriptor = CTFontDescriptorCreateWithAttributes((CFDictionaryRef)@{});
-        CTFontRef font = CTFontCreateWithGraphicsFont(cgFont, 0, NULL, fontDescriptor);
-        CFRelease(fontDescriptor);
+        _textFont = CTFontCreateWithGraphicsFont(cgFont, 0, NULL, NULL);
         CGFontRelease(cgFont);
-        self->_font = font;
     }
     return self;
 }
 
-- (CTFontRef)fontRef {
-    return self->_font;
+- (NSString *)name {
+    return (__bridge_transfer NSString *) CTFontCopyFullName(self.textFont);
 }
 
-- (NSString *)fontName {
-    return (NSString *)CTFontCopyFullName(self.fontRef);
+- (NSString *)postScriptName {
+    return (__bridge_transfer NSString *) CTFontCopyPostScriptName(self.textFont);
 }
 
-#pragma mark - Fonts
-
-+ (FIFont *)entypoFont {
-    return [self fontWithName:@"Entypo" ofType:@"otf"];
+- (NSString *)objcName {
+    return [[NSRegularExpression regularExpressionWithPattern:@"\\W+"
+                                                      options:NSRegularExpressionUseUnicodeWordBoundaries
+                                                        error:nil]
+                             stringByReplacingMatchesInString:self.name
+                                                      options:(NSMatchingOptions) 0
+                                                        range:NSMakeRange(0, self.name.length)
+                                                 withTemplate:@""];
 }
 
-+ (FIFont *)entypoSocialFont {
-    return [self fontWithName:@"Entypo-Social" ofType:@"otf"];
+- (NSString *)glyphsPath {
+    return [self.objcName stringByAppendingString:@".strings"];
 }
 
-+ (FIFont *)fontAwesomeFont {
-    return [self fontWithName:@"fontawesome" ofType:@"ttf"];
+- (NSDictionary *)glyphMap {
+    if (!_glyphMap) @synchronized(self) {
+        NSString *path = [self.class pathForResource:self.glyphsPath defaultDirectory:@"Strings"];
+        _glyphMap = self.aliasMap;
+        if (_glyphMap.count) {
+            NSMutableDictionary *glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+            [_glyphMap enumerateKeysAndObjectsUsingBlock:^(NSString *alias, NSString *name, BOOL *stop) {
+                NSAssert(!glyphMap[alias], @"%@ %@ alias must not overwrite exisiting glyph", self.name, alias);
+                NSAssert(glyphMap[name], @"%@ %@ glyph must exist for %@ alias", self.name, name, alias);
+                glyphMap[alias] = glyphMap[name];
+            }];
+            _glyphMap = glyphMap.copy;
+        } else {
+            _glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+        }
+    }
+    return _glyphMap;
 }
 
-+ (FIFont *)iconicFont {
-    return [self fontWithName:@"iconic" ofType:@"otf"];
+- (NSDictionary *)aliasMap {
+    BOOL conforms = [self conformsToProtocol:@protocol(FIFontGlyphAliases)];
+    return conforms ? [NSDictionary dictionaryWithContentsOfFile:[self.class
+                                                 pathForResource:((id <FIFontGlyphAliases>) self).aliasesPath
+                                                defaultDirectory:@"Strings"]] : nil;
+}
+
+- (void)dealloc {
+    CFRelease(_textFont);
+}
+
++ (NSString *)pathForResource:(NSString *)aPath defaultDirectory:(NSString *)aDirectory {
+    NSString *subpath = aPath.stringByDeletingLastPathComponent;
+    return [[NSBundle mainBundle] pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
+                                           ofType:aPath.pathExtension
+                                      inDirectory:subpath.length ? subpath : aDirectory];
 }
 
 @end

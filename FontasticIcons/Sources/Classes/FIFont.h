@@ -3,18 +3,14 @@
 //  FontasticIcons
 //
 //  Created by Alex Denisov on 28.10.12.
-//  Copyright (c) 2012 Alex Denisov. All rights reserved.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
 
 @interface FIFont : NSObject
 
-- (NSString *)fontName;
+@property (nonatomic, copy, readonly) NSString *name;
+@property (nonatomic, copy, readonly) NSString *postScriptName;
 
-+ (FIFont *)entypoFont;
-+ (FIFont *)entypoSocialFont;
-+ (FIFont *)fontAwesomeFont;
-+ (FIFont *)iconicFont;
++ (instancetype)fontWithResourcePath:(NSString *)aPath;
 
 @end

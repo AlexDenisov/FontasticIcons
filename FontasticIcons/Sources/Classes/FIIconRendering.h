@@ -1,9 +1,9 @@
 //
-//  FIIconRendering
+//  FIIconRendering.h
 //  FontasticIcons
 //
 //  Created by Jonathan Toland on 30.12.12.
-//  Copyright (c) 2012 Alex Denisov. All rights reserved.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
 //
 
 @class FIIcon;
@@ -11,7 +11,9 @@
 @protocol FIIconRendering
 
 @property (nonatomic, copy) FIIcon *icon;
-@property (nonatomic, retain) UIColor *iconColor; // only copyable since iOS 6.0
-@property (nonatomic, assign) CGPoint inset;
+@property (nonatomic, strong) UIColor *iconColor; // TODO: migrate to copy for iOS 6.0
+@property (nonatomic, strong) UIColor *iconStrokeColor; // TODO: migrate to copy for iOS 6.0
+@property (nonatomic, assign) CGFloat iconStrokeWidthRatio;
+@property (nonatomic, assign) CGPoint iconInset;
 
 @end

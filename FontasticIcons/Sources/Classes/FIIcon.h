@@ -3,22 +3,25 @@
 //  FontasticIcons
 //
 //  Created by Alex Denisov on 28.10.12.
-//  Copyright (c) 2012 Alex Denisov. All rights reserved.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class FIFont;
 
 @interface FIIcon : NSObject <NSCopying>
 
-@property (nonatomic, copy) NSString *iconString;
-@property (nonatomic, copy) NSString *iconName;
+@property (nonatomic, copy, readonly) NSString *glyph;
+@property (nonatomic, copy, readonly) NSString *name;
 
-+ (FIIcon *)iconWithName:(NSString *)anIconName fontSetName:(NSString *)aFontName;
-+ (FIIcon *)iconWithName:(NSString *)anIconName;
++ (FIIcon *)iconWithName:(NSString *)anIconName fontName:(NSString *)aFontName;
++ (instancetype)iconWithName:(NSString *)anIconName;
 - (id)initWithName:(NSString *)anIconName;
-+ (NSArray *)iconNames;
++ (NSArray *)iconNames; // TODO: migrate to NSOrderedSet for iOS 5.0
 
-+ (NSString *)fontSetName;
-- (NSString *)fontSetName;
+@end
+
+@interface FIIcon (Abstract)
+
++ (FIFont *)font;
 
 @end
