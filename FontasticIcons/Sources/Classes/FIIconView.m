@@ -3,7 +3,7 @@
 //  FontasticIcons
 //
 //  Created by Alex Denisov on 28.10.12.
-//  Copyright (c) 2012 Alex Denisov. All rights reserved.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
 //
 
 #import "FIIconView.h"
@@ -18,15 +18,15 @@
 
 - (CGFloat)padding {
     // prefer vertical padding value for relevance to landscape buttons
-    return self.iconLayer.inset.y ? : self.iconLayer.inset.x;
+    return self.iconLayer.iconInset.y ? : self.iconLayer.iconInset.x;
 }
 
 - (void)setPadding:(CGFloat)padding {
-    self.iconLayer.inset = CGPointMake(padding, padding);
+    self.iconLayer.iconInset = CGPointMake(padding, padding);
 }
 
 #pragma mark self <FIIconRendering>
-@dynamic icon, iconColor, inset;
+@dynamic icon, iconColor, iconStrokeColor, iconStrokeWidthRatio, iconInset;
 
 #pragma mark super
 + (Class)layerClass {
@@ -34,12 +34,10 @@
 }
 
 #pragma mark super : NSObject
-- (void)forwardInvocation:(NSInvocation *)anInvocation {
-    if ([self.iconLayer respondsToSelector:[anInvocation selector]]) {
-        [anInvocation invokeWithTarget:self.iconLayer];
-    } else {
-        [super forwardInvocation:anInvocation];
-    }
+// http://www.mikeash.com/pyblog/friday-qa-2009-03-27-objective-c-message-forwarding.html
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    FIIconLayer *target = self.iconLayer;
+    return [target respondsToSelector:aSelector] ? target : [super forwardingTargetForSelector:aSelector];
 }
 
 @end

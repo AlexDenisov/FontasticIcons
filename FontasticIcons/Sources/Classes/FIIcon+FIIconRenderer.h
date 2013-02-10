@@ -1,9 +1,9 @@
 //
-//  FIIcon(FIIconRenderer)
+//  FIIcon+FIIconRenderer.h
 //  FontasticIcons
 //
 //  Created by Jonathan Toland on 31.12.12.
-//  Copyright (c) 2012 Alex Denisov. All rights reserved.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
 //
 
 #import "FIIcon.h"
@@ -11,7 +11,8 @@
 
 @interface FIIcon (FIIconRenderer)
 
-- (FIIconRenderer)renderer;
++ (FIIconRendererRef)rendererWithName:(NSString *)anIconName;
+- (FIIconRendererRef)renderer;
 - (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color;
 
 @end

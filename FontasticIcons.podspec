@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'FontasticIcons'
-  s.version      = '0.2.0'
+  s.version      = '0.3.0'
   s.summary      = 'Objective-C wrapper for iconic fonts.'
   s.description  = <<-DESC
                     - [Entypo](http://entypo.com) pictograms by Daniel Bruce
@@ -11,8 +11,9 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { 'Alex Denisov' => '1101.debian@gmail.com' }
   s.source       = { :git => 'https://github.com/AlexDenisov/FontasticIcons.git', :tag => "#{s.version}" }
-  s.platform     = :ios, '4.0'
+  s.platform     = :ios, '4.2'
   s.source_files = 'FontasticIcons/Sources/Classes'
-  s.resources    = 'FontasticIcons/Sources/Resources/Fonts/*'
+  s.resources    = 'FontasticIcons/Sources/Resources/**'
   s.frameworks   = 'CoreText', 'QuartzCore'
+  s.requires_arc = true
 end
