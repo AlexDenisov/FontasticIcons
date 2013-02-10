@@ -105,9 +105,9 @@
 - (void)invalidateLine {
     if (_line) {
         CFRelease(_line);
-        _line = NULL; // relative to icon string
-        _iconBounds = CGRectZero; // relative to line
-        _scale = CGPointZero; // relative to icon bounds
+        _line = NULL; // depends on delegate.iconString
+        _iconBounds = CGRectZero; // depends on line
+        _scale = CGPointZero; // depends on iconBounds
     }
 }
 
