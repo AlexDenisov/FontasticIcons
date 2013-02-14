@@ -11,7 +11,6 @@
 
 @interface FIIcon (FIIconRenderer)
 
-+ (FIIconRendererRef)rendererWithName:(NSString *)anIconName;
 - (FIIconRendererRef)renderer;
 - (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color;
 
