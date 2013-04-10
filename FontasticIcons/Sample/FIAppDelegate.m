@@ -7,20 +7,44 @@
 //
 
 #import "FIAppDelegate.h"
-
 #import "FIViewController.h"
-#import "FIFontListViewController.h"
+
+#import "FIEntypoIcon.h"
+#import "FIEntypoSocialIcon.h"
+#import "FIIconicIcon.h"
+#import "FIFontAwesomeIcon.h"
 
 @implementation FIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    FIViewController *entypoViewController = [FIViewController new];
+    entypoViewController.iconClass = [FIEntypoIcon class];
+    
+    FIViewController *entypoSocialViewController = [FIViewController new];
+    entypoSocialViewController.iconClass = [FIEntypoSocialIcon class];
+    
+    FIViewController *iconicViewController = [FIViewController new];
+    iconicViewController.iconClass = [FIIconicIcon class];
+    
+    FIViewController *fontAwesomeViewController = [FIViewController new];
+    fontAwesomeViewController.iconClass = [FIFontAwesomeIcon class];
 
-    self.viewController = [[FIFontListViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc]
-                                             initWithRootViewController:self.viewController];
-    self.window.rootViewController = navController;
+    UITabBarController *tabbarController = [UITabBarController new];
+    
+    NSArray *viewControllers =
+    @[
+      [[UINavigationController alloc] initWithRootViewController:entypoViewController],
+      [[UINavigationController alloc] initWithRootViewController:entypoSocialViewController],
+      [[UINavigationController alloc] initWithRootViewController:iconicViewController],
+      [[UINavigationController alloc] initWithRootViewController:fontAwesomeViewController]
+      ];
+    
+    tabbarController.viewControllers = viewControllers;
+    
+    self.window.rootViewController = tabbarController;
     [self.window makeKeyAndVisible];
     return YES;
 }

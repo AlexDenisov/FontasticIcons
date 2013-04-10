@@ -16,6 +16,8 @@ Just add sources from `FontasticIcons/Sources/Classes` directory to your project
  
 ## Usage
 
+#### With UIView
+
 ```objective-c
 #import <FontasticIcons.h>
 ...
@@ -26,7 +28,33 @@ iconView.padding = 2;
 iconView.iconColor = [UIColor greenColor];
 [self.view addSubview:iconView];
 ```
-    
+
+#### With UITabBarItem
+
+```objective-c
+#import <FontasticIcons.h>
+...
+FIIcon *icon = [FIEntypoIcon leafIcon];    
+UIImage *image = [icon imageWithBounds:CGRectMake(0, 0, 30, 30) color:[UIColor blackColor]];
+[self.tabBarItem setImage:image];
+```
+
+#### With UIButton
+
+```objective-c
+#import <FontasticIcons.h>
+...
+UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+button.frame = CGRectMake(0, 0, 60, 40);
+FIIcon *icon = [FIEntypoIcon leafIcon];    
+
+FIIconLayer *layer = [FIIconLayer new];
+layer.icon = icon;
+layer.frame = button.bounds;
+layer.iconColor = [UIColor greenColor];
+[button.layer addSublayer:layer];
+```
+
 ## Available fonts
 
  - Entypo pictograms by Daniel Bruce — www.entypo.com
