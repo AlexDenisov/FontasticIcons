@@ -17,7 +17,7 @@ static NSMutableDictionary *fonts;
 + (instancetype)fontWithResourcePath:(NSString *)aPath {
     static dispatch_once_t once[1];
     dispatch_once(once, ^{ fonts = [NSMutableDictionary dictionary]; });
-    aPath = [self pathForResource:aPath defaultDirectory:@"Fonts"];
+    aPath = [self pathForResource:aPath];
     if (!fonts[aPath]) @synchronized (fonts) {
         fonts[aPath] = [[self alloc] initWithFontData:[NSData dataWithContentsOfFile:aPath]];
     }
@@ -59,7 +59,7 @@ static NSMutableDictionary *fonts;
 
 - (NSDictionary *)glyphMap {
     if (!_glyphMap) @synchronized(self) {
-        NSString *path = [self.class pathForResource:self.glyphsPath defaultDirectory:@"Strings"];
+        NSString *path = [self.class pathForResource:self.glyphsPath];
         _glyphMap = self.aliasMap;
         if (_glyphMap.count) {
             NSMutableDictionary *glyphMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
@@ -79,19 +79,16 @@ static NSMutableDictionary *fonts;
 - (NSDictionary *)aliasMap {
     BOOL conforms = [self conformsToProtocol:@protocol(FIFontGlyphAliases)];
     return conforms ? [NSDictionary dictionaryWithContentsOfFile:[self.class
-                                                 pathForResource:((id <FIFontGlyphAliases>) self).aliasesPath
-                                                defaultDirectory:@"Strings"]] : nil;
+                                                 pathForResource:((id <FIFontGlyphAliases>) self).aliasesPath]] : nil;
 }
 
 - (void)dealloc {
     CFRelease(_textFont);
 }
 
-+ (NSString *)pathForResource:(NSString *)aPath defaultDirectory:(NSString *)aDirectory {
-    NSString *subpath = aPath.stringByDeletingLastPathComponent;
++ (NSString *)pathForResource:(NSString *)aPath {
     return [[NSBundle mainBundle] pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
-                                           ofType:aPath.pathExtension
-                                      inDirectory:subpath.length ? subpath : aDirectory];
+                                           ofType:aPath.pathExtension];
 }
 
 @end

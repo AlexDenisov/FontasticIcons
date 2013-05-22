@@ -13,6 +13,15 @@
 		B0E074089E50B3F02CC2D35A /* FIIconLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07850BEB4C2B283D2B5ED /* FIIconLayer.m */; };
 		B0E07A573ED2D4C754BBDC9B /* FIIcon+Forwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E073E5FC678D5BA8A5D8D2 /* FIIcon+Forwarding.m */; };
 		B0E07FCD6FF099DF8C41B3B9 /* FIIcon+Deprecation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07DFFECDB781CFC510ABE /* FIIcon+Deprecation.m */; };
+		CA04FA56174CC1C5004FA4F6 /* Entypo.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA51174CC1C5004FA4F6 /* Entypo.strings */; };
+		CA04FA57174CC1C5004FA4F6 /* EntypoSocial.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA52174CC1C5004FA4F6 /* EntypoSocial.strings */; };
+		CA04FA58174CC1C5004FA4F6 /* FontAwesome.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA53174CC1C5004FA4F6 /* FontAwesome.strings */; };
+		CA04FA59174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA54174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings */; };
+		CA04FA5A174CC1C5004FA4F6 /* IconicStroke.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA55174CC1C5004FA4F6 /* IconicStroke.strings */; };
+		CA04FA5F174CC1CD004FA4F6 /* Entypo-Social.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA5B174CC1CD004FA4F6 /* Entypo-Social.otf */; };
+		CA04FA60174CC1CD004FA4F6 /* Entypo.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA5C174CC1CD004FA4F6 /* Entypo.otf */; };
+		CA04FA61174CC1CD004FA4F6 /* fontawesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA5D174CC1CD004FA4F6 /* fontawesome.ttf */; };
+		CA04FA62174CC1CD004FA4F6 /* iconic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA5E174CC1CD004FA4F6 /* iconic.otf */; };
 		CA31B9A71657E194002A9EDD /* FIFontListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9A61657E194002A9EDD /* FIFontListViewController.m */; };
 		CA31B9CE165807F5002A9EDD /* FIFontAwesomeIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9CD165807F5002A9EDD /* FIFontAwesomeIcon.m */; };
 		CA31B9E616582411002A9EDD /* FIIconicIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA31B9E516582411002A9EDD /* FIIconicIcon.m */; };
@@ -33,8 +42,6 @@
 		CA7C5606163E3AAD00AC32A3 /* FIEntypoIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5605163E3AAD00AC32A3 /* FIEntypoIcon.m */; };
 		CA7C5609163E433400AC32A3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7C5608163E433400AC32A3 /* CoreText.framework */; };
 		CA7C561A163EFBCC00AC32A3 /* FIEntypoSocialIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */; };
-		E183779716BE361500525AB5 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = E183779516BE361500525AB5 /* Fonts */; };
-		E183779816BE361500525AB5 /* Strings in Resources */ = {isa = PBXBuildFile; fileRef = E183779616BE361500525AB5 /* Strings */; };
 		E1B6DBF51693A4A600B6704C /* FIIconLayer+FIRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07B56EB080A788441AB2E /* FIIconLayer+FIRenderer.m */; };
 		E1EC0266168FE25D004A8EDD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EC0263168FE23B004A8EDD /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +64,15 @@
 		B0E07DFFECDB781CFC510ABE /* FIIcon+Deprecation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FIIcon+Deprecation.m"; sourceTree = "<group>"; };
 		B0E07E4A5DDD412B2220558F /* FIIcon+Deprecation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIcon+Deprecation.h"; sourceTree = "<group>"; };
 		B0E07F9CA8E68482CC5775F0 /* FIIcon+FIIconRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIcon+FIIconRenderer.h"; sourceTree = "<group>"; };
+		CA04FA51174CC1C5004FA4F6 /* Entypo.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Entypo.strings; sourceTree = "<group>"; };
+		CA04FA52174CC1C5004FA4F6 /* EntypoSocial.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = EntypoSocial.strings; sourceTree = "<group>"; };
+		CA04FA53174CC1C5004FA4F6 /* FontAwesome.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FontAwesome.strings; sourceTree = "<group>"; };
+		CA04FA54174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "FontAwesome+Deprecation.strings"; sourceTree = "<group>"; };
+		CA04FA55174CC1C5004FA4F6 /* IconicStroke.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = IconicStroke.strings; sourceTree = "<group>"; };
+		CA04FA5B174CC1CD004FA4F6 /* Entypo-Social.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Entypo-Social.otf"; sourceTree = "<group>"; };
+		CA04FA5C174CC1CD004FA4F6 /* Entypo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.otf; sourceTree = "<group>"; };
+		CA04FA5D174CC1CD004FA4F6 /* fontawesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fontawesome.ttf; sourceTree = "<group>"; };
+		CA04FA5E174CC1CD004FA4F6 /* iconic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconic.otf; sourceTree = "<group>"; };
 		CA31B9A51657E194002A9EDD /* FIFontListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFontListViewController.h; sourceTree = "<group>"; };
 		CA31B9A61657E194002A9EDD /* FIFontListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFontListViewController.m; sourceTree = "<group>"; };
 		CA31B9CC165807F5002A9EDD /* FIFontAwesomeIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFontAwesomeIcon.h; sourceTree = "<group>"; };
@@ -92,8 +108,6 @@
 		CA7C5618163EFBCC00AC32A3 /* FIEntypoSocialIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIEntypoSocialIcon.h; sourceTree = "<group>"; };
 		CA7C5619163EFBCC00AC32A3 /* FIEntypoSocialIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIEntypoSocialIcon.m; sourceTree = "<group>"; };
 		CA7C562D163FAC5300AC32A3 /* FontasticIcons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontasticIcons.h; sourceTree = "<group>"; };
-		E183779516BE361500525AB5 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = FontasticIcons/Sources/Resources/Fonts; sourceTree = SOURCE_ROOT; };
-		E183779616BE361500525AB5 /* Strings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Strings; sourceTree = "<group>"; };
 		E1EC0263168FE23B004A8EDD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E1EC02671690028C004A8EDD /* FontasticIcons.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = FontasticIcons.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +139,29 @@
 				B0E0738924F11B4C5F919777 /* FIFont+Deprecation.h */,
 			);
 			name = Deprecation;
+			sourceTree = "<group>";
+		};
+		CA04FA4F174CC120004FA4F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CA04FA5B174CC1CD004FA4F6 /* Entypo-Social.otf */,
+				CA04FA5C174CC1CD004FA4F6 /* Entypo.otf */,
+				CA04FA5D174CC1CD004FA4F6 /* fontawesome.ttf */,
+				CA04FA5E174CC1CD004FA4F6 /* iconic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CA04FA50174CC130004FA4F6 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				CA04FA51174CC1C5004FA4F6 /* Entypo.strings */,
+				CA04FA52174CC1C5004FA4F6 /* EntypoSocial.strings */,
+				CA04FA53174CC1C5004FA4F6 /* FontAwesome.strings */,
+				CA04FA54174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings */,
+				CA04FA55174CC1C5004FA4F6 /* IconicStroke.strings */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		CA31B9E1165823E2002A9EDD /* FontAwesome */ = {
@@ -252,8 +289,8 @@
 		CA7C55F2163DC52B00AC32A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E183779516BE361500525AB5 /* Fonts */,
-				E183779616BE361500525AB5 /* Strings */,
+				CA04FA50174CC130004FA4F6 /* Strings */,
+				CA04FA4F174CC120004FA4F6 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -371,8 +408,15 @@
 				CA7C55D9163DC00700AC32A3 /* Default@2x.png in Resources */,
 				CA7C55DB163DC00700AC32A3 /* Default-568h@2x.png in Resources */,
 				CA7C55E1163DC00700AC32A3 /* FIViewController.xib in Resources */,
-				E183779716BE361500525AB5 /* Fonts in Resources */,
-				E183779816BE361500525AB5 /* Strings in Resources */,
+				CA04FA56174CC1C5004FA4F6 /* Entypo.strings in Resources */,
+				CA04FA57174CC1C5004FA4F6 /* EntypoSocial.strings in Resources */,
+				CA04FA58174CC1C5004FA4F6 /* FontAwesome.strings in Resources */,
+				CA04FA59174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings in Resources */,
+				CA04FA5A174CC1C5004FA4F6 /* IconicStroke.strings in Resources */,
+				CA04FA5F174CC1CD004FA4F6 /* Entypo-Social.otf in Resources */,
+				CA04FA60174CC1CD004FA4F6 /* Entypo.otf in Resources */,
+				CA04FA61174CC1CD004FA4F6 /* fontawesome.ttf in Resources */,
+				CA04FA62174CC1CD004FA4F6 /* iconic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
