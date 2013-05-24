@@ -1,0 +1,610 @@
+//
+//  FontAwesome.strings
+//  FontasticIcons
+//
+//  Created by Ben Kreeger on 7.1.13.
+//  Copyright (c) 2013 Alex Denisov. All rights reserved.
+//
+"glass" = "\Uf000";
+
+"music" = "\Uf001";
+
+"search" = "\Uf002";
+
+"envelope" = "\Uf003";
+
+"heart" = "\Uf004";
+
+"star" = "\Uf005";
+
+"starEmpty" = "\Uf006";
+
+"user" = "\Uf007";
+
+"film" = "\Uf008";
+
+"thLarge" = "\Uf009";
+
+"th" = "\Uf00a";
+
+"thList" = "\Uf00b";
+
+"ok" = "\Uf00c";
+
+"remove" = "\Uf00d";
+
+"zoomIn" = "\Uf00e";
+
+"zoomOut" = "\Uf010";
+
+"off" = "\Uf011";
+
+"signal" = "\Uf012";
+
+"cog" = "\Uf013";
+
+"trash" = "\Uf014";
+
+"home" = "\Uf015";
+
+"file" = "\Uf016";
+
+"time" = "\Uf017";
+
+"road" = "\Uf018";
+
+"downloadAlt" = "\Uf019";
+
+"download" = "\Uf01a";
+
+"upload" = "\Uf01b";
+
+"inbox" = "\Uf01c";
+
+"playCircle" = "\Uf01d";
+
+"repeat" = "\Uf01e";
+
+"refresh" = "\Uf021";
+
+"listAlt" = "\Uf022";
+
+"lock" = "\Uf023";
+
+"flag" = "\Uf024";
+
+"headphones" = "\Uf025";
+
+"volumeOff" = "\Uf026";
+
+"volumeDown" = "\Uf027";
+
+"volumeUp" = "\Uf028";
+
+"qrcode" = "\Uf029";
+
+"barcode" = "\Uf02a";
+
+"tag" = "\Uf02b";
+
+"tags" = "\Uf02c";
+
+"book" = "\Uf02d";
+
+"bookmark" = "\Uf02e";
+
+"print" = "\Uf02f";
+
+"camera" = "\Uf030";
+
+"font" = "\Uf031";
+
+"bold" = "\Uf032";
+
+"italic" = "\Uf033";
+
+"textHeight" = "\Uf034";
+
+"textWidth" = "\Uf035";
+
+"alignLeft" = "\Uf036";
+
+"alignCenter" = "\Uf037";
+
+"alignRight" = "\Uf038";
+
+"alignJustify" = "\Uf039";
+
+"list" = "\Uf03a";
+
+"indentLeft" = "\Uf03b";
+
+"indentRight" = "\Uf03c";
+
+"facetimeVideo" = "\Uf03d";
+
+"picture" = "\Uf03e";
+
+"pencil" = "\Uf040";
+
+"mapMarker" = "\Uf041";
+
+"adjust" = "\Uf042";
+
+"tint" = "\Uf043";
+
+"edit" = "\Uf044";
+
+"share" = "\Uf045";
+
+"check" = "\Uf046";
+
+"move" = "\Uf047";
+
+"stepBackward" = "\Uf048";
+
+"fastBackward" = "\Uf049";
+
+"backward" = "\Uf04a";
+
+"play" = "\Uf04b";
+
+"pause" = "\Uf04c";
+
+"stop" = "\Uf04d";
+
+"forward" = "\Uf04e";
+
+"fastForward" = "\Uf050";
+
+"stepForward" = "\Uf051";
+
+"eject" = "\Uf052";
+
+"chevronLeft" = "\Uf053";
+
+"chevronRight" = "\Uf054";
+
+"plusSign" = "\Uf055";
+
+"minusSign" = "\Uf056";
+
+"removeSign" = "\Uf057";
+
+"okSign" = "\Uf058";
+
+"questionSign" = "\Uf059";
+
+"infoSign" = "\Uf05a";
+
+"screenshot" = "\Uf05b";
+
+"removeCircle" = "\Uf05c";
+
+"okCircle" = "\Uf05d";
+
+"banCircle" = "\Uf05e";
+
+"arrowLeft" = "\Uf060";
+
+"arrowRight" = "\Uf061";
+
+"arrowUp" = "\Uf062";
+
+"arrowDown" = "\Uf063";
+
+"shareAlt" = "\Uf064";
+
+"resizeFull" = "\Uf065";
+
+"resizeSmall" = "\Uf066";
+
+"plus" = "\Uf067";
+
+"minus" = "\Uf068";
+
+"asterisk" = "\Uf069";
+
+"exclamationSign" = "\Uf06a";
+
+"gift" = "\Uf06b";
+
+"leaf" = "\Uf06c";
+
+"fire" = "\Uf06d";
+
+"eyeOpen" = "\Uf06e";
+
+"eyeClose" = "\Uf070";
+
+"warningSign" = "\Uf071";
+
+"plane" = "\Uf072";
+
+"calendar" = "\Uf073";
+
+"random" = "\Uf074";
+
+"comment" = "\Uf075";
+
+"magnet" = "\Uf076";
+
+"chevronUp" = "\Uf077";
+
+"chevronDown" = "\Uf078";
+
+"retweet" = "\Uf079";
+
+"shoppingCart" = "\Uf07a";
+
+"folderClose" = "\Uf07b";
+
+"folderOpen" = "\Uf07c";
+
+"resizeVertical" = "\Uf07d";
+
+"resizeHorizontal" = "\Uf07e";
+
+"barChart" = "\Uf080";
+
+"twitterSign" = "\Uf081";
+
+"facebookSign" = "\Uf082";
+
+"cameraRetro" = "\Uf083";
+
+"key" = "\Uf084";
+
+"cogs" = "\Uf085";
+
+"comments" = "\Uf086";
+
+"thumbsUp" = "\Uf087";
+
+"thumbsDown" = "\Uf088";
+
+"starHalf" = "\Uf089";
+
+"heartEmpty" = "\Uf08a";
+
+"signout" = "\Uf08b";
+
+"linkedinSign" = "\Uf08c";
+
+"pushpin" = "\Uf08d";
+
+"externalLink" = "\Uf08e";
+
+"signin" = "\Uf090";
+
+"trophy" = "\Uf091";
+
+"githubSign" = "\Uf092";
+
+"uploadAlt" = "\Uf093";
+
+"lemon" = "\Uf094";
+
+"phone" = "\Uf095";
+
+"checkEmpty" = "\Uf096";
+
+"bookmarkEmpty" = "\Uf097";
+
+"phoneSign" = "\Uf098";
+
+"twitter" = "\Uf099";
+
+"facebook" = "\Uf09a";
+
+"github" = "\Uf09b";
+
+"unlock" = "\Uf09c";
+
+"creditCard" = "\Uf09d";
+
+"rss" = "\Uf09e";
+
+"hdd" = "\Uf0a0";
+
+"bullhorn" = "\Uf0a1";
+
+"bell" = "\Uf0a2";
+
+"certificate" = "\Uf0a3";
+
+"handRight" = "\Uf0a4";
+
+"handLeft" = "\Uf0a5";
+
+"handUp" = "\Uf0a6";
+
+"handDown" = "\Uf0a7";
+
+"circleArrowLeft" = "\Uf0a8";
+
+"circleArrowRight" = "\Uf0a9";
+
+"circleArrowUp" = "\Uf0aa";
+
+"circleArrowDown" = "\Uf0ab";
+
+"globe" = "\Uf0ac";
+
+"wrench" = "\Uf0ad";
+
+"tasks" = "\Uf0ae";
+
+"filter" = "\Uf0b0";
+
+"briefcase" = "\Uf0b1";
+
+"fullscreen" = "\Uf0b2";
+
+"group" = "\Uf0c0";
+
+"link" = "\Uf0c1";
+
+"cloud" = "\Uf0c2";
+
+"beaker" = "\Uf0c3";
+
+"cut" = "\Uf0c4";
+
+"copy" = "\Uf0c5";
+
+"paperClip" = "\Uf0c6";
+
+"save" = "\Uf0c7";
+
+"signBlank" = "\Uf0c8";
+
+"reorder" = "\Uf0c9";
+
+"listUl" = "\Uf0ca";
+
+"listOl" = "\Uf0cb";
+
+"strikethrough" = "\Uf0cc";
+
+"underline" = "\Uf0cd";
+
+"table" = "\Uf0ce";
+
+"magic" = "\Uf0d0";
+
+"truck" = "\Uf0d1";
+
+"pinterest" = "\Uf0d2";
+
+"pinterestSign" = "\Uf0d3";
+
+"googlePlusSign" = "\Uf0d4";
+
+"googlePlus" = "\Uf0d5";
+
+"money" = "\Uf0d6";
+
+"caretDown" = "\Uf0d7";
+
+"caretUp" = "\Uf0d8";
+
+"caretLeft" = "\Uf0d9";
+
+"caretRight" = "\Uf0da";
+
+"columns" = "\Uf0db";
+
+"sort" = "\Uf0dc";
+
+"sortDown" = "\Uf0dd";
+
+"sortUp" = "\Uf0de";
+
+"envelopeAlt" = "\Uf0e0";
+
+"linkedin" = "\Uf0e1";
+
+"undo" = "\Uf0e2";
+
+"legal" = "\Uf0e3";
+
+"dashboard" = "\Uf0e4";
+
+"commentAlt" = "\Uf0e5";
+
+"commentsAlt" = "\Uf0e6";
+
+"bolt" = "\Uf0e7";
+
+"sitemap" = "\Uf0e8";
+
+"umbrella" = "\Uf0e9";
+
+"paste" = "\Uf0ea";
+
+"lightbulb" = "\Uf0eb";
+
+"exchange" = "\Uf0ec";
+
+"cloudDownload" = "\Uf0ed";
+
+"cloudUpload" = "\Uf0ee";
+
+"userMd" = "\Uf0f0";
+
+"stethoscope" = "\Uf0f1";
+
+"suitcase" = "\Uf0f2";
+
+"bellAlt" = "\Uf0f3";
+
+"coffee" = "\Uf0f4";
+
+"food" = "\Uf0f5";
+
+"fileAlt" = "\Uf0f6";
+
+"building" = "\Uf0f7";
+
+"hospital" = "\Uf0f8";
+
+"ambulance" = "\Uf0f9";
+
+"medkit" = "\Uf0fa";
+
+"fighterJet" = "\Uf0fb";
+
+"beer" = "\Uf0fc";
+
+"hSign" = "\Uf0fd";
+
+"plusSignAlt" = "\Uf0fe";
+
+"doubleAngleLeft" = "\Uf100";
+
+"doubleAngleRight" = "\Uf101";
+
+"doubleAngleUp" = "\Uf102";
+
+"doubleAngleDown" = "\Uf103";
+
+"angleLeft" = "\Uf104";
+
+"angleRight" = "\Uf105";
+
+"angleUp" = "\Uf106";
+
+"angleDown" = "\Uf107";
+
+"desktop" = "\Uf108";
+
+"laptop" = "\Uf109";
+
+"tablet" = "\Uf10a";
+
+"mobilePhone" = "\Uf10b";
+
+"circleBlank" = "\Uf10c";
+
+"quoteLeft" = "\Uf10d";
+
+"quoteRight" = "\Uf10e";
+
+"spinner" = "\Uf110";
+
+"circle" = "\Uf111";
+
+"reply" = "\Uf112";
+
+"folderCloseAlt" = "\Uf114";
+
+"folderOpenAlt" = "\Uf115";
+
+"expandAlt" = "\Uf116";
+
+"collapseAlt" = "\Uf117";
+
+"smile" = "\Uf118";
+
+"frown" = "\Uf119";
+
+"meh" = "\Uf11a";
+
+"gamepad" = "\Uf11b";
+
+"keyboard" = "\Uf11c";
+
+"flagAlt" = "\Uf11d";
+
+"flagCheckered" = "\Uf11e";
+
+"terminal" = "\Uf120";
+
+"code" = "\Uf121";
+
+"replyAll" = "\Uf122";
+
+"mailReplyAll" = "\Uf122";
+
+"starHalfEmpty" = "\Uf123";
+
+"locationArrow" = "\Uf124";
+
+"crop" = "\Uf125";
+
+"codeFork" = "\Uf126";
+
+"unlink" = "\Uf127";
+
+"question" = "\Uf128";
+
+"info" = "\Uf129";
+
+"exclamation" = "\Uf12a";
+
+"superscript" = "\Uf12b";
+
+"subscript" = "\Uf12c";
+
+"eraser" = "\Uf12d";
+
+"puzzlePiece" = "\Uf12e";
+
+"microphone" = "\Uf130";
+
+"microphoneOff" = "\Uf131";
+
+"shield" = "\Uf132";
+
+"calendarEmpty" = "\Uf133";
+
+"fireExtinguisher" = "\Uf134";
+
+"rocket" = "\Uf135";
+
+"maxcdn" = "\Uf136";
+
+"chevronSignLeft" = "\Uf137";
+
+"chevronSignRight" = "\Uf138";
+
+"chevronSignUp" = "\Uf139";
+
+"chevronSignDown" = "\Uf13a";
+
+"html5" = "\Uf13b";
+
+"css3" = "\Uf13c";
+
+"anchor" = "\Uf13d";
+
+"unlockAlt" = "\Uf13e";
+
+"bullseye" = "\Uf140";
+
+"ellipsisHorizontal" = "\Uf141";
+
+"ellipsisVertical" = "\Uf142";
+
+"rssSign" = "\Uf143";
+
+"playSign" = "\Uf144";
+
+"ticket" = "\Uf145";
+
+"minusSignAlt" = "\Uf146";
+
+"checkMinus" = "\Uf147";
+
+"levelUp" = "\Uf148";
+
+"levelDown" = "\Uf149";
+
+"checkSign" = "\Uf14a";
+
+"editSign" = "\Uf14b";
+
+"externalLinkSign" = "\Uf14c";
+
+"shareSign" = "\Uf14d";

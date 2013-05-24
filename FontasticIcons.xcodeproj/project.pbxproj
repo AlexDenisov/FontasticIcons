@@ -15,8 +15,8 @@
 		B0E07FCD6FF099DF8C41B3B9 /* FIIcon+Deprecation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E07DFFECDB781CFC510ABE /* FIIcon+Deprecation.m */; };
 		CA04FA56174CC1C5004FA4F6 /* Entypo.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA51174CC1C5004FA4F6 /* Entypo.strings */; };
 		CA04FA57174CC1C5004FA4F6 /* EntypoSocial.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA52174CC1C5004FA4F6 /* EntypoSocial.strings */; };
-		CA04FA58174CC1C5004FA4F6 /* FontAwesome.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA53174CC1C5004FA4F6 /* FontAwesome.strings */; };
-		CA04FA59174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA54174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings */; };
+		CA04FA58174CC1C5004FA4F6 /* FontAwesomeRegular.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA53174CC1C5004FA4F6 /* FontAwesomeRegular.strings */; };
+		CA04FA59174CC1C5004FA4F6 /* FontAwesomeRegular+Deprecation.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA54174CC1C5004FA4F6 /* FontAwesomeRegular+Deprecation.strings */; };
 		CA04FA5A174CC1C5004FA4F6 /* IconicStroke.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA55174CC1C5004FA4F6 /* IconicStroke.strings */; };
 		CA04FA5F174CC1CD004FA4F6 /* Entypo-Social.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA5B174CC1CD004FA4F6 /* Entypo-Social.otf */; };
 		CA04FA60174CC1CD004FA4F6 /* Entypo.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA04FA5C174CC1CD004FA4F6 /* Entypo.otf */; };
@@ -66,8 +66,8 @@
 		B0E07F9CA8E68482CC5775F0 /* FIIcon+FIIconRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FIIcon+FIIconRenderer.h"; sourceTree = "<group>"; };
 		CA04FA51174CC1C5004FA4F6 /* Entypo.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Entypo.strings; sourceTree = "<group>"; };
 		CA04FA52174CC1C5004FA4F6 /* EntypoSocial.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = EntypoSocial.strings; sourceTree = "<group>"; };
-		CA04FA53174CC1C5004FA4F6 /* FontAwesome.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FontAwesome.strings; sourceTree = "<group>"; };
-		CA04FA54174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "FontAwesome+Deprecation.strings"; sourceTree = "<group>"; };
+		CA04FA53174CC1C5004FA4F6 /* FontAwesomeRegular.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FontAwesomeRegular.strings; sourceTree = "<group>"; };
+		CA04FA54174CC1C5004FA4F6 /* FontAwesomeRegular+Deprecation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "FontAwesomeRegular+Deprecation.strings"; sourceTree = "<group>"; };
 		CA04FA55174CC1C5004FA4F6 /* IconicStroke.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = IconicStroke.strings; sourceTree = "<group>"; };
 		CA04FA5B174CC1CD004FA4F6 /* Entypo-Social.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Entypo-Social.otf"; sourceTree = "<group>"; };
 		CA04FA5C174CC1CD004FA4F6 /* Entypo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.otf; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 			children = (
 				CA04FA51174CC1C5004FA4F6 /* Entypo.strings */,
 				CA04FA52174CC1C5004FA4F6 /* EntypoSocial.strings */,
-				CA04FA53174CC1C5004FA4F6 /* FontAwesome.strings */,
-				CA04FA54174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings */,
+				CA04FA53174CC1C5004FA4F6 /* FontAwesomeRegular.strings */,
+				CA04FA54174CC1C5004FA4F6 /* FontAwesomeRegular+Deprecation.strings */,
 				CA04FA55174CC1C5004FA4F6 /* IconicStroke.strings */,
 			);
 			path = Strings;
@@ -410,8 +410,8 @@
 				CA7C55E1163DC00700AC32A3 /* FIViewController.xib in Resources */,
 				CA04FA56174CC1C5004FA4F6 /* Entypo.strings in Resources */,
 				CA04FA57174CC1C5004FA4F6 /* EntypoSocial.strings in Resources */,
-				CA04FA58174CC1C5004FA4F6 /* FontAwesome.strings in Resources */,
-				CA04FA59174CC1C5004FA4F6 /* FontAwesome+Deprecation.strings in Resources */,
+				CA04FA58174CC1C5004FA4F6 /* FontAwesomeRegular.strings in Resources */,
+				CA04FA59174CC1C5004FA4F6 /* FontAwesomeRegular+Deprecation.strings in Resources */,
 				CA04FA5A174CC1C5004FA4F6 /* IconicStroke.strings in Resources */,
 				CA04FA5F174CC1CD004FA4F6 /* Entypo-Social.otf in Resources */,
 				CA04FA60174CC1CD004FA4F6 /* Entypo.otf in Resources */,
