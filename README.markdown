@@ -1,4 +1,4 @@
-## FontasticIcons
+## FontasticIcons ![](http://cocoapod-badges.herokuapp.com/v/FontasticIcons/badge.png)
 
 FontasticIcons is an Objective-C wrapper for iconic fonts.
 
