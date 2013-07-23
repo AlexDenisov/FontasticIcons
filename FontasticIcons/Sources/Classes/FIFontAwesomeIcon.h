@@ -13,609 +13,609 @@
 
 @interface FIFontAwesomeIcon (Forwarding)
 
-- (instancetype)glass;
++ (instancetype)glassIcon;
 
-- (instancetype)music;
++ (instancetype)musicIcon;
 
-- (instancetype)search;
++ (instancetype)searchIcon;
 
-- (instancetype)envelope;
++ (instancetype)envelopeIcon;
 
-- (instancetype)heart;
++ (instancetype)heartIcon;
 
-- (instancetype)star;
++ (instancetype)starIcon;
 
-- (instancetype)starEmpty;
++ (instancetype)starEmptyIcon;
 
-- (instancetype)user;
++ (instancetype)userIcon;
 
-- (instancetype)film;
++ (instancetype)filmIcon;
 
-- (instancetype)thLarge;
++ (instancetype)thLargeIcon;
 
-- (instancetype)th;
++ (instancetype)thIcon;
 
-- (instancetype)thList;
++ (instancetype)thListIcon;
 
-- (instancetype)ok;
++ (instancetype)okIcon;
 
-- (instancetype)remove;
++ (instancetype)removeIcon;
 
-- (instancetype)zoomIn;
++ (instancetype)zoomInIcon;
 
-- (instancetype)zoomOut;
++ (instancetype)zoomOutIcon;
 
-- (instancetype)off;
++ (instancetype)offIcon;
 
-- (instancetype)signal;
++ (instancetype)signalIcon;
 
-- (instancetype)cog;
++ (instancetype)cogIcon;
 
-- (instancetype)trash;
++ (instancetype)trashIcon;
 
-- (instancetype)home;
++ (instancetype)homeIcon;
 
-- (instancetype)file;
++ (instancetype)fileIcon;
 
-- (instancetype)time;
++ (instancetype)timeIcon;
 
-- (instancetype)road;
++ (instancetype)roadIcon;
 
-- (instancetype)downloadAlt;
++ (instancetype)downloadAltIcon;
 
-- (instancetype)download;
++ (instancetype)downloadIcon;
 
-- (instancetype)upload;
++ (instancetype)uploadIcon;
 
-- (instancetype)inbox;
++ (instancetype)inboxIcon;
 
-- (instancetype)playCircle;
++ (instancetype)playCircleIcon;
 
-- (instancetype)repeat;
++ (instancetype)repeatIcon;
 
-- (instancetype)refresh;
++ (instancetype)refreshIcon;
 
-- (instancetype)listAlt;
++ (instancetype)listAltIcon;
 
-- (instancetype)lock;
++ (instancetype)lockIcon;
 
-- (instancetype)flag;
++ (instancetype)flagIcon;
 
-- (instancetype)headphones;
++ (instancetype)headphonesIcon;
 
-- (instancetype)volumeOff;
++ (instancetype)volumeOffIcon;
 
-- (instancetype)volumeDown;
++ (instancetype)volumeDownIcon;
 
-- (instancetype)volumeUp;
++ (instancetype)volumeUpIcon;
 
-- (instancetype)qrcode;
++ (instancetype)qrcodeIcon;
 
-- (instancetype)barcode;
++ (instancetype)barcodeIcon;
 
-- (instancetype)tag;
++ (instancetype)tagIcon;
 
-- (instancetype)tags;
++ (instancetype)tagsIcon;
 
-- (instancetype)book;
++ (instancetype)bookIcon;
 
-- (instancetype)bookmark;
++ (instancetype)bookmarkIcon;
 
-- (instancetype)print;
++ (instancetype)printIcon;
 
-- (instancetype)camera;
++ (instancetype)cameraIcon;
 
-- (instancetype)font;
++ (instancetype)fontIcon;
 
-- (instancetype)bold;
++ (instancetype)boldIcon;
 
-- (instancetype)italic;
++ (instancetype)italicIcon;
 
-- (instancetype)textHeight;
++ (instancetype)textHeightIcon;
 
-- (instancetype)textWidth;
++ (instancetype)textWidthIcon;
 
-- (instancetype)alignLeft;
++ (instancetype)alignLeftIcon;
 
-- (instancetype)alignCenter;
++ (instancetype)alignCenterIcon;
 
-- (instancetype)alignRight;
++ (instancetype)alignRightIcon;
 
-- (instancetype)alignJustify;
++ (instancetype)alignJustifyIcon;
 
-- (instancetype)list;
++ (instancetype)listIcon;
 
-- (instancetype)indentLeft;
++ (instancetype)indentLeftIcon;
 
-- (instancetype)indentRight;
++ (instancetype)indentRightIcon;
 
-- (instancetype)facetimeVideo;
++ (instancetype)facetimeVideoIcon;
 
-- (instancetype)picture;
++ (instancetype)pictureIcon;
 
-- (instancetype)pencil;
++ (instancetype)pencilIcon;
 
-- (instancetype)mapMarker;
++ (instancetype)mapMarkerIcon;
 
-- (instancetype)adjust;
++ (instancetype)adjustIcon;
 
-- (instancetype)tint;
++ (instancetype)tintIcon;
 
-- (instancetype)edit;
++ (instancetype)editIcon;
 
-- (instancetype)share;
++ (instancetype)shareIcon;
 
-- (instancetype)check;
++ (instancetype)checkIcon;
 
-- (instancetype)move;
++ (instancetype)moveIcon;
 
-- (instancetype)stepBackward;
++ (instancetype)stepBackwardIcon;
 
-- (instancetype)fastBackward;
++ (instancetype)fastBackwardIcon;
 
-- (instancetype)backward;
++ (instancetype)backwardIcon;
 
-- (instancetype)play;
++ (instancetype)playIcon;
 
-- (instancetype)pause;
++ (instancetype)pauseIcon;
 
-- (instancetype)stop;
++ (instancetype)stopIcon;
 
-- (instancetype)forward;
++ (instancetype)forwardIcon;
 
-- (instancetype)fastForward;
++ (instancetype)fastForwardIcon;
 
-- (instancetype)stepForward;
++ (instancetype)stepForwardIcon;
 
-- (instancetype)eject;
++ (instancetype)ejectIcon;
 
-- (instancetype)chevronLeft;
++ (instancetype)chevronLeftIcon;
 
-- (instancetype)chevronRight;
++ (instancetype)chevronRightIcon;
 
-- (instancetype)plusSign;
++ (instancetype)plusSignIcon;
 
-- (instancetype)minusSign;
++ (instancetype)minusSignIcon;
 
-- (instancetype)removeSign;
++ (instancetype)removeSignIcon;
 
-- (instancetype)okSign;
++ (instancetype)okSignIcon;
 
-- (instancetype)questionSign;
++ (instancetype)questionSignIcon;
 
-- (instancetype)infoSign;
++ (instancetype)infoSignIcon;
 
-- (instancetype)screenshot;
++ (instancetype)screenshotIcon;
 
-- (instancetype)removeCircle;
++ (instancetype)removeCircleIcon;
 
-- (instancetype)okCircle;
++ (instancetype)okCircleIcon;
 
-- (instancetype)banCircle;
++ (instancetype)banCircleIcon;
 
-- (instancetype)arrowLeft;
++ (instancetype)arrowLeftIcon;
 
-- (instancetype)arrowRight;
++ (instancetype)arrowRightIcon;
 
-- (instancetype)arrowUp;
++ (instancetype)arrowUpIcon;
 
-- (instancetype)arrowDown;
++ (instancetype)arrowDownIcon;
 
-- (instancetype)shareAlt;
++ (instancetype)shareAltIcon;
 
-- (instancetype)resizeFull;
++ (instancetype)resizeFullIcon;
 
-- (instancetype)resizeSmall;
++ (instancetype)resizeSmallIcon;
 
-- (instancetype)plus;
++ (instancetype)plusIcon;
 
-- (instancetype)minus;
++ (instancetype)minusIcon;
 
-- (instancetype)asterisk;
++ (instancetype)asteriskIcon;
 
-- (instancetype)exclamationSign;
++ (instancetype)exclamationSignIcon;
 
-- (instancetype)gift;
++ (instancetype)giftIcon;
 
-- (instancetype)leaf;
++ (instancetype)leafIcon;
 
-- (instancetype)fire;
++ (instancetype)fireIcon;
 
-- (instancetype)eyeOpen;
++ (instancetype)eyeOpenIcon;
 
-- (instancetype)eyeClose;
++ (instancetype)eyeCloseIcon;
 
-- (instancetype)warningSign;
++ (instancetype)warningSignIcon;
 
-- (instancetype)plane;
++ (instancetype)planeIcon;
 
-- (instancetype)calendar;
++ (instancetype)calendarIcon;
 
-- (instancetype)random;
++ (instancetype)randomIcon;
 
-- (instancetype)comment;
++ (instancetype)commentIcon;
 
-- (instancetype)magnet;
++ (instancetype)magnetIcon;
 
-- (instancetype)chevronUp;
++ (instancetype)chevronUpIcon;
 
-- (instancetype)chevronDown;
++ (instancetype)chevronDownIcon;
 
-- (instancetype)retweet;
++ (instancetype)retweetIcon;
 
-- (instancetype)shoppingCart;
++ (instancetype)shoppingCartIcon;
 
-- (instancetype)folderClose;
++ (instancetype)folderCloseIcon;
 
-- (instancetype)folderOpen;
++ (instancetype)folderOpenIcon;
 
-- (instancetype)resizeVertical;
++ (instancetype)resizeVerticalIcon;
 
-- (instancetype)resizeHorizontal;
++ (instancetype)resizeHorizontalIcon;
 
-- (instancetype)barChart;
++ (instancetype)barChartIcon;
 
-- (instancetype)twitterSign;
++ (instancetype)twitterSignIcon;
 
-- (instancetype)facebookSign;
++ (instancetype)facebookSignIcon;
 
-- (instancetype)cameraRetro;
++ (instancetype)cameraRetroIcon;
 
-- (instancetype)key;
++ (instancetype)keyIcon;
 
-- (instancetype)cogs;
++ (instancetype)cogsIcon;
 
-- (instancetype)comments;
++ (instancetype)commentsIcon;
 
-- (instancetype)thumbsUp;
++ (instancetype)thumbsUpIcon;
 
-- (instancetype)thumbsDown;
++ (instancetype)thumbsDownIcon;
 
-- (instancetype)starHalf;
++ (instancetype)starHalfIcon;
 
-- (instancetype)heartEmpty;
++ (instancetype)heartEmptyIcon;
 
-- (instancetype)signout;
++ (instancetype)signoutIcon;
 
-- (instancetype)linkedinSign;
++ (instancetype)linkedinSignIcon;
 
-- (instancetype)pushpin;
++ (instancetype)pushpinIcon;
 
-- (instancetype)externalLink;
++ (instancetype)externalLinkIcon;
 
-- (instancetype)signin;
++ (instancetype)signinIcon;
 
-- (instancetype)trophy;
++ (instancetype)trophyIcon;
 
-- (instancetype)githubSign;
++ (instancetype)githubSignIcon;
 
-- (instancetype)uploadAlt;
++ (instancetype)uploadAltIcon;
 
-- (instancetype)lemon;
++ (instancetype)lemonIcon;
 
-- (instancetype)phone;
++ (instancetype)phoneIcon;
 
-- (instancetype)checkEmpty;
++ (instancetype)checkEmptyIcon;
 
-- (instancetype)bookmarkEmpty;
++ (instancetype)bookmarkEmptyIcon;
 
-- (instancetype)phoneSign;
++ (instancetype)phoneSignIcon;
 
-- (instancetype)twitter;
++ (instancetype)twitterIcon;
 
-- (instancetype)facebook;
++ (instancetype)facebookIcon;
 
-- (instancetype)github;
++ (instancetype)githubIcon;
 
-- (instancetype)unlock;
++ (instancetype)unlockIcon;
 
-- (instancetype)creditCard;
++ (instancetype)creditCardIcon;
 
-- (instancetype)rss;
++ (instancetype)rssIcon;
 
-- (instancetype)hdd;
++ (instancetype)hddIcon;
 
-- (instancetype)bullhorn;
++ (instancetype)bullhornIcon;
 
-- (instancetype)bell;
++ (instancetype)bellIcon;
 
-- (instancetype)certificate;
++ (instancetype)certificateIcon;
 
-- (instancetype)handRight;
++ (instancetype)handRightIcon;
 
-- (instancetype)handLeft;
++ (instancetype)handLeftIcon;
 
-- (instancetype)handUp;
++ (instancetype)handUpIcon;
 
-- (instancetype)handDown;
++ (instancetype)handDownIcon;
 
-- (instancetype)circleArrowLeft;
++ (instancetype)circleArrowLeftIcon;
 
-- (instancetype)circleArrowRight;
++ (instancetype)circleArrowRightIcon;
 
-- (instancetype)circleArrowUp;
++ (instancetype)circleArrowUpIcon;
 
-- (instancetype)circleArrowDown;
++ (instancetype)circleArrowDownIcon;
 
-- (instancetype)globe;
++ (instancetype)globeIcon;
 
-- (instancetype)wrench;
++ (instancetype)wrenchIcon;
 
-- (instancetype)tasks;
++ (instancetype)tasksIcon;
 
-- (instancetype)filter;
++ (instancetype)filterIcon;
 
-- (instancetype)briefcase;
++ (instancetype)briefcaseIcon;
 
-- (instancetype)fullscreen;
++ (instancetype)fullscreenIcon;
 
-- (instancetype)group;
++ (instancetype)groupIcon;
 
-- (instancetype)link;
++ (instancetype)linkIcon;
 
-- (instancetype)cloud;
++ (instancetype)cloudIcon;
 
-- (instancetype)beaker;
++ (instancetype)beakerIcon;
 
-- (instancetype)cut;
++ (instancetype)cutIcon;
 
-- (instancetype)copy;
++ (instancetype)copyIcon;
 
-- (instancetype)paperClip;
++ (instancetype)paperClipIcon;
 
-- (instancetype)save;
++ (instancetype)saveIcon;
 
-- (instancetype)signBlank;
++ (instancetype)signBlankIcon;
 
-- (instancetype)reorder;
++ (instancetype)reorderIcon;
 
-- (instancetype)listUl;
++ (instancetype)listUlIcon;
 
-- (instancetype)listOl;
++ (instancetype)listOlIcon;
 
-- (instancetype)strikethrough;
++ (instancetype)strikethroughIcon;
 
-- (instancetype)underline;
++ (instancetype)underlineIcon;
 
-- (instancetype)table;
++ (instancetype)tableIcon;
 
-- (instancetype)magic;
++ (instancetype)magicIcon;
 
-- (instancetype)truck;
++ (instancetype)truckIcon;
 
-- (instancetype)pinterest;
++ (instancetype)pinterestIcon;
 
-- (instancetype)pinterestSign;
++ (instancetype)pinterestSignIcon;
 
-- (instancetype)googlePlusSign;
++ (instancetype)googlePlusSignIcon;
 
-- (instancetype)googlePlus;
++ (instancetype)googlePlusIcon;
 
-- (instancetype)money;
++ (instancetype)moneyIcon;
 
-- (instancetype)caretDown;
++ (instancetype)caretDownIcon;
 
-- (instancetype)caretUp;
++ (instancetype)caretUpIcon;
 
-- (instancetype)caretLeft;
++ (instancetype)caretLeftIcon;
 
-- (instancetype)caretRight;
++ (instancetype)caretRightIcon;
 
-- (instancetype)columns;
++ (instancetype)columnsIcon;
 
-- (instancetype)sort;
++ (instancetype)sortIcon;
 
-- (instancetype)sortDown;
++ (instancetype)sortDownIcon;
 
-- (instancetype)sortUp;
++ (instancetype)sortUpIcon;
 
-- (instancetype)envelopeAlt;
++ (instancetype)envelopeAltIcon;
 
-- (instancetype)linkedin;
++ (instancetype)linkedinIcon;
 
-- (instancetype)undo;
++ (instancetype)undoIcon;
 
-- (instancetype)legal;
++ (instancetype)legalIcon;
 
-- (instancetype)dashboard;
++ (instancetype)dashboardIcon;
 
-- (instancetype)commentAlt;
++ (instancetype)commentAltIcon;
 
-- (instancetype)commentsAlt;
++ (instancetype)commentsAltIcon;
 
-- (instancetype)bolt;
++ (instancetype)boltIcon;
 
-- (instancetype)sitemap;
++ (instancetype)sitemapIcon;
 
-- (instancetype)umbrella;
++ (instancetype)umbrellaIcon;
 
-- (instancetype)paste;
++ (instancetype)pasteIcon;
 
-- (instancetype)lightbulb;
++ (instancetype)lightbulbIcon;
 
-- (instancetype)exchange;
++ (instancetype)exchangeIcon;
 
-- (instancetype)cloudDownload;
++ (instancetype)cloudDownloadIcon;
 
-- (instancetype)cloudUpload;
++ (instancetype)cloudUploadIcon;
 
-- (instancetype)userMd;
++ (instancetype)userMdIcon;
 
-- (instancetype)stethoscope;
++ (instancetype)stethoscopeIcon;
 
-- (instancetype)suitcase;
++ (instancetype)suitcaseIcon;
 
-- (instancetype)bellAlt;
++ (instancetype)bellAltIcon;
 
-- (instancetype)coffee;
++ (instancetype)coffeeIcon;
 
-- (instancetype)food;
++ (instancetype)foodIcon;
 
-- (instancetype)fileAlt;
++ (instancetype)fileAltIcon;
 
-- (instancetype)building;
++ (instancetype)buildingIcon;
 
-- (instancetype)hospital;
++ (instancetype)hospitalIcon;
 
-- (instancetype)ambulance;
++ (instancetype)ambulanceIcon;
 
-- (instancetype)medkit;
++ (instancetype)medkitIcon;
 
-- (instancetype)fighterJet;
++ (instancetype)fighterJetIcon;
 
-- (instancetype)beer;
++ (instancetype)beerIcon;
 
-- (instancetype)hSign;
++ (instancetype)hSignIcon;
 
-- (instancetype)plusSignAlt;
++ (instancetype)plusSignAltIcon;
 
-- (instancetype)doubleAngleLeft;
++ (instancetype)doubleAngleLeftIcon;
 
-- (instancetype)doubleAngleRight;
++ (instancetype)doubleAngleRightIcon;
 
-- (instancetype)doubleAngleUp;
++ (instancetype)doubleAngleUpIcon;
 
-- (instancetype)doubleAngleDown;
++ (instancetype)doubleAngleDownIcon;
 
-- (instancetype)angleLeft;
++ (instancetype)angleLeftIcon;
 
-- (instancetype)angleRight;
++ (instancetype)angleRightIcon;
 
-- (instancetype)angleUp;
++ (instancetype)angleUpIcon;
 
-- (instancetype)angleDown;
++ (instancetype)angleDownIcon;
 
-- (instancetype)desktop;
++ (instancetype)desktopIcon;
 
-- (instancetype)laptop;
++ (instancetype)laptopIcon;
 
-- (instancetype)tablet;
++ (instancetype)tabletIcon;
 
-- (instancetype)mobilePhone;
++ (instancetype)mobilePhoneIcon;
 
-- (instancetype)circleBlank;
++ (instancetype)circleBlankIcon;
 
-- (instancetype)quoteLeft;
++ (instancetype)quoteLeftIcon;
 
-- (instancetype)quoteRight;
++ (instancetype)quoteRightIcon;
 
-- (instancetype)spinner;
++ (instancetype)spinnerIcon;
 
-- (instancetype)circle;
++ (instancetype)circleIcon;
 
-- (instancetype)reply;
++ (instancetype)replyIcon;
 
-- (instancetype)folderCloseAlt;
++ (instancetype)folderCloseAltIcon;
 
-- (instancetype)folderOpenAlt;
++ (instancetype)folderOpenAltIcon;
 
-- (instancetype)expandAlt;
++ (instancetype)expandAltIcon;
 
-- (instancetype)collapseAlt;
++ (instancetype)collapseAltIcon;
 
-- (instancetype)smile;
++ (instancetype)smileIcon;
 
-- (instancetype)frown;
++ (instancetype)frownIcon;
 
-- (instancetype)meh;
++ (instancetype)mehIcon;
 
-- (instancetype)gamepad;
++ (instancetype)gamepadIcon;
 
-- (instancetype)keyboard;
++ (instancetype)keyboardIcon;
 
-- (instancetype)flagAlt;
++ (instancetype)flagAltIcon;
 
-- (instancetype)flagCheckered;
++ (instancetype)flagCheckeredIcon;
 
-- (instancetype)terminal;
++ (instancetype)terminalIcon;
 
-- (instancetype)code;
++ (instancetype)codeIcon;
 
-- (instancetype)replyAll;
++ (instancetype)replyAllIcon;
 
-- (instancetype)mailReplyAll;
++ (instancetype)mailReplyAllIcon;
 
-- (instancetype)starHalfEmpty;
++ (instancetype)starHalfEmptyIcon;
 
-- (instancetype)locationArrow;
++ (instancetype)locationArrowIcon;
 
-- (instancetype)crop;
++ (instancetype)cropIcon;
 
-- (instancetype)codeFork;
++ (instancetype)codeForkIcon;
 
-- (instancetype)unlink;
++ (instancetype)unlinkIcon;
 
-- (instancetype)question;
++ (instancetype)questionIcon;
 
-- (instancetype)info;
++ (instancetype)infoIcon;
 
-- (instancetype)exclamation;
++ (instancetype)exclamationIcon;
 
-- (instancetype)superscript;
++ (instancetype)superscriptIcon;
 
-- (instancetype)subscript;
++ (instancetype)subscriptIcon;
 
-- (instancetype)eraser;
++ (instancetype)eraserIcon;
 
-- (instancetype)puzzlePiece;
++ (instancetype)puzzlePieceIcon;
 
-- (instancetype)microphone;
++ (instancetype)microphoneIcon;
 
-- (instancetype)microphoneOff;
++ (instancetype)microphoneOffIcon;
 
-- (instancetype)shield;
++ (instancetype)shieldIcon;
 
-- (instancetype)calendarEmpty;
++ (instancetype)calendarEmptyIcon;
 
-- (instancetype)fireExtinguisher;
++ (instancetype)fireExtinguisherIcon;
 
-- (instancetype)rocket;
++ (instancetype)rocketIcon;
 
-- (instancetype)maxcdn;
++ (instancetype)maxcdnIcon;
 
-- (instancetype)chevronSignLeft;
++ (instancetype)chevronSignLeftIcon;
 
-- (instancetype)chevronSignRight;
++ (instancetype)chevronSignRightIcon;
 
-- (instancetype)chevronSignUp;
++ (instancetype)chevronSignUpIcon;
 
-- (instancetype)chevronSignDown;
++ (instancetype)chevronSignDownIcon;
 
-- (instancetype)html5;
++ (instancetype)html5Icon;
 
-- (instancetype)css3;
++ (instancetype)css3Icon;
 
-- (instancetype)anchor;
++ (instancetype)anchorIcon;
 
-- (instancetype)unlockAlt;
++ (instancetype)unlockAltIcon;
 
-- (instancetype)bullseye;
++ (instancetype)bullseyeIcon;
 
-- (instancetype)ellipsisHorizontal;
++ (instancetype)ellipsisHorizontalIcon;
 
-- (instancetype)ellipsisVertical;
++ (instancetype)ellipsisVerticalIcon;
 
-- (instancetype)rssSign;
++ (instancetype)rssSignIcon;
 
-- (instancetype)playSign;
++ (instancetype)playSignIcon;
 
-- (instancetype)ticket;
++ (instancetype)ticketIcon;
 
-- (instancetype)minusSignAlt;
++ (instancetype)minusSignAltIcon;
 
-- (instancetype)checkMinus;
++ (instancetype)checkMinusIcon;
 
-- (instancetype)levelUp;
++ (instancetype)levelUpIcon;
 
-- (instancetype)levelDown;
++ (instancetype)levelDownIcon;
 
-- (instancetype)checkSign;
++ (instancetype)checkSignIcon;
 
-- (instancetype)editSign;
++ (instancetype)editSignIcon;
 
-- (instancetype)externalLinkSign;
++ (instancetype)externalLinkSignIcon;
 
-- (instancetype)shareSign;
++ (instancetype)shareSignIcon;
 
 
 @end
