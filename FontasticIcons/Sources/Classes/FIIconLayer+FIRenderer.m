@@ -70,6 +70,7 @@
     scaledBounds.origin.x += (scaledBounds.size.width - self.iconBounds.size.width) / 2 - self.iconBounds.origin.x;
     scaledBounds.origin.y += (scaledBounds.size.height - self.iconBounds.size.height) / 2 - self.iconBounds.origin.y;
     CGContextSetTextPosition(ctx, scaledBounds.origin.x, scaledBounds.origin.y);
+    CGContextSetShadowWithColor(ctx, delegate.iconShadowOffset, 0, delegate.iconShadowColor.CGColor);
     CTLineDraw(self.line, ctx);
 }
 

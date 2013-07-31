@@ -15,5 +15,7 @@
 @property (nonatomic, strong) UIColor *iconStrokeColor; // TODO: migrate to copy for iOS 6.0
 @property (nonatomic, assign) CGFloat iconStrokeWidthRatio;
 @property (nonatomic, assign) CGPoint iconInset;
+@property (nonatomic, copy) UIColor *iconShadowColor;
+@property (nonatomic, assign) CGSize iconShadowOffset;
 
 @end

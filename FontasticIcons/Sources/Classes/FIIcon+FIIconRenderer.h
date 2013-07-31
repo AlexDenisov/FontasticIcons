@@ -13,5 +13,6 @@
 
 - (FIIconRendererRef)renderer;
 - (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color;
+- (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color shadowOffset:(CGSize)shadowOffset shadowColor:(UIColor *)shadowColor;
 
 @end
