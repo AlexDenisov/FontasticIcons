@@ -44,6 +44,7 @@
 #pragma mark self <FIIconRendering>
 @synthesize icon = _icon, iconColor = _iconColor, iconInset = _iconInset;
 @synthesize iconStrokeColor = _iconStrokeColor, iconStrokeWidthRatio = _iconStrokeWidthRatio;
+@synthesize iconShadowColor = _iconShadowColor, iconShadowOffset = _iconShadowOffset;
 
 - (void)setIcon:(FIIcon *)icon {
     [self setIcon:icon withContentsScale:0];

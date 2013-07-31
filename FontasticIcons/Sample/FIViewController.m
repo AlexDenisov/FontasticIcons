@@ -68,7 +68,7 @@ const static NSUInteger kColumnsCount = 3;
 
 - (void)renderNavigationItems {
     FIIcon *leftIcon = [self randomIcon];
-    UIImage *leftImage = [leftIcon imageWithBounds:CGRectMake(0, 0, 26, 26) color:[UIColor whiteColor]];
+    UIImage *leftImage = [leftIcon imageWithBounds:CGRectMake(0, 0, 26, 26) color:[UIColor whiteColor] shadowOffset:CGSizeMake(0, -1) shadowColor:[UIColor redColor]];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
                                              initWithImage:leftImage

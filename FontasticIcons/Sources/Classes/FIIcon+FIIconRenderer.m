@@ -18,10 +18,16 @@
 }
 
 - (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color {
+    return [self imageWithBounds:bounds color:color shadowOffset:CGSizeZero shadowColor:nil];
+}
+
+- (UIImage *)imageWithBounds:(CGRect)bounds color:(UIColor *)color shadowOffset:(CGSize)shadowOffset shadowColor:(UIColor *)shadowColor {
     FIIconRendererRef renderer = self.renderer;
     renderer.bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
     renderer.iconInset = bounds.origin;
     renderer.iconColor = color;
+    renderer.iconShadowColor = shadowColor;
+    renderer.iconShadowOffset = shadowOffset;
     return renderer.image;
 }
 
