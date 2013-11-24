@@ -67,3 +67,7 @@ Source code distributed under MIT license.
 
 **Note that all fonts have their own license.**
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/AlexDenisov/fontasticicons/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
