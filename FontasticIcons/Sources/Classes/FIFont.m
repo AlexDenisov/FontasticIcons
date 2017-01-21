@@ -87,7 +87,7 @@ static NSMutableDictionary *fonts;
 }
 
 + (NSString *)pathForResource:(NSString *)aPath {
-    return [[NSBundle mainBundle] pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
+    return [[NSBundle bundleForClass:self] pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
                                            ofType:aPath.pathExtension];
 }
 
