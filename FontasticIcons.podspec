@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
                     - [FontAwesome](http://fortawesome.github.com/Font-Awesome/) by Dave Gandy
                     - [Iconic](http://somerandomdude.com/work/iconic/) font by P.J. Onori
                    DESC
-  s.homepage     = 'https://github.com/AlexDenisov/FontasticIcons'
+  s.homepage     = 'https://github.com/eddy-lau/FontasticIcons'
   s.license      = 'MIT'
   s.author       = { 'Alex Denisov' => '1101.debian@gmail.com' }
-  s.source       = { :git => 'https://github.com/AlexDenisov/FontasticIcons.git', :tag => "#{s.version}" }
+  s.source       = { :git => 'https://github.com/eddy-lau/FontasticIcons.git', :tag => "#{s.version}" }
   s.platform     = :ios, '4.2'
   s.source_files = 'FontasticIcons/Sources/Classes'
   s.resources    = 'FontasticIcons/Sources/Resources/**'
