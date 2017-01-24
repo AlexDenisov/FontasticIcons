@@ -87,8 +87,30 @@ static NSMutableDictionary *fonts;
 }
 
 + (NSString *)pathForResource:(NSString *)aPath {
-    return [[NSBundle bundleForClass:self] pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
-                                           ofType:aPath.pathExtension];
+
+    NSBundle *bundle = [NSBundle bundleForClass:self];
+
+    NSString *resourcePath =
+        [bundle pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
+                         ofType:aPath.pathExtension];
+
+    if (resourcePath == nil) {
+
+        resourcePath =
+            [bundle pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
+                             ofType:aPath.pathExtension inDirectory:@"Fonts"];
+
+    }
+
+    if (resourcePath == nil) {
+
+        resourcePath =
+        [bundle pathForResource:aPath.stringByDeletingPathExtension.lastPathComponent
+                         ofType:aPath.pathExtension inDirectory:@"Strings"];
+
+    }
+
+    return resourcePath;
 }
 
 @end
